@@ -1,5 +1,3 @@
-#import "undergraduate-component.typ": *
-
 #let song_ti = ("Times New Roman", "SimSun")
 
 #set page(
