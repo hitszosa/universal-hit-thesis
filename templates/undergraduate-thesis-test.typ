@@ -52,7 +52,7 @@
   #grid(
     columns: (auto, auto, auto),
     rows: (字号.四号, 字号.四号),
-    row-gutter: 16pt,
+    row-gutter: 1.5em,
     cover_info_key(text(spacing: (key_width - 3em) /2)[本 科 生]),
     cover_info_colon[：],
     cover_info_value("xxx"),
@@ -75,5 +75,37 @@
     cover_info_colon[：],
     cover_info_value("xxxxxxx"),
   )
+
+]
+
+#pagebreak()
+
+#show heading.where(level: 2): it => {
+  align(center)[
+    #text(font: 字体.黑体, size: 字号.小二,
+    spacing: 1em)[#it]
+  ]
+}
+
+#par(first-line-indent: 2em, justify: true, leading: 1em)[
+
+  #heading(level: 2)[摘 要]
+
+  #linebreak()
+
+  #text(
+    font: 字体.宋体,
+    size: 字号.小四,
+  )[#lorem(200)]
+
+  #let abstract_key_words(content) = {
+    set par(first-line-indent: 0em)
+
+    text(font: 字体.黑体)[关键词：]
+    text(font: 字体.宋体)[#content.join("，")]
+    
+  }
+
+  #abstract_key_words(("关键词1", "关键词2"))
 
 ]

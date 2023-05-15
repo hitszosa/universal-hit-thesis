@@ -22,5 +22,6 @@
 
 #let 字体 = (
   宋体: ("Times New Roman", "SimSun"),
+  楷体: ("Times New Roman", "KaiTi"),
   黑体: ("Arial", "Adobe Heiti Std", "SimHei"),
 )
