@@ -41,7 +41,7 @@
     leading: 1em
   )
 
-  heading(level: 2)[Abstract]
+  heading(level: 2, "Abstract")
 
   text(
     font: 字体.宋体,
