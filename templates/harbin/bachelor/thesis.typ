@@ -66,8 +66,8 @@
         ]
       }
       if it != none {
-        if it.level > 2 and display_numbering {
-          h(1em)
+        if display_numbering {
+          h(0.75em)
         }
         text[
           #it.body.text
