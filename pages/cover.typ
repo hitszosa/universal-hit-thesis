@@ -1,4 +1,5 @@
 #import "../theme/type.typ": 字体, 字号
+#import "../utils/counters.typ": cover_end_before_counter, cover_end_after_counter
 
 #let cover(
   title: "",
@@ -80,6 +81,9 @@
     )
   ]
 
+  cover_end_before_counter.update(1)
   pagebreak()
+  cover_end_after_counter.update(1)
+  counter(page).update(1)
 
 }
