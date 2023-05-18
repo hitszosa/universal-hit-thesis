@@ -71,6 +71,8 @@
 
   ]
 
+  v(2em)
+
   grid(
     columns: (1fr, 1fr),
     rows: (auto),
@@ -83,6 +85,8 @@
       #text[日期：#h(4em) 年 #h(2em) 月 #h(2em) 日]
     ]
   )
+
+  v(1em)
 
   grid(
     columns: (1fr, 1fr),
