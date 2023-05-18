@@ -1,4 +1,5 @@
-#import "../theme/type.typ": *
+#import "../theme/type.typ": 字体, 字号
+#import "../config/constants.typ": special_chapter_titles
 
 #let abstract_cn(
   content,
@@ -11,7 +12,7 @@
     leading: 1em
   )
 
-  heading(level: 2, "摘 要")
+  heading(level: 2, special_chapter_titles.摘要)
 
   text(
     font: 字体.宋体,
@@ -41,7 +42,7 @@
     leading: 1em
   )
 
-  heading(level: 2, "Abstract")
+  heading(level: 2, special_chapter_titles.Abstract)
 
   text(
     font: 字体.宋体,

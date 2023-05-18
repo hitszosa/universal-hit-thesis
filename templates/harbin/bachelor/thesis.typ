@@ -1,6 +1,9 @@
-#import "../../../theme/type.typ": *
-#import "../../../utils/numbering.typ": *
+#import "../../../theme/type.typ": 字体, 字号
+#import "../../../pages/cover.typ": cover
+#import "../../../pages/abstract.typ": abstract_cn, abstract_en
+#import "../../../utils/numbering.typ": heading_numbering
 #import "../../../utils/counters.typ": cover_end_before_counter, cover_end_after_counter
+#import "../../../config/constants.typ": special_chapter_titles
 
 
 #let conf(content) = {
@@ -78,21 +81,17 @@
 
     }
 
-      set par(first-line-indent: 0em)
+    set par(first-line-indent: 0em)
 
     if it.level == 1 {
       format_heading(it: it, font: 字体.黑体, size: 字号.二号, display_numbering: false)
     } else if it.level == 2 {
       align(center)[
 
-        #if it.body.text == "Abstract" or it.body.text == "摘 要" {
-          set text(spacing: 1em)
-          counter(heading).update(0)
-        }
-
-        #if it.body.text in ("参考文献", "结 论", "摘 要", "Abstract") {
+        #if it.body.text in special_chapter_titles.values() {
           set text(spacing: 1em)
           format_heading(it: it, font: 字体.黑体, size: 字号.小二, display_numbering: false)
+          counter(heading).update(0)
         } else {
           format_heading(it: it, font: 字体.黑体, size: 字号.小二)
         }
