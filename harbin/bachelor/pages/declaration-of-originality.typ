@@ -1,5 +1,6 @@
 #import "../config/constants.typ": special_chapter_titles
 #import "../../../common/theme/type.typ": 字体, 字号
+#import "../../../common/components/typography.typ": no_numbering_chapter_title
 
 #let declaration_of_originality(
   title: " ",
@@ -12,7 +13,7 @@
     ]
   ]
 
-  heading(level: 2, special_chapter_titles.原创性声明)
+  no_numbering_chapter_title(title: special_chapter_titles.原创性声明)
 
   align(center)[
     #text(font: 字体.黑体, size: 字号.小三)[

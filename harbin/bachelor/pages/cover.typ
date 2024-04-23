@@ -21,11 +21,11 @@
 
     #v(字号.小四 * 3 * space_scale_ratio)
 
-    #text(size: 字号.小二, font: 字体.宋体)[本科毕业论文（设计）]
+    #text(size: 字号.小二, font: 字体.宋体)[*本科毕业论文（设计）*]
 
     #v(字号.小四 * 2 * space_scale_ratio)
 
-    #heading(level: 1)[#title]
+    #text(size: 字号.二号, font: 字体.黑体)[#title]
 
     #v(字号.小四 * 1 * space_scale_ratio)
 
@@ -35,13 +35,13 @@
 
     #let cover_info_key(content) = {
       align(right)[
-        #text(size: 字号.四号, font: 字体.黑体, weight: "bold")[#content]
+        #text(size: 字号.四号, font: 字体.黑体)[#content]
       ]
     }
 
     #let cover_info_colon(content) = {
       align(left)[
-        #text(size: 字号.四号, font: 字体.黑体, weight: "bold")[#content]
+        #text(size: 字号.四号, font: 字体.黑体)[#content]
       ]
     }
 
@@ -54,7 +54,7 @@
     #let key_width = 字号.四号 * (4 + 0.5 * 3)
 
     #grid(
-      columns: (auto, auto, auto),
+      columns: (auto, 1em, auto),
       rows: (字号.四号, 字号.四号),
       row-gutter: 1.5em,
       cover_info_key(text(spacing: (key_width - 3em) / 2)[本 科 生]),

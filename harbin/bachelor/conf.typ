@@ -2,6 +2,7 @@
 #import "../../common/utils/numbering.typ": heading_numbering
 #import "utils/counters.typ": cover_end_before_counter, cover_end_after_counter
 #import "config/constants.typ": special_chapter_titles
+#import "@preview/cuti:0.2.1": show-cn-fakebold
 
 #let conf(content) = {
   let show_if_after_cover_end_before(content) = {
@@ -50,11 +51,11 @@
   })
 
   show heading: it => {
-    let format_heading(it: none, font: none, size: none, display_numbering: true) = {
+    let format_heading(it: none, font: none, size: none, display_numbering: true, weight: "regular") = {
       set text(font: font, size: size)
 
       if display_numbering {
-        text(weight: "regular")[
+        text(weight: weight)[
           #counter(heading).display()
         ]
       }
@@ -62,8 +63,8 @@
         if display_numbering {
           h(0.75em)
         }
-        text[
-          #it.body.text
+        text(weight: weight)[
+          #it.body
         ]
       }
 
@@ -84,10 +85,11 @@
         } else {
           format_heading(it: it, font: 字体.黑体, size: 字号.小二)
         }
+
       ]
     } else if it.level == 3 {
       format_heading(it: it, font: 字体.黑体, size: 字号.小三)
-    } else if it.level == 4 {
+    } else if it.level >= 4 {
       format_heading(it: it, font: 字体.黑体, size: 字号.小四)
     }
   }
@@ -99,6 +101,30 @@
   set text(font: 字体.宋体, size: 字号.小四)
 
   show figure.where(kind: "table"): set figure.caption(position: top)
+
+  show: show-cn-fakebold
+
+  set math.equation(numbering: "(1)")
+
+  show ref: it => {
+    let eq = math.equation
+    let el = it.element
+    if el != none and el.func() == eq {
+      // Override equation references.
+      numbering(
+        el.numbering,
+        ..counter(eq).at(el.location()),
+      )
+    } else {
+      // Other references as usual.
+      it
+    }
+  }
+
+  show outline.entry.where(level: 1): it => {
+    // v(12pt, weak: true)
+    // strong(it)
+  }
 
   content
 }

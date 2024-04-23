@@ -1,11 +1,11 @@
 #import "../config/constants.typ": special_chapter_titles
+#import "../../../common/components/typography.typ": no_numbering_chapter_title
 
 #let acknowledgement(
   content,
 ) = [
-  #heading(level: 2, special_chapter_titles.致谢)
+
+  #no_numbering_chapter_title(title: special_chapter_titles.致谢)
 
   #content
-
-  #pagebreak()
 ]
