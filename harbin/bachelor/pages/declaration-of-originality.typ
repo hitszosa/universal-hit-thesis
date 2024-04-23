@@ -1,5 +1,5 @@
 #import "../config/constants.typ": special_chapter_titles
-#import "../theme/type.typ": 字体, 字号
+#import "../../../common/theme/type.typ": 字体, 字号
 
 #let declaration_of_originality(
   title: " "

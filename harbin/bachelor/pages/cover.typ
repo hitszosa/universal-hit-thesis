@@ -1,4 +1,4 @@
-#import "../theme/type.typ": 字体, 字号
+#import "../../../common/theme/type.typ": 字体, 字号
 #import "../utils/counters.typ": cover_end_before_counter, cover_end_after_counter
 
 #let cover(

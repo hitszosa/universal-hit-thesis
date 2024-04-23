@@ -1,11 +1,11 @@
-#import "../../../theme/type.typ": 字体, 字号
-#import "../../../pages/cover.typ": cover
-#import "../../../pages/abstract.typ": abstract_cn, abstract_en
-#import "../../../pages/declaration-of-originality.typ": declaration_of_originality
-#import "../../../pages/acknowledgement.typ": acknowledgement
-#import "../../../utils/numbering.typ": heading_numbering
-#import "../../../utils/counters.typ": cover_end_before_counter, cover_end_after_counter
-#import "../../../config/constants.typ": special_chapter_titles
+#import "../../common/theme/type.typ": 字体, 字号
+#import "pages/cover.typ": cover
+#import "pages/abstract.typ": abstract_cn, abstract_en
+#import "pages/declaration-of-originality.typ": declaration_of_originality
+#import "pages/acknowledgement.typ": acknowledgement
+#import "../../common/utils/numbering.typ": heading_numbering
+#import "utils/counters.typ": cover_end_before_counter, cover_end_after_counter
+#import "config/constants.typ": special_chapter_titles
 
 
 #let conf(content) = {
