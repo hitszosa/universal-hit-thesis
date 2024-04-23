@@ -30,7 +30,7 @@
     #v(字号.小四 * 1 * space_scale_ratio)
 
     #v(字号.二号 * 3 * space_scale_ratio)
-    
+
     #v(字号.小四 * space_scale_ratio)
 
     #let cover_info_key(content) = {
@@ -57,7 +57,7 @@
       columns: (auto, auto, auto),
       rows: (字号.四号, 字号.四号),
       row-gutter: 1.5em,
-      cover_info_key(text(spacing: (key_width - 3em) /2)[本 科 生]),
+      cover_info_key(text(spacing: (key_width - 3em) / 2)[本 科 生]),
       cover_info_colon[：],
       cover_info_value(name),
       cover_info_key(text(spacing: (key_width - 2em))[学 号]),
@@ -85,5 +85,4 @@
   pagebreak()
   cover_end_after_counter.update(1)
   counter(page).update(1)
-
 }

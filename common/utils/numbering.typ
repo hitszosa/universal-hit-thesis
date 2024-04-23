@@ -1,5 +1,4 @@
 #let heading_numbering(..nums) = {
-
   let nums_vec = nums.pos()
 
   if nums_vec.len() > 0 {
@@ -10,7 +9,5 @@
     ] else {
       numbering("1.1", ..without_first)
     }
-
-    
   }
 }

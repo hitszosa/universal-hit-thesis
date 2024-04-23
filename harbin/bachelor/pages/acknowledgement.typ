@@ -1,7 +1,7 @@
 #import "../config/constants.typ": special_chapter_titles
 
 #let acknowledgement(
-  content
+  content,
 ) = [
   #heading(level: 2, special_chapter_titles.致谢)
 

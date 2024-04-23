@@ -25,7 +25,7 @@
   pad(y: 0.25em)[
     #grid(
       columns: header_values.len(),
-      ..header_values.map(content=>table_cell(content: content)).flatten()
+      ..header_values.map(content => table_cell(content: content)).flatten(),
     )
   ]
   v(0em, weak: true)
@@ -37,9 +37,9 @@
       #grid(
         columns: header_values.len(),
         row-gutter: 0.25em,
-        ..content_values.map(line_content=>{
-          (..line_content.map(content=>table_cell(content: content)).flatten())
-        }).flatten()
+        ..content_values.map(line_content => {
+          (..line_content.map(content => table_cell(content: content)).flatten(),)
+        }).flatten(),
       )
     ]
     v(0em, weak: true)
