@@ -1,8 +1,4 @@
 #import "../../common/theme/type.typ": 字体, 字号
-#import "pages/cover.typ": cover
-#import "pages/abstract.typ": abstract_cn, abstract_en
-#import "pages/declaration-of-originality.typ": declaration_of_originality
-#import "pages/acknowledgement.typ": acknowledgement
 #import "../../common/utils/numbering.typ": heading_numbering
 #import "utils/counters.typ": cover_end_before_counter, cover_end_after_counter
 #import "config/constants.typ": special_chapter_titles
@@ -98,9 +94,11 @@
 
   set heading(numbering: heading_numbering)
 
-  set par(first-line-indent: 2em, leading: 1em)
+  set par(first-line-indent: 2em, leading: 1em, justify: true)
 
   set text(font: 字体.宋体, size: 字号.小四)
+
+  show figure.where(kind: "table"): set figure.caption(position: top)
 
   content
 }
