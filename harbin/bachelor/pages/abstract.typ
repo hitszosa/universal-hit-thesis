@@ -53,7 +53,7 @@
   let abstract_key_words(content) = {
     set par(first-line-indent: 0em)
 
-    text(font: 字体.宋体, "Keywords:  ")
+    text(font: 字体.宋体, weight: "bold", "Keywords:  ")
     text(font: 字体.宋体)[#content.join("，")]
   }
 

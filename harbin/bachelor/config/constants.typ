@@ -1,6 +1,7 @@
 #let special_chapter_titles = (
   摘要: "摘 要",
   Abstract: "Abstract",
+  目录: "目 录",
   结论: "结 论",
   参考文献: "参考文献",
   原创性声明: "原创性声明和使用权限",
