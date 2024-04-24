@@ -29,5 +29,5 @@ typst compile ./templates/<template-name>.typ --root ./
 typst watch ./templates/<template-name>.typ --root ./
 ```
 
-并在 Vscode 中安装 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) 等插件即可实现实时预览。
+并在 VS Code 中安装 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) 等插件即可实现实时预览。
 
