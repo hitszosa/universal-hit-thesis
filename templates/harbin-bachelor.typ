@@ -8,13 +8,14 @@
 #show: doc => conf(doc)
 
 #cover(
-  title: "局部多孔质气体静压轴承关键技术的研究",
-  name: "□□□",
-  student_id: "□□□□□□□□□□",
-  mentor: "□□□ 教授",
+  title_cn: "局部多孔质气体静压轴承关键技术的研究",
+  title_en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
+  student_name: "▢▢▢",
+  student_id: "▢▢▢▢▢▢▢▢▢▢",
+  mentor: "▢▢▢ 教授",
   profession: "机械制造及其自动化",
   collage: "机电工程学院",
-  reply_data: "2022年6月",
+  reply_date: "2022年6月",
   institute: "哈尔滨工业大学",
 )
 
