@@ -1,4 +1,5 @@
-#import "../harbin/bachelor/lib.typ": *
+#import "../lib.typ": harbin_bachelor
+#import harbin_bachelor: *
 #import "../common/components/table.typ": three_line_table
 #import "../common/components/typography.typ": no_numbering_chapter_title
 
