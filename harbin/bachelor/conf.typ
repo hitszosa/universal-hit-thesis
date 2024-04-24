@@ -1,50 +1,39 @@
 #import "../../common/theme/type.typ": 字体, 字号
 #import "../../common/utils/numbering.typ": heading_numbering
-#import "utils/counters.typ": cover_end_before_counter, cover_end_after_counter
+#import "utils/states.typ": cover_header_active, cover_footer_active, perface_header_active, perface_footer_active, body_header_active, body_footer_active
 #import "config/constants.typ": special_chapter_titles
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 
 #let conf(content) = {
-  let show_if_after_cover_end_before(content) = {
-    locate(loc => {
-      if cover_end_before_counter.at(loc).first() > 0 {
-        content
-      }
-    })
-  }
-  let show_if_after_cover_end_after(content) = {
-    locate(loc => {
-      if cover_end_after_counter.at(loc).first() > 0 {
-        content
-      }
-    })
-  }
-
   set page(
     paper: "a4",
     margin: (top: 3.8cm, left: 3cm, right: 3cm, bottom: 3cm),
   )
 
   set page(header: {
-    show_if_after_cover_end_before[
-      #set align(center)
-      #set text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)
-      #set par(leading: 0em)
-      #text[
-        哈尔滨工业大学本科毕业论文（设计）
+    locate(loc => {
+      if cover_header_active.get() == false [
+        #set align(center)
+        #set text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)
+        #set par(leading: 0em)
+        #text[
+          哈尔滨工业大学本科毕业论文（设计）
+        ]
+        #line(length: 100%)
+        #v(2pt, weak: true)
+        #line(length: 100%, stroke: 0.1mm)
       ]
-      #line(length: 100%)
-      #v(2pt, weak: true)
-      #line(length: 100%, stroke: 0.1mm)
-    ]
+    })
   })
 
   set page(footer: {
     set align(center)
     locate(loc => {
-      show_if_after_cover_end_after[
-        #text()[
-          \- #counter(page).at(loc).first() \-
+      text()[
+        #if perface_footer_active.get() == true [
+          #counter(page).display("- I -")
+        ] else if body_footer_active.get() == true [
+          #counter(page).display("- 1 -")
         ]
       ]
     })

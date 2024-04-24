@@ -1,5 +1,5 @@
 #import "../../../common/theme/type.typ": 字体, 字号
-#import "../utils/counters.typ": cover_end_before_counter, cover_end_after_counter
+#import "../utils/states.typ": cover_header_active, cover_footer_active, perface_header_active
 
 #let cover(
   title: "",
@@ -11,6 +11,8 @@
   reply_data: "",
   institute: "",
 ) = {
+  cover_footer_active.update(true)
+
   align(center)[
 
     #let space_scale_ratio = 1.6
@@ -81,8 +83,9 @@
     )
   ]
 
-  cover_end_before_counter.update(1)
+  cover_header_active.update(false)
+  perface_header_active.update(true)
   pagebreak()
-  cover_end_after_counter.update(1)
+  cover_footer_active.update(false)
   counter(page).update(1)
 }

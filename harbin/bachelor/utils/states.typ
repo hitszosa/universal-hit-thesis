@@ -1,0 +1,6 @@
+#let cover_header_active = state("cover_header_active", true)
+#let cover_footer_active = state("cover_footer_active", false)
+#let perface_header_active = state("perface_header_active", false)
+#let perface_footer_active = state("perface_footer_active", false)
+#let body_header_active = state("body_header_active", false)
+#let body_footer_active = state("body_footer_active", false)

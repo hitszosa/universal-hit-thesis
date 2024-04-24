@@ -1,11 +1,14 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../../../common/components/typography.typ": no_numbering_chapter_title
 #import "../config/constants.typ": special_chapter_titles
+#import "../utils/states.typ": perface_footer_active
 
 #let abstract_cn(
   content,
   keywords: (),
 ) = {
+  perface_footer_active.update(true)
+
   set par(
     first-line-indent: 2em,
     justify: true,
