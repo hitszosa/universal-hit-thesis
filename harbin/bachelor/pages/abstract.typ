@@ -1,17 +1,21 @@
-#import "../theme/type.typ": *
+#import "../../../common/theme/type.typ": 字体, 字号
+#import "../../../common/components/typography.typ": no_numbering_chapter_title
+#import "../config/constants.typ": special_chapter_titles
+#import "../utils/states.typ": perface_footer_active
 
 #let abstract_cn(
   content,
-  keywords: ()
+  keywords: (),
 ) = {
+  perface_footer_active.update(true)
 
   set par(
-    first-line-indent: 2em, 
-    justify: true, 
-    leading: 1em
+    first-line-indent: 2em,
+    justify: true,
+    leading: 1em,
   )
 
-  heading(level: 2, "摘 要")
+  no_numbering_chapter_title(title: special_chapter_titles.摘要)
 
   text(
     font: 字体.宋体,
@@ -22,7 +26,6 @@
     set par(first-line-indent: 0em)
     text(font: 字体.黑体)[关键词：]
     text(font: 字体.宋体)[#content.join("，")]
-    
   }
 
   abstract_key_words(keywords)
@@ -32,16 +35,15 @@
 
 #let abstract_en(
   content,
-  keywords: ()
+  keywords: (),
 ) = {
-
   set par(
-    first-line-indent: 2em, 
-    justify: true, 
-    leading: 1em
+    first-line-indent: 2em,
+    justify: true,
+    leading: 1em,
   )
 
-  heading(level: 2, "Abstract")
+  no_numbering_chapter_title(title: special_chapter_titles.Abstract)
 
   text(
     font: 字体.宋体,
@@ -51,9 +53,8 @@
   let abstract_key_words(content) = {
     set par(first-line-indent: 0em)
 
-    text(font: 字体.宋体, "Keywords:  ")
+    text(font: 字体.宋体, weight: "bold", "Keywords:  ")
     text(font: 字体.宋体)[#content.join("，")]
-    
   }
 
   abstract_key_words(keywords)
