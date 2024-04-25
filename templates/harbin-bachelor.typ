@@ -60,7 +60,7 @@
 
 === 气体润滑轴承的发展
 
-1828年，*R.R.Willis* $" "^[3]$ 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
+1828年，*R.R.Willis* @林来兴1992空间控制技术 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
 
 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式：
 
@@ -239,23 +239,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #no_numbering_chapter_title(title: special_chapter_titles.参考文献)
 
-［1］林来兴. 空间控制技术［M］. 北京：中国宇航出版社，1992：25-42.
-
-［2］辛希孟. 信息技术与信息服务国际研讨会论文集：A集［C］. 北京：中
-国科学出版社，1999：45-49.
-
-［3］赵耀东. 新时代的工业工程师［M/OL］. 台北：天下文化出版社，1998 ［1998-09-26］. http://www.ie.nthu.edu.tw/info/ie.newie.htm（Big5）.
-
-……
-
-［12］谌颖. 空间交会控制理论与方法研究［D］. 哈尔滨：哈尔滨工业大学，1992：8-13.
-
-［13］ KANAMORI H. Shaking without quaking［J］. Science, 1998，279（5359）：2063-2064.
-
-……
-
-［104］CHRISTINE M. Plant Physiology: Plant Biology in the Genome Era［J/OL］. Science，1998，281：331-332［1998-09-23］. http://www. sciencemag. org/cgi/ collection/anatmorp.
-……
+#bibliography("harbin-bachelor-ref.bib", title: none, full: true)
 
 #pagebreak()
 
@@ -263,28 +247,27 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 一、发表的学术论文
 
-［1］ ×××，×××. Static Oxidation Model of Al-Mg/C Dissipation Thermal Protection Materials［J］. Rare Metal Materials and Engineering, 2010, 39(Suppl. 1): 520-524.（SCI收录，IDS号为669JS）
+[1] ×××，×××. Static Oxidation Model of Al-Mg/C Dissipation Thermal Protection Materials［J］. Rare Metal Materials and Engineering, 2010, 39(Suppl. 1): 520-524.（SCI收录，IDS号为669JS）
 
-［2］ ×××，×××. 精密超声振动切削单晶铜的计算机仿真研究［J］. 系统仿真学报，2007，19（4）：738-741，753.（EI收录号：20071310514841）
+[2] ×××，×××. 精密超声振动切削单晶铜的计算机仿真研究［J］. 系统仿真学报，2007，19（4）：738-741，753.（EI收录号：20071310514841）
 
-［3］ ×××，×××. 局部多孔质气体静压轴向轴承静态特性的数值求解
-［J］. 摩擦学学报，2007（1）：68-72.（EI收录号：20071510544816）
+[3] ×××，×××. 局部多孔质气体静压轴向轴承静态特性的数值求解［J］. 摩擦学学报，2007（1）：68-72.（EI收录号：20071510544816）
 
-［4］ ×××，×××. 硬脆光学晶体材料超精密切削理论研究综述［J］. 机械工程学报，2003，39（8）：15-22.（EI收录号：2004088028875）
+[4] ×××，×××. 硬脆光学晶体材料超精密切削理论研究综述［J］. 机械工程学报，2003，39（8）：15-22.（EI收录号：2004088028875）
 
-［5］ ×××，×××. 基于遗传算法的超精密切削加工表面粗糙度预测模型的参数辨识以及切削参数优化［J］. 机械工程学报，2005，41（11）：158-162.（EI收录号：2006039650087）
+[5] ×××，×××. 基于遗传算法的超精密切削加工表面粗糙度预测模型的参数辨识以及切削参数优化［J］. 机械工程学报，2005，41（11）：158-162.（EI收录号：2006039650087）
 
-［6］ ×××，×××. Discrete Sliding Mode Cintrok with Fuzzy Adaptive Reaching Law on 6-PEES Parallel Robot［C］. Intelligent System Design and Applications, Jinan, 2006: 649-652.（EI收录号：20073210746529）
+[6] ×××，×××. Discrete Sliding Mode Cintrok with Fuzzy Adaptive Reaching Law on 6-PEES Parallel Robot［C］. Intelligent System Design and Applications, Jinan, 2006: 649-652.（EI收录号：20073210746529）
 
 二、申请及已获得的专利（无专利时此项不必列出）
 
-［1］ ×××，×××. 一种温热外敷药制备方案：中国，88105607.3［P］. 1989-07-26.
+[1] ×××，×××. 一种温热外敷药制备方案：中国，88105607.3［P］. 1989-07-26.
 
 三、参与的科研项目及获奖情况
 
-［1］ ×××，×××. ××气体静压轴承技术研究, ××省自然科学基金项目.课题编号：××××.
+[1] ×××，×××. ××气体静压轴承技术研究, ××省自然科学基金项目.课题编号：××××.
 
-［2］ ×××，×××. ××静载下预应力混凝土房屋结构设计统一理论. 黑江省科学技术二等奖, 2007.
+[2] ×××，×××. ××静载下预应力混凝土房屋结构设计统一理论. 黑江省科学技术二等奖, 2007.
 
 #pagebreak()
 
