@@ -1,5 +1,4 @@
 #import "../../../common/theme/type.typ": 字体, 字号
-#import "../utils/states.typ": cover_header_active, cover_footer_active, perface_header_active
 
 #let cover_primary(
   title_cn: "",
@@ -142,8 +141,7 @@
   reply_date: "",
   institute: "",
 ) = {
-  cover_footer_active.update(true)
-
+  // cover_footer_active.update(true)
   cover_primary(
     title_cn: title_cn,
     title_en: title_en,
@@ -168,10 +166,4 @@
     reply_date: reply_date,
     institute: institute,
   )
-
-  cover_header_active.update(false)
-  perface_header_active.update(true)
-  pagebreak()
-  cover_footer_active.update(false)
-  counter(page).update(1)
 }

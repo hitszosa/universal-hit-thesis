@@ -1,6 +1,5 @@
 #import "../config/constants.typ": special_chapter_titles
 #import "../../../common/theme/type.typ": 字体, 字号
-#import "../../../common/components/typography.typ": no_numbering_chapter_title
 
 #let declaration_of_originality(
   title: " ",
@@ -13,7 +12,7 @@
     ]
   ]
 
-  no_numbering_chapter_title(title: special_chapter_titles.原创性声明)
+  heading(special_chapter_titles.原创性声明, level: 1, numbering: none)
 
   align(center)[
     #text(font: 字体.黑体, size: 字号.小三)[
@@ -100,6 +99,4 @@
       #text[日期：#h(4em) 年 #h(2em) 月 #h(2em) 日]
     ],
   )
-
-  pagebreak()
 }

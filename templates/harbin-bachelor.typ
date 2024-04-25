@@ -1,12 +1,11 @@
 #import "../lib.typ": harbin_bachelor
 #import harbin_bachelor: *
 #import "../common/components/table.typ": three_line_table
-#import "../common/components/typography.typ": no_numbering_chapter_title
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
 // 编译命令  typst compile ./templates/harbin-bachelor.typ --root ./
 
-#show: doc => conf(doc)
+#show: doc
 
 #cover(
   title_cn: "局部多孔质气体静压轴承关键技术的研究",
@@ -20,6 +19,8 @@
   institute: "哈尔滨工业大学",
 )
 
+#show: preface
+
 #abstract_cn(keywords: ("多孔质石墨", "……", "稳定性"))[
 
   气体静压轴承由于具有运动精度高、摩擦损耗小、发热变形小、寿命长、无污染等特点，在航空航天工业、半导体工业、纺织工业和测量仪器中得到广泛应用。本文在分析国内外气体静压轴承的基础上，以改善气体静压轴承的静态特性和稳定性为目的，通过理论分析、仿真计算和实验研究对局部多孔质气体静压止推轴承进行了研究，同时分析轴承的结构参数和工作参数对局部多孔质气体静压止推轴承工作特性的影响，为局部多孔质气体静压轴承的设计和工程应用奠定理论基础。
@@ -32,6 +33,8 @@
 
 ]
 
+#pagebreak()
+
 #abstract_en(keywords: ("porous graphite", "…", "Stability"))[
 
   Externally pressurized gas bearing has been widely used in the field of aviation, semiconductor, weave, and measurement apparatus because of its advantage of high accuracy, little friction, low heat distortion, long life-span, and no pollution. In this thesis, based on the domestic and overseas researching development about externally pressurized gas bearing, the author investigated the partial porous externally pressurized gas thrust bearing by theoretical analysis, computer simulation, and experiments to improve its static charaterictics and stability. The effects of structure and operating parameters on partial porous externally pressurized gas bearing has been studied. Therefore, a theoretical foundation for the designing and application for the partial porous externally pressurized gas bearing has been presented.
@@ -42,7 +45,11 @@
 
 ]
 
+#pagebreak()
+
 #outline_page()
+
+#show: main
 
 = 绪 论
 
@@ -239,41 +246,49 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #pagebreak()
 
-#no_numbering_chapter_title(title: special_chapter_titles.参考文献)
+#show: ending
 
-#bibliography("harbin-bachelor-ref.bib", title: none, full: true)
+#bibliography_page(bibliography.with("harbin-bachelor-ref.bib", full: true))
 
 #pagebreak()
 
-#no_numbering_chapter_title(title: special_chapter_titles.成果)
+#achievement[
+  #par(first-line-indent: 0em)[
+    *一、发表的学术论文*
+  ]
 
-一、发表的学术论文
+  [1] ×××，×××. Static Oxidation Model of Al-Mg/C Dissipation Thermal Protection Materials［J］. Rare Metal Materials and Engineering, 2010, 39(Suppl. 1): 520-524.（SCI收录，IDS号为669JS）
 
-[1] ×××，×××. Static Oxidation Model of Al-Mg/C Dissipation Thermal Protection Materials［J］. Rare Metal Materials and Engineering, 2010, 39(Suppl. 1): 520-524.（SCI收录，IDS号为669JS）
+  [2] ×××，×××. 精密超声振动切削单晶铜的计算机仿真研究［J］. 系统仿真学报，2007，19（4）：738-741，753.（EI收录号：20071310514841）
 
-[2] ×××，×××. 精密超声振动切削单晶铜的计算机仿真研究［J］. 系统仿真学报，2007，19（4）：738-741，753.（EI收录号：20071310514841）
+  [3] ×××，×××. 局部多孔质气体静压轴向轴承静态特性的数值求解［J］. 摩擦学学报，2007（1）：68-72.（EI收录号：20071510544816）
 
-[3] ×××，×××. 局部多孔质气体静压轴向轴承静态特性的数值求解［J］. 摩擦学学报，2007（1）：68-72.（EI收录号：20071510544816）
+  [4] ×××，×××. 硬脆光学晶体材料超精密切削理论研究综述［J］. 机械工程学报，2003，39（8）：15-22.（EI收录号：2004088028875）
 
-[4] ×××，×××. 硬脆光学晶体材料超精密切削理论研究综述［J］. 机械工程学报，2003，39（8）：15-22.（EI收录号：2004088028875）
+  [5] ×××，×××. 基于遗传算法的超精密切削加工表面粗糙度预测模型的参数辨识以及切削参数优化［J］. 机械工程学报，2005，41（11）：158-162.（EI收录号：2006039650087）
 
-[5] ×××，×××. 基于遗传算法的超精密切削加工表面粗糙度预测模型的参数辨识以及切削参数优化［J］. 机械工程学报，2005，41（11）：158-162.（EI收录号：2006039650087）
+  [6] ×××，×××. Discrete Sliding Mode Cintrok with Fuzzy Adaptive Reaching Law on 6-PEES Parallel Robot［C］. Intelligent System Design and Applications, Jinan, 2006: 649-652.（EI收录号：20073210746529）
 
-[6] ×××，×××. Discrete Sliding Mode Cintrok with Fuzzy Adaptive Reaching Law on 6-PEES Parallel Robot［C］. Intelligent System Design and Applications, Jinan, 2006: 649-652.（EI收录号：20073210746529）
+  #par(first-line-indent: 0em)[
+    *二、申请及已获得的专利（无专利时此项不必列出）*
+  ]
 
-二、申请及已获得的专利（无专利时此项不必列出）
+  [1] ×××，×××. 一种温热外敷药制备方案：中国，88105607.3［P］. 1989-07-26.
 
-[1] ×××，×××. 一种温热外敷药制备方案：中国，88105607.3［P］. 1989-07-26.
+  #par(first-line-indent: 0em)[
+    *三、参与的科研项目及获奖情况*
+  ]
 
-三、参与的科研项目及获奖情况
+  [1] ×××，×××. ××气体静压轴承技术研究, ××省自然科学基金项目.课题编号：××××.
 
-[1] ×××，×××. ××气体静压轴承技术研究, ××省自然科学基金项目.课题编号：××××.
-
-[2] ×××，×××. ××静载下预应力混凝土房屋结构设计统一理论. 黑江省科学技术二等奖, 2007.
+  [2] ×××，×××. ××静载下预应力混凝土房屋结构设计统一理论. 黑江省科学技术二等奖, 2007.
+]
 
 #pagebreak()
 
 #declaration_of_originality(title: "                                                             ")
+
+#pagebreak()
 
 #acknowledgement[
   衷心感谢导师×××教授对本人的精心指导。他的言传身教将使我终身受益。
