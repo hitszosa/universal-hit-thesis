@@ -1,6 +1,5 @@
 #import "../lib.typ": harbin_bachelor
 #import harbin_bachelor: *
-#import "../common/components/table.typ": three_line_table
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
 // 编译命令  typst compile ./templates/harbin-bachelor.typ --root ./
@@ -80,7 +79,7 @@
 
 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
 
-（1）气体静压轴承 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @气体润滑轴承的分类1 (a) 所示。……
+（1）气体静压轴承 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @fig:气体润滑轴承的分类1 (a) 所示。……
 
 #figure(
   grid(
@@ -98,7 +97,6 @@
     [ #align(left)[(d)] #square(size: 8em, stroke: 2pt) ],
   ),
   caption: [气体润滑轴承的分类],
-  kind: "image",
   supplement: [图],
 )<气体润滑轴承的分类1>
 
@@ -119,9 +117,10 @@
     ),
     // image("path/to/image.png", width: 50%),
     caption: [气体润滑轴承的分类],
-    kind: "image",
     supplement: [图],
 )<气体润滑轴承的分类2>
+
+#indent （图表之后手动缩进）
 
 === 多孔质气体静压轴承的研究
 
@@ -154,7 +153,7 @@
 
 == 问题的提出
 
-本文采用……，则每一个方向上的……由公式 @formula-1 @formula-2
+本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2
 
 $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
@@ -183,43 +182,75 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 ……
 
-1号试样的试验数据见 @1号试样的实验数据。
+1号试样的试验数据见 @tbl:1号试样的实验数据。
 
 #figure(
-  three_line_table(
-    (
-      "供气压力 Ps (MPa)",
-      "流量测量 M′(m3/h) ",
-      "流量修正值M (m3/s) ×10-4",
-      "压力差 ΔP (Pa) ",
-      "lgΔP",
-      "lg M",
-    ),
-    ("0.15", "0.009", "0.023 12", "46 900", "4.671 17", "-5.636 01"),
-    ("0.2", "0.021", "0.045 84", "96 900", "4.986 32", "-5.338 76"),
+  table(
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+    stroke: none,
+    align: center + horizon,
+    table.hline(),
+    [供气压力 #linebreak() $P_s ("MPa")$],
+    [流量测量 #linebreak() $M prime (m^3\/h)$ ],
+    [#v(.5em) 流量修正值 #linebreak() #v(.5em)
+    $M (m_3\/s) \ times 10^(-4)$ #v(.25em)],
+    [压力差 #linebreak() $Delta P ("Pa")$ ],
+    [$lg Delta P$],
+    [$lg M$],
+    table.hline(stroke: .5pt),
+    // ---
+    [0.15],
+    [0.009],
+    [0.023 12],
+    [46 900],
+    [4.671 17],
+    [-5.636 01],
+    // ---
+    [0.2],
+    [0.021],
+    [0.045 84],
+    [96 900],
+    [4.986 32],
+    [-5.338 76],
+    table.hline(),
   ),
   caption: [1号试样渗透率测试数据(温度：T=16 ℃ 高度：H=5.31 mm)],
-  kind: "table",
   supplement: [表],
 )<1号试样的实验数据>
 
 #linebreak()
 
 #figure(
-  three_line_table(
-    (
-      "供气压力 Ps (MPa)",
-      "流量测量 M′(m3/h) ",
-      "流量修正值M (m3/s) ×10-4",
-      "压力差 ΔP (Pa) ",
-      "lgΔP",
-      "lg M",
-    ),
-    ("0.15", "0.009", "0.023 12", "46 900", "4.671 17", "-5.636 01"),
-    ("0.2", "0.021", "0.045 84", "96 900", "4.986 32", "-5.338 76"),
+  table(
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+    stroke: none,
+    align: center + horizon,
+    table.hline(),
+    [供气压力 #linebreak() $P_s ("MPa")$],
+    [流量测量 #linebreak()$M prime (m^3\/h)$ ],
+    [#v(.5em) 流量修正值 #linebreak() #v(.5em)
+    $M (m_3\/s) \ times 10^(-4)$ #v(.25em) ],
+    [压力差 #linebreak() $Delta P ("Pa")$ ],
+    [$lg Delta P$],
+    [$lg M$],
+    table.hline(stroke: .5pt),
+    // ---
+    [0.15],
+    [0.009],
+    [0.023 12],
+    [46 900],
+    [4.671 17],
+    [-5.636 01],
+    // ---
+    [0.2],
+    [0.021],
+    [0.045 84],
+    [96 900],
+    [4.986 32],
+    [-5.338 76],
+    table.hline(),
   ),
   caption: [试样渗透率测试数据],
-  kind: "table",
   supplement: [表],
 )<试样渗透率测试数据>
 

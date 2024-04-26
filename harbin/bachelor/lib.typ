@@ -7,3 +7,4 @@
 #import "pages/achievement.typ": achievement
 #import "config/constants.typ": special_chapter_titles
 #import "pages/declaration-of-originality.typ": declaration_of_originality
+#import "../../common/components/typography.typ": indent

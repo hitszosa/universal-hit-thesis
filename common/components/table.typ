@@ -1,3 +1,16 @@
+/* 
+旧版三线表已弃用，推荐使用新版原生写法
+#table(
+  columns: (1fr, 1fr, 1fr, 1fr),
+  stroke: none,
+  table.hline(),
+  [t], [1], [2], [3],
+  table.hline(stroke: .5pt),
+  [y], [0.3s], [0.4s], [0.8s],
+  table.hline(),
+)
+*/
+
 #let three_line_table(..args) = {
   let values = args.pos()
   let header_values = if values.len() > 0 {
