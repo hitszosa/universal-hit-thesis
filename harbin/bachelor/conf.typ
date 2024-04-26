@@ -3,6 +3,7 @@
 #import "utils/numbering.typ": heading_numbering
 #import "config/constants.typ": special_chapter_titles
 #import "@preview/cuti:0.2.1": show-cn-fakebold
+#import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 
 #let doc(content) = {
   set page(
@@ -30,7 +31,14 @@
     ]
   })
 
-  set page(numbering: "- I -")
+  set page(numbering: "I")
+
+  set page(footer: context [
+    #align(center)[
+      #counter(page).display("- I -")
+    ]
+  ])
+
   counter(page).update(1)
 
 
@@ -46,6 +54,9 @@
     }
   }
 
+  show heading: reset-counters
+  show figure: show-figure.with(numbering: "1-1")
+
 
   set par(first-line-indent: 2em, leading: 1em, justify: true)
 
@@ -55,7 +66,14 @@
 }
 
 #let main(content) = {
-  set page(numbering: "- 1 -")
+  set page(numbering: "1")
+
+  set page(footer: context [
+    #align(center)[
+      #counter(page).display("- 1 -")
+    ]
+  ])
+
   counter(page).update(1)
 
   set heading(numbering: heading_numbering)
@@ -74,7 +92,7 @@
     }
   }
 
-  show figure.where(kind: "table"): set figure.caption(position: top)
+  show figure.where(kind: table): set figure.caption(position: top)
 
   show raw.where(block: false): box.with(
     fill: luma(240),
@@ -98,7 +116,7 @@
     size: 10.5pt,
   )
 
-  set math.equation(numbering: "(1)")
+  show math.equation: show-equation
 
   show ref: it => {
     let eq = math.equation
