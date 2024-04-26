@@ -30,7 +30,14 @@
     ]
   })
 
-  set page(numbering: "- I -")
+  set page(numbering: "I")
+
+  set page(footer: context [
+    #align(center)[
+      #counter(page).display("- I -")
+    ]
+  ])
+
   counter(page).update(1)
 
 
@@ -55,7 +62,14 @@
 }
 
 #let main(content) = {
-  set page(numbering: "- 1 -")
+  set page(numbering: "1")
+
+  set page(footer: context [
+    #align(center)[
+      #counter(page).display("- 1 -")
+    ]
+  ])
+
   counter(page).update(1)
 
   set heading(numbering: heading_numbering)
