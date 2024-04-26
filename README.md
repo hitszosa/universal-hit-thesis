@@ -2,6 +2,8 @@
 
 适用于哈尔滨工业大学学位论文的 Typst 模板
 
+![hit-thesis-typst-cover](https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20240426-HIT-Thesis-Typst/hit-thesis-typst-development-cover.jpg)
+
 > [!WARNING]
 > 本模板正处于积极开发阶段，存在一些格式问题，适合尝鲜 Typst 特性
 > 
