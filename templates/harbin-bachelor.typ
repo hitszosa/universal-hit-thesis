@@ -4,6 +4,7 @@
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
 // 编译命令  typst compile ./templates/harbin-bachelor.typ --root ./
+// 实时预览  typst watch ./templates/harbin-bachelor.typ --root ./
 
 #show: doc
 
@@ -15,8 +16,10 @@
   mentor: "▢▢▢ 教授",
   profession: "机械制造及其自动化",
   collage: "机电工程学院",
-  reply_date: "2022年6月",
   institute: "哈尔滨工业大学",
+  // year: 2024,
+  // month: 5,
+  // day: 1,
 )
 
 #show: preface

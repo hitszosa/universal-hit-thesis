@@ -1,4 +1,5 @@
 #import "../../../common/theme/type.typ": 字体, 字号
+#import "../config/constants.typ": current_date
 
 #let cover_primary(
   title_cn: "",
@@ -10,6 +11,9 @@
   collage: "",
   reply_date: "",
   institute: "",
+  year: current_date.year(),
+  month: current_date.month(),
+  day: current_date.day(),
 ) = {
   align(center)[
 
@@ -42,9 +46,11 @@
     #v(字号.小四 * 6 * space_scale_ratio)
 
     #align(center)[
-      #text(size: 字号.小二, font: 字体.楷体, weight: "bold")[哈尔滨工业大学]
+      #text(size: 字号.小二, font: 字体.楷体, weight: "bold")[#institute]
 
-      #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[2022年6月]
+      #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[
+        #[#year]年#[#month]月
+      ]
     ]
   ]
 }
@@ -56,8 +62,10 @@
   mentor: "",
   profession: "",
   collage: "",
-  reply_date: "",
   institute: "",
+  year: current_date.year(),
+  month: current_date.month(),
+  day: current_date.day(),
 ) = {
   align(center)[
 
@@ -122,7 +130,7 @@
       cover_info_value(collage),
       cover_info_key(text(spacing: 0.5em)[答 辩 日 期]),
       cover_info_colon[：],
-      cover_info_value(reply_date),
+      cover_info_value([#[#year]年#[#month]月]),
       cover_info_key(text(spacing: (key_width - 2em))[学 校]),
       cover_info_colon[：],
       cover_info_value(institute),
@@ -138,8 +146,10 @@
   mentor: "",
   profession: "",
   collage: "",
-  reply_date: "",
   institute: "",
+  year: current_date.year(),
+  month: current_date.month(),
+  day: current_date.day(),
 ) = {
   // cover_footer_active.update(true)
   cover_primary(
@@ -150,8 +160,10 @@
     mentor: mentor,
     profession: profession,
     collage: collage,
-    reply_date: reply_date,
     institute: institute,
+    year: year,
+    month: month,
+    day: day,
   )
 
   pagebreak()
@@ -163,7 +175,9 @@
     mentor: mentor,
     profession: profession,
     collage: collage,
-    reply_date: reply_date,
     institute: institute,
+    year: year,
+    month: month,
+    day: day,
   )
 }

@@ -8,3 +8,5 @@
   致谢: "致 谢",
   成果: "攻读学士学位期间取得创新性成果",
 )
+
+#let current_date = datetime.today()
