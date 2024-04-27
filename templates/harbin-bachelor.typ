@@ -282,7 +282,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #show: ending
 
-#bibliography_page(bibliography.with("harbin-bachelor-ref.bib", full: true, style: "chinese-gb7714-2005-numeric.csl"))
+#bibliography_page(bibliography.with("harbin-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"))
 
 #pagebreak()
 
