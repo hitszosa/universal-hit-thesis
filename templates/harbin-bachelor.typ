@@ -51,7 +51,12 @@
 
 #outline_page()
 
-#show: main
+#show: main.with(
+  // extra-kinds, extra-prefixes 表示需要执行计数器重置和引用的图表类型
+  // 参考 https://github.com/RubixDev/typst-i-figured/blob/main/examples/basic.typ
+  // 示例：extra-kinds: ("atom",), extra-prefixes: (atom: "atom:")，即新建一个 atom 类型，并使用 @atom: 来引用
+  extra-kinds: (), extra-prefixes: (:),
+)
 
 = 绪 论
 

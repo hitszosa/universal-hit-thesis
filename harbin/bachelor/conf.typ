@@ -54,9 +54,6 @@
     }
   }
 
-  show heading: reset-counters
-  show figure: show-figure.with(numbering: "1-1")
-
 
   set par(first-line-indent: 2em, leading: 1em, justify: true)
 
@@ -65,7 +62,11 @@
   content
 }
 
-#let main(content) = {
+#let main(
+  content,
+  extra-kinds: (),
+  extra-prefixes: (:),
+) = {
   set page(numbering: "1")
 
   set page(footer: context [
@@ -92,6 +93,8 @@
     }
   }
 
+  show heading: reset-counters.with(extra-kinds: extra-kinds)
+  show figure: show-figure.with(numbering: "1-1", extra-prefixes: extra-prefixes)
   show figure.where(kind: table): set figure.caption(position: top)
 
   show raw.where(block: false): box.with(
