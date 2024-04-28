@@ -285,6 +285,56 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 = 其他 Typst 使用示例
 
+== 图表
+
+使用 `@fig:` 来引用图片： @fig:square
+
+#figure(
+  square(size: 8em, stroke: 2pt),
+  caption: [A curious figure.],
+  supplement: [图],
+) <square>
+
+#indent 图表之后默认不缩进，如需缩进，可以手动调用 `#indent` 实现缩进。
+
+#figure(
+  table(
+    columns: 4,
+    [t],
+    [1],
+    [2],
+    [3],
+    [y],
+    [0.3s],
+    [0.4s],
+    [0.8s],
+  ),
+  caption: [Timing results],
+  supplement: [表],
+) <time-results>
+
+#figure(
+  table(
+    columns: 4,
+    stroke: none,
+    table.hline(),
+    [t],
+    [1],
+    [2],
+    [3],
+    table.hline(stroke: .5pt),
+    [y],
+    [0.3s],
+    [0.4s],
+    [0.8s],
+    table.hline(),
+  ),
+  caption: [Timing results（三线表）],
+  supplement: [表],
+) <time-results-three-line-table>
+
+使用 `@tbl:` 来引用表格： @tbl:time-results @tbl:time-results-three-line-table
+
 == 算法
 
 #[
@@ -293,7 +343,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
-  可以像这样引用算法 @algo:XXX算法
+  使用 `@algo` 来引用算法： @algo:XXX算法
 
   #algorithm_figure(
     algorithm({
@@ -335,8 +385,6 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     supplement: [算法],
     label-name: "XXX算法",
   )
-
-  #indent 图表之后默认不缩进，如需缩进，可以手动调用 `#indent` 实现缩进。
 ]
 
 == 代码块
@@ -356,7 +404,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     label-name: "XXX代码",
   )
 
-  #indent 可以像这样引用算法 @lst:XXX代码
+  #indent 与 Markdown 类似，代码可以高亮显示，使用 `@lst:` 来引用代码块： @lst:XXX代码
 ]
 
 #pagebreak()
