@@ -125,8 +125,6 @@
     supplement: [图],
 )<气体润滑轴承的分类2>
 
-#indent （图表之后手动缩进）
-
 === 多孔质气体静压轴承的研究
 
 由于气体的压力低和可压缩性，……。
@@ -282,6 +280,84 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 1. 本文仅是采用了局部多孔质圆柱塞这种节流方式，在以后的研究中，可以通过改变局部多孔质材料的形状来改变节流方式，从而通过性能对比，获得最优的节流效果。
 
 ……
+
+#pagebreak()
+
+= 其他 Typst 使用示例
+
+== 算法
+
+#[
+
+  #import "../common/components/figure.typ": algorithm_figure
+  #import "@preview/algorithmic:0.1.0"
+  #import algorithmic: algorithm
+
+  可以像这样引用算法 @algo:XXX算法
+
+  #algorithm_figure(
+    algorithm({
+      import algorithmic: *
+      Function(
+        "Binary-Search",
+        args: ("A", "n", "v"),
+        {
+          Cmt[Initialize the search range]
+          Assign[$l$][$1$]
+          Assign[$r$][$n$]
+          State[]
+          While(
+            cond: $l <= r$,
+            {
+              Assign([mid], FnI[floor][$(l + r) / 2$])
+              If(
+                cond: $A ["mid"] < v$,
+                {
+                  Assign[$l$][$m + 1$]
+                },
+              )
+              ElsIf(
+                cond: [$A ["mid"] > v$],
+                {
+                  Assign[$r$][$m - 1$]
+                },
+              )
+              Else({
+                Return[$m$]
+              })
+            },
+          )
+          Return[*null*]
+        },
+      )
+    }),
+    caption: [XXX算法],
+    supplement: [算法],
+    label-name: "XXX算法",
+  )
+
+  #indent 图表之后默认不缩进，如需缩进，可以手动调用 `#indent` 实现缩进。
+]
+
+== 代码块
+
+#[
+
+  #import "../common/components/figure.typ": code-figure
+
+  #code-figure(
+    ```rs
+    fn main() {
+        println!("Hello, World!");
+    }
+    ```,
+    caption: [XXX代码],
+    supplement: [代码],
+    label-name: "XXX代码",
+  )
+
+  #indent 可以像这样引用算法 @lst:XXX代码
+]
 
 #pagebreak()
 
