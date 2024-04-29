@@ -120,7 +120,7 @@
     size: 10.5pt,
   )
 
-  show math.equation: show-equation
+  show math.equation: show-equation.with(numbering: "(1-1)")
 
   show ref: it => {
     let eq = math.equation

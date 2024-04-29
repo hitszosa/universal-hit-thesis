@@ -156,7 +156,7 @@
 
 == 问题的提出
 
-本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2
+本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
 
 $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
