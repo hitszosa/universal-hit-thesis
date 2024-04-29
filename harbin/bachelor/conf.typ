@@ -96,6 +96,7 @@
   show heading: reset-counters.with(extra-kinds: ("algorithm",) + extra-kinds)
   show figure: show-figure.with(numbering: "1-1", extra-prefixes: ("algorithm": "algo:") + extra-prefixes)
   show figure.where(kind: table): set figure.caption(position: top)
+  show figure.where(kind: raw): set figure.caption(position: top)
   show figure.where(kind: "algorithm"): set figure.caption(position: top)
 
   show raw.where(block: false): box.with(
