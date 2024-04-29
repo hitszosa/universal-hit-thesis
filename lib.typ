@@ -1,1 +1,1 @@
-#import "harbin/bachelor/lib.typ" as harbin_bachelor
+#import "harbin/bachelor/lib.typ" as harbin-bachelor

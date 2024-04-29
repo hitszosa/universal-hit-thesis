@@ -1,7 +1,7 @@
 #import "../../common/theme/type.typ": 字体, 字号
-#import "components/typography.typ": main_format_heading, special_chapter_format_heading
-#import "utils/numbering.typ": heading_numbering
-#import "config/constants.typ": special_chapter_titles
+#import "components/typography.typ": main-format-heading, special-chapter-format-heading
+#import "utils/numbering.typ": heading-numbering
+#import "config/constants.typ": special-chapter-titles
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 
@@ -47,7 +47,7 @@
 
     if it.level == 1 {
       align(center)[
-        #special_chapter_format_heading(it: it, font: 字体.黑体, size: 字号.小二)
+        #special-chapter-format-heading(it: it, font: 字体.黑体, size: 字号.小二)
       ]
     } else {
       it
@@ -77,19 +77,19 @@
 
   counter(page).update(1)
 
-  set heading(numbering: heading_numbering)
+  set heading(numbering: heading-numbering)
 
   show heading: it => {
     set par(first-line-indent: 0em)
 
     if it.level == 1 {
       align(center)[
-        #main_format_heading(it: it, font: 字体.黑体, size: 字号.小二)
+        #main-format-heading(it: it, font: 字体.黑体, size: 字号.小二)
       ]
     } else if it.level == 2 {
-      main_format_heading(it: it, font: 字体.黑体, size: 字号.小三)
+      main-format-heading(it: it, font: 字体.黑体, size: 字号.小三)
     } else if it.level >= 3 {
-      main_format_heading(it: it, font: 字体.黑体, size: 字号.小四)
+      main-format-heading(it: it, font: 字体.黑体, size: 字号.小四)
     }
   }
 
@@ -146,7 +146,7 @@
 
     if it.level == 1 {
       align(center)[
-        #special_chapter_format_heading(it: it, font: 字体.黑体, size: 字号.小二)
+        #special-chapter-format-heading(it: it, font: 字体.黑体, size: 字号.小二)
       ]
     } else {
       it

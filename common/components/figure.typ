@@ -1,4 +1,4 @@
-#let algorithm_figure(content, caption: [], supplement: [算法], label-name: "") = {
+#let algorithm-figure(content, caption: [], supplement: [算法], label-name: "") = {
   let fig = figure(
     [#line(length: 100%, stroke: 0.05mm)
       #v(0.5em, weak: true)

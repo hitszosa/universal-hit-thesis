@@ -1,4 +1,4 @@
-#let special_chapter_titles = (
+#let special-chapter-titles = (
   摘要: "摘 要",
   Abstract: "Abstract",
   目录: "目 录",
@@ -9,4 +9,4 @@
   成果: "攻读学士学位期间取得创新性成果",
 )
 
-#let current_date = datetime.today()
+#let current-date = datetime.today()

@@ -1,49 +1,49 @@
 #import "../../../common/theme/type.typ": 字体, 字号
-#import "../config/constants.typ": current_date
+#import "../config/constants.typ": current-date
 
-#let cover_primary(
-  title_cn: "",
-  title_en: "",
-  student_name: "",
-  student_id: "",
+#let cover-primary(
+  title-cn: "",
+  title-en: "",
+  student-name: "",
+  student-id: "",
   mentor: "",
   profession: "",
   collage: "",
-  reply_date: "",
+  reply-date: "",
   institute: "",
-  year: current_date.year(),
-  month: current_date.month(),
-  day: current_date.day(),
+  year: current-date.year(),
+  month: current-date.month(),
+  day: current-date.day(),
 ) = {
   align(center)[
 
-    #let space_scale_ratio = 1.2
+    #let space-scale-ratio = 1.2
 
-    #v(字号.小四 * 3 * space_scale_ratio)
+    #v(字号.小四 * 3 * space-scale-ratio)
 
     #text(size: 字号.小一, font: 字体.宋体, weight: "bold")[*本科毕业论文（设计）*]
 
-    #v(字号.小四 * 2 * space_scale_ratio)
+    #v(字号.小四 * 2 * space-scale-ratio)
 
-    #text(size: 字号.二号, font: 字体.黑体)[#title_cn]
+    #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
-    #v(字号.小四 * 2 * space_scale_ratio)
+    #v(字号.小四 * 2 * space-scale-ratio)
 
     #par(justify: false)[
-      #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[#title_en]
+      #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[#title-en]
     ]
 
-    #v(字号.小四 * 1 * space_scale_ratio)
-    #v(字号.二号 * 2 * space_scale_ratio)
+    #v(字号.小四 * 1 * space-scale-ratio)
+    #v(字号.二号 * 2 * space-scale-ratio)
 
     #align(center)[
       #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[
-        #student_name
+        #student-name
       ]
     ]
 
-    #v(字号.小二 * 2 * space_scale_ratio)
-    #v(字号.小四 * 6 * space_scale_ratio)
+    #v(字号.小二 * 2 * space-scale-ratio)
+    #v(字号.小四 * 6 * space-scale-ratio)
 
     #align(center)[
       #text(size: 字号.小二, font: 字体.楷体, weight: "bold")[#institute]
@@ -55,108 +55,107 @@
   ]
 }
 
-#let cover_secondary(
-  title_cn: "",
-  student_name: "",
-  student_id: "",
+#let cover-secondary(
+  title-cn: "",
+  student-name: "",
+  student-id: "",
   mentor: "",
   profession: "",
   collage: "",
   institute: "",
-  year: current_date.year(),
-  month: current_date.month(),
-  day: current_date.day(),
+  year: current-date.year(),
+  month: current-date.month(),
+  day: current-date.day(),
 ) = {
   align(center)[
 
-    #let space_scale_ratio = 1.6
+    #let space-scale-ratio = 1.6
 
     #align(right)[
       #text(size: 字号.四号, font: 字体.宋体)[密级：公开]
     ]
 
-    #v(字号.小四 * 3 * space_scale_ratio)
+    #v(字号.小四 * 3 * space-scale-ratio)
 
     #text(size: 字号.小二, font: 字体.宋体)[*本科毕业论文（设计）*]
 
-    #v(字号.小四 * 2 * space_scale_ratio)
+    #v(字号.小四 * 2 * space-scale-ratio)
 
-    #text(size: 字号.二号, font: 字体.黑体)[#title_cn]
+    #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
-    #v(字号.小四 * 1 * space_scale_ratio)
+    #v(字号.小四 * 1 * space-scale-ratio)
+    cover-info-value
+    #v(字号.二号 * 3 * space-scale-ratio)
 
-    #v(字号.二号 * 3 * space_scale_ratio)
+    #v(字号.小四 * space-scale-ratio)
 
-    #v(字号.小四 * space_scale_ratio)
-
-    #let cover_info_key(content) = {
+    #let cover-info-key(content) = {
       align(right)[
         #text(size: 字号.四号, font: 字体.黑体)[#content]
       ]
     }
 
-    #let cover_info_colon(content) = {
+    #let cover-info-colon(content) = {
       align(left)[
         #text(size: 字号.四号, font: 字体.黑体)[#content]
       ]
     }
 
-    #let cover_info_value(content) = {
+    #let cover-info-value(content) = {
       align(left)[
         #text(size: 字号.四号, font: 字体.宋体)[#content]
       ]
     }
 
-    #let key_width = 字号.四号 * (4 + 0.5 * 3)
+    #let key-width = 字号.四号 * (4 + 0.5 * 3)
 
     #grid(
       columns: (auto, 1em, auto),
       rows: (字号.四号, 字号.四号),
       row-gutter: 1.5em,
-      cover_info_key(text(spacing: (key_width - 3em) / 2)[本 科 生]),
-      cover_info_colon[：],
-      cover_info_value(student_name),
-      cover_info_key(text(spacing: (key_width - 2em))[学 号]),
-      cover_info_colon[：],
-      cover_info_value(student_id),
-      cover_info_key(text(spacing: 0.5em)[指 导 教 师]),
-      cover_info_colon[：],
-      cover_info_value(mentor),
-      cover_info_key(text(spacing: (key_width - 2em))[专 业]),
-      cover_info_colon[：],
-      cover_info_value(profession),
-      cover_info_key(text(spacing: (key_width - 2em))[学 院]),
-      cover_info_colon[：],
-      cover_info_value(collage),
-      cover_info_key(text(spacing: 0.5em)[答 辩 日 期]),
-      cover_info_colon[：],
-      cover_info_value([#[#year]年#[#month]月]),
-      cover_info_key(text(spacing: (key_width - 2em))[学 校]),
-      cover_info_colon[：],
-      cover_info_value(institute),
+      cover-info-key(text(spacing: (key-width - 3em) / 2)[本 科 生]),
+      cover-info-colon[：],
+      cover-info-value(student-name),
+      cover-info-key(text(spacing: (key-width - 2em))[学 号]),
+      cover-info-colon[：],
+      cover-info-value(student-id),
+      cover-info-key(text(spacing: 0.5em)[指 导 教 师]),
+      cover-info-colon[：],
+      cover-info-value(mentor),
+      cover-info-key(text(spacing: (key-width - 2em))[专 业]),
+      cover-info-colon[：],
+      cover-info-value(profession),
+      cover-info-key(text(spacing: (key-width - 2em))[学 院]),
+      cover-info-colon[：],
+      cover-info-value(collage),
+      cover-info-key(text(spacing: 0.5em)[答 辩 日 期]),
+      cover-info-colon[：],
+      cover-info-value([#[#year]年#[#month]月]),
+      cover-info-key(text(spacing: (key-width - 2em))[学 校]),
+      cover-info-colon[：],
+      cover-info-value(institute),
     )
   ]
 }
 
 #let cover(
-  title_cn: "",
-  title_en: "",
-  student_name: "",
-  student_id: "",
+  title-cn: "",
+  title-en: "",
+  student-name: "",
+  student-id: "",
   mentor: "",
   profession: "",
   collage: "",
   institute: "",
-  year: current_date.year(),
-  month: current_date.month(),
-  day: current_date.day(),
+  year: current-date.year(),
+  month: current-date.month(),
+  day: current-date.day(),
 ) = {
-  // cover_footer_active.update(true)
-  cover_primary(
-    title_cn: title_cn,
-    title_en: title_en,
-    student_name: student_name,
-    student_id: student_id,
+  cover-primary(
+    title-cn: title-cn,
+    title-en: title-en,
+    student-name: student-name,
+    student-id: student-id,
     mentor: mentor,
     profession: profession,
     collage: collage,
@@ -168,10 +167,10 @@
 
   pagebreak()
 
-  cover_secondary(
-    title_cn: title_cn,
-    student_name: student_name,
-    student_id: student_id,
+  cover-secondary(
+    title-cn: title-cn,
+    student-name: student-name,
+    student-id: student-id,
     mentor: mentor,
     profession: profession,
     collage: collage,
