@@ -1,9 +1,9 @@
-#let heading_numbering(..nums) = {
-  let nums_vec = nums.pos()
+#let heading-numbering(..nums) = {
+  let nums-vec = nums.pos()
 
-  if nums_vec.len() == 1 [
-    第 #numbering("1", ..nums_vec) 章
+  if nums-vec.len() == 1 [
+    第 #numbering("1", ..nums-vec) 章
   ] else {
-    numbering("1.1", ..nums_vec)
+    numbering("1.1", ..nums-vec)
   }
 }

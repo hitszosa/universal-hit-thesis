@@ -1,5 +1,5 @@
-#import "../lib.typ": harbin_bachelor
-#import harbin_bachelor: *
+#import "../lib.typ": harbin-bachelor
+#import harbin-bachelor: *
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
 // 编译命令  typst compile ./templates/harbin-bachelor.typ --root ./
@@ -8,11 +8,11 @@
 #show: doc
 
 #cover(
-  title_cn: "局部多孔质气体静压轴承关键技术的研究",
-  title_en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
-  student_name: "▢▢▢",
-  student_id: "▢▢▢▢▢▢▢▢▢▢",
-  mentor: "▢▢▢ 教授",
+  title-cn: "局部多孔质气体静压轴承关键技术的研究",
+  title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
+  author: "▢▢▢",
+  student-id: "▢▢▢▢▢▢▢▢▢▢",
+  supervisor: "▢▢▢ 教授",
   profession: "机械制造及其自动化",
   collage: "机电工程学院",
   institute: "哈尔滨工业大学",
@@ -23,7 +23,7 @@
 
 #show: preface
 
-#abstract_cn(keywords: ("多孔质石墨", "……", "稳定性"))[
+#abstract-cn(keywords: ("多孔质石墨", "……", "稳定性"))[
 
   气体静压轴承由于具有运动精度高、摩擦损耗小、发热变形小、寿命长、无污染等特点，在航空航天工业、半导体工业、纺织工业和测量仪器中得到广泛应用。本文在分析国内外气体静压轴承的基础上，以改善气体静压轴承的静态特性和稳定性为目的，通过理论分析、仿真计算和实验研究对局部多孔质气体静压止推轴承进行了研究，同时分析轴承的结构参数和工作参数对局部多孔质气体静压止推轴承工作特性的影响，为局部多孔质气体静压轴承的设计和工程应用奠定理论基础。
 
@@ -37,7 +37,7 @@
 
 #pagebreak()
 
-#abstract_en(keywords: ("porous graphite", "…", "Stability"))[
+#abstract-en(keywords: ("porous graphite", "…", "Stability"))[
 
   Externally pressurized gas bearing has been widely used in the field of aviation, semiconductor, weave, and measurement apparatus because of its advantage of high accuracy, little friction, low heat distortion, long life-span, and no pollution. In this thesis, based on the domestic and overseas researching development about externally pressurized gas bearing, the author investigated the partial porous externally pressurized gas thrust bearing by theoretical analysis, computer simulation, and experiments to improve its static charaterictics and stability. The effects of structure and operating parameters on partial porous externally pressurized gas bearing has been studied. Therefore, a theoretical foundation for the designing and application for the partial porous externally pressurized gas bearing has been presented.
 
@@ -49,7 +49,7 @@
 
 #pagebreak()
 
-#outline_page()
+#outline-page()
 
 #show: main.with(
   // extra-kinds, extra-prefixes 表示需要执行计数器重置和引用的图表类型
@@ -156,7 +156,7 @@
 
 == 问题的提出
 
-本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2
+本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
 
 $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
@@ -339,13 +339,13 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #[
 
-  #import "../common/components/figure.typ": algorithm_figure
+  #import "../common/components/figure.typ": algorithm-figure
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
   使用 `@algo` 来引用算法： @algo:XXX算法
 
-  #algorithm_figure(
+  #algorithm-figure(
     algorithm({
       import algorithmic: *
       Function(
@@ -411,7 +411,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #show: ending
 
-#bibliography_page(bibliography.with("harbin-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"))
+#bibliography-page(bibliography.with("harbin-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"))
 
 #pagebreak()
 
@@ -449,7 +449,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #pagebreak()
 
-#declaration_of_originality(title: "                                                             ")
+#declaration-of-originality(title: "                                                             ")
 
 #pagebreak()
 

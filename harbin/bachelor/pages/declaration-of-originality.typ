@@ -1,7 +1,7 @@
-#import "../config/constants.typ": special_chapter_titles
+#import "../config/constants.typ": special-chapter-titles
 #import "../../../common/theme/type.typ": 字体, 字号
 
-#let declaration_of_originality(
+#let declaration-of-originality(
   title: " ",
 ) = {
   set par(leading: 1.25em)
@@ -12,7 +12,7 @@
     ]
   ]
 
-  heading(special_chapter_titles.原创性声明, level: 1, numbering: none)
+  heading(special-chapter-titles.原创性声明, level: 1, numbering: none)
 
   align(center)[
     #text(font: 字体.黑体, size: 字号.小三)[

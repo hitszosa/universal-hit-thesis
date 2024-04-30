@@ -1,10 +1,10 @@
-#import "../config/constants.typ": special_chapter_titles
+#import "../config/constants.typ": special-chapter-titles
 
-#let bibliography_page(
+#let bibliography-page(
   bibliography,
 ) = [
 
-  #heading(special_chapter_titles.参考文献, level: 1, numbering: none)
+  #heading(special-chapter-titles.参考文献, level: 1, numbering: none)
 
   #bibliography(title: none)
 ]

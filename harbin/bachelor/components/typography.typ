@@ -1,4 +1,4 @@
- #let special_chapter_format_heading(it: none, font: none, size: none, weight: "regular") = {
+ #let special-chapter-format-heading(it: none, font: none, size: none, weight: "regular") = {
   set text(font: font, size: size)
 
   text(weight: weight)[
@@ -11,7 +11,7 @@
   v(0.5em)
 }
 
-#let main_format_heading(it: none, font: none, size: none, weight: "regular") = {
+#let main-format-heading(it: none, font: none, size: none, weight: "regular") = {
   set text(font: font, size: size)
 
   text(weight: weight)[
