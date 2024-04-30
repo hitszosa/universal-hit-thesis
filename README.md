@@ -37,10 +37,10 @@ typst watch ./templates/<template-name>.typ --root ./
 > 本模板正处于积极开发阶段，更新较为频繁，并且尚未上传至 Typst Universe，这种情况下您可能遇到更新模板较为困难的问题.
 > 
 > 如果您已经以某个版本的模板为基础开始撰写论文，又想获得后续更新，可以借助 Typst local packages 来实现，具体做法为：
-> - 在 Release 页面下载对应版本的源码压缩包，并将其解压到 `{data-dir}/typst/packages/local/hit-thesis/{version}`，`{data-dir}` 在不同操作系统下的指为：
+> - 在 Release 页面下载对应版本的源码压缩包，并将其解压到 `{data-dir}/typst/packages/local/hit-thesis/{version}`，`{data-dir}` 在不同操作系统下的值为：
 >   - `$XDG_DATA_HOME` or `~/.local/share` on Linux
 >   - `~/Library/Application` Support on macOS
->   - `%APPDATA%` on Windows
+>   - `%LOCALAPPDATA%` on Windows
 >   
 >   `{version}` 的值为 `typst.toml` 中 `version` 项的值.
 >   
