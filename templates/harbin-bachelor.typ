@@ -10,9 +10,9 @@
 #cover(
   title-cn: "局部多孔质气体静压轴承关键技术的研究",
   title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
-  student-name: "▢▢▢",
+  author: "▢▢▢",
   student-id: "▢▢▢▢▢▢▢▢▢▢",
-  mentor: "▢▢▢ 教授",
+  supervisor: "▢▢▢ 教授",
   profession: "机械制造及其自动化",
   collage: "机电工程学院",
   institute: "哈尔滨工业大学",

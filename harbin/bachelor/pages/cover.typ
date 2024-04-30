@@ -4,9 +4,9 @@
 #let cover-primary(
   title-cn: "",
   title-en: "",
-  student-name: "",
+  author: "",
   student-id: "",
-  mentor: "",
+  supervisor: "",
   profession: "",
   collage: "",
   reply-date: "",
@@ -38,7 +38,7 @@
 
     #align(center)[
       #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[
-        #student-name
+        #author
       ]
     ]
 
@@ -57,9 +57,9 @@
 
 #let cover-secondary(
   title-cn: "",
-  student-name: "",
+  author: "",
   student-id: "",
-  mentor: "",
+  supervisor: "",
   profession: "",
   collage: "",
   institute: "",
@@ -115,13 +115,13 @@
       row-gutter: 1.5em,
       cover-info-key(text(spacing: (key-width - 3em) / 2)[本 科 生]),
       cover-info-colon[：],
-      cover-info-value(student-name),
+      cover-info-value(author),
       cover-info-key(text(spacing: (key-width - 2em))[学 号]),
       cover-info-colon[：],
       cover-info-value(student-id),
       cover-info-key(text(spacing: 0.5em)[指 导 教 师]),
       cover-info-colon[：],
-      cover-info-value(mentor),
+      cover-info-value(supervisor),
       cover-info-key(text(spacing: (key-width - 2em))[专 业]),
       cover-info-colon[：],
       cover-info-value(profession),
@@ -141,9 +141,9 @@
 #let cover(
   title-cn: "",
   title-en: "",
-  student-name: "",
+  author: "",
   student-id: "",
-  mentor: "",
+  supervisor: "",
   profession: "",
   collage: "",
   institute: "",
@@ -154,9 +154,9 @@
   cover-primary(
     title-cn: title-cn,
     title-en: title-en,
-    student-name: student-name,
+    author: author,
     student-id: student-id,
-    mentor: mentor,
+    supervisor: supervisor,
     profession: profession,
     collage: collage,
     institute: institute,
@@ -169,9 +169,9 @@
 
   cover-secondary(
     title-cn: title-cn,
-    student-name: student-name,
+    author: author,
     student-id: student-id,
-    mentor: mentor,
+    supervisor: supervisor,
     profession: profession,
     collage: collage,
     institute: institute,
