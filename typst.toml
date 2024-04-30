@@ -1,6 +1,6 @@
 [package]
 name = "hit-thesis"
-version = "0.1.5"
+version = "0.1.6"
 entrypoint = "lib.typ"
 authors = ["CHOSER Tech"]
 license = "MIT"
