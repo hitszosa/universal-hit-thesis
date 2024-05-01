@@ -85,7 +85,7 @@
     #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
     #v(字号.小四 * 1 * space-scale-ratio)
-    cover-info-value
+
     #v(字号.二号 * 3 * space-scale-ratio)
 
     #v(字号.小四 * space-scale-ratio)
