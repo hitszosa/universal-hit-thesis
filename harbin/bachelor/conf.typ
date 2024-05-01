@@ -2,10 +2,36 @@
 #import "components/typography.typ": main-format-heading, special-chapter-format-heading
 #import "utils/numbering.typ": heading-numbering
 #import "config/constants.typ": special-chapter-titles
+#import "config/constants.typ": current-date
+#import "utils/states.typ": thesis-info-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 
-#let doc(content) = {
+#let doc(content, thesis-info: (:)) = {
+  thesis-info = (
+    title-cn: "",
+    title-en: "",
+    author: "▢▢▢",
+    student-id: "▢▢▢▢▢▢▢▢▢▢",
+    supervisor: "▢▢▢ 教授",
+    profession: "▢▢▢ 专业",
+    collage: "▢▢▢ 学院",
+    institute: "哈尔滨工业大学",
+    year: current-date.year(),
+    month: current-date.month(),
+    day: current-date.day(),
+  ) + thesis-info
+
+  set document(
+    title: thesis-info.at("title-cn"),
+    author: thesis-info.author,
+  )
+
+  thesis-info-state.update(current => {
+    current + thesis-info
+  })
+
+
   set page(
     paper: "a4",
     margin: (top: 3.8cm, left: 3cm, right: 3cm, bottom: 3cm),

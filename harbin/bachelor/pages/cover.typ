@@ -1,5 +1,6 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../config/constants.typ": current-date
+#import "../utils/states.typ": thesis-info-state
 
 #let cover-primary(
   title-cn: "",
@@ -138,45 +139,36 @@
   ]
 }
 
-#let cover(
-  title-cn: "",
-  title-en: "",
-  author: "",
-  student-id: "",
-  supervisor: "",
-  profession: "",
-  collage: "",
-  institute: "",
-  year: current-date.year(),
-  month: current-date.month(),
-  day: current-date.day(),
-) = {
-  cover-primary(
-    title-cn: title-cn,
-    title-en: title-en,
-    author: author,
-    student-id: student-id,
-    supervisor: supervisor,
-    profession: profession,
-    collage: collage,
-    institute: institute,
-    year: year,
-    month: month,
-    day: day,
-  )
+#let cover() = {
+  context {
+    let thesis-info = thesis-info-state.get()
+    cover-primary(
+      title-cn: thesis-info.at("title-cn"),
+      title-en: thesis-info.at("title-en"),
+      author: thesis-info.at("author"),
+      student-id: thesis-info.at("student-id"),
+      supervisor: thesis-info.at("supervisor"),
+      profession: thesis-info.at("profession"),
+      collage: thesis-info.at("collage"),
+      institute: thesis-info.at("institute"),
+      year: thesis-info.at("year"),
+      month: thesis-info.at("month"),
+      day: thesis-info.at("day"),
+    )
 
-  pagebreak()
+    pagebreak()
 
-  cover-secondary(
-    title-cn: title-cn,
-    author: author,
-    student-id: student-id,
-    supervisor: supervisor,
-    profession: profession,
-    collage: collage,
-    institute: institute,
-    year: year,
-    month: month,
-    day: day,
-  )
+    cover-secondary(
+      title-cn: thesis-info.at("title-cn"),
+      author: thesis-info.at("author"),
+      student-id: thesis-info.at("student-id"),
+      supervisor: thesis-info.at("supervisor"),
+      profession: thesis-info.at("profession"),
+      collage: thesis-info.at("collage"),
+      institute: thesis-info.at("institute"),
+      year: thesis-info.at("year"),
+      month: thesis-info.at("month"),
+      day: thesis-info.at("day"),
+    )
+  }
 }

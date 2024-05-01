@@ -1,8 +1,9 @@
 #import "../config/constants.typ": special-chapter-titles
 #import "../../../common/theme/type.typ": 字体, 字号
+#import "../utils/states.typ": thesis-info-state
 
 #let declaration-of-originality(
-  title: " ",
+  title: none,
 ) = {
   set par(leading: 1.25em)
 
@@ -24,13 +25,25 @@
     ]
   ]
 
-  text()[
+  context {
+    let thesis-info = thesis-info-state.get()
 
-    本人郑重声明：此处所提交的本科毕业论文（设计）《#title》，是本人在导师指导下，在哈尔滨工业大学攻读学士学位期间独立进行研究工作所取得的成果，且毕业论文（设计）中除已标注引用文献的部分外不包含他人完成或已发表的研究成果。对本毕业论文（设计）的研究工作做出重要贡献的个人和集体，均已在文中以明确方式注明。
+    let title = if title == none {
+      thesis-info.at("title-cn")
+    } else {
+      title
+    }
 
-    #v(1em)
 
-  ]
+
+    text()[
+
+      本人郑重声明：此处所提交的本科毕业论文（设计）《#title》，是本人在导师指导下，在哈尔滨工业大学攻读学士学位期间独立进行研究工作所取得的成果，且毕业论文（设计）中除已标注引用文献的部分外不包含他人完成或已发表的研究成果。对本毕业论文（设计）的研究工作做出重要贡献的个人和集体，均已在文中以明确方式注明。
+
+      #v(1em)
+
+    ]
+  }
 
   grid(
     columns: (1fr, 1fr),

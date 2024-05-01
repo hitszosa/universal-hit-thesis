@@ -5,9 +5,7 @@
 // 编译命令  typst compile ./templates/harbin-bachelor.typ --root ./
 // 实时预览  typst watch ./templates/harbin-bachelor.typ --root ./
 
-#show: doc
-
-#cover(
+#show: doc.with(thesis-info: (
   title-cn: "局部多孔质气体静压轴承关键技术的研究",
   title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
   author: "▢▢▢",
@@ -19,7 +17,9 @@
   // year: 2024,
   // month: 5,
   // day: 1,
-)
+))
+
+#cover()
 
 #show: preface
 
@@ -449,7 +449,9 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #pagebreak()
 
-#declaration-of-originality(title: "                                                             ")
+#declaration-of-originality()
+// 可传入 title 参数以自定义原创性声明中显示的标题
+// #declaration-of-originality(title: "    ")
 
 #pagebreak()
 
