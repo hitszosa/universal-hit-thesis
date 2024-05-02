@@ -21,35 +21,35 @@
 
 在 `templates/` 目录下选择您需要的模板，直接修改或复制一份，在根目录运行以下命令进行编译：
 
-```bash
+```sh
 typst compile ./templates/<template-name>.typ --root ./
 ```
 
 您也可以使用如下命令：
 
-```bash
+```sh
 typst watch ./templates/<template-name>.typ --root ./
 ```
 
 并在 VS Code 中使用 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) 等插件来实现实时预览。
 
 > [!NOTE]
-> 调查发现，官方提供的本科毕业设计 Microsoft Word 论文模板 `本科毕业论文（设计）书写范例（理工类）.doc` 在一校三区是通用的，意味着本 Typst 模板的本科论文部分理论上也是在一校三区通用的，因此我们提供适用于各校区的本科毕业论文模板模块导出，即以下四种导入模块的效果相同：
-> ```typ
+> 注意到，官方提供的本科毕业设计 Microsoft Word 论文模板 `本科毕业论文（设计）书写范例（理工类）.doc` 在一校三区是通用的，意味着本 Typst 模板的本科论文部分理论上也是在一校三区通用的，因此我们提供适用于各校区的本科毕业论文模板模块导出，即以下四种导入模块的方式效果相同：
+> ```typst
 > #import "../lib.typ": harbin-bachelor
-> #import harbin-bachelor: *
+> #import harbin-bachelor: * // 哈尔滨校区本科
 > ```
-> ```typ
+> ```typst
 > #import "../lib.typ": weihai-bachelor
-> #import weihai-bachelor: *
+> #import weihai-bachelor: * // 威海校区本科
 > ```
-> ```typ
+> ```typst
 > #import "../lib.typ": shenzhen-bachelor
-> #import shenzhen-bachelor: *
+> #import shenzhen-bachelor: * // 深圳校区本科
 > ```
-> ```typ
+> ```typst
 > #import "../lib.typ": universal-bachelor
-> #import universal-bachelor: *
+> #import universal-bachelor: * // 一校三区本科通用
 > ```
 
 > [!TIP]
