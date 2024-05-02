@@ -15,7 +15,7 @@
 
 **HIT Thesis Typst** 是一套简单易用的哈尔滨工业大学学位论文 Typst 模板，受 [hithesis](https://github.com/hithesis/hithesis) 启发，计划囊括一校三区本科、硕士、博士的学位论文格式。
 
-预览效果：[harbin-bachelor.pdf](https://github.com/chosertech/HIT-Thesis-Typst/blob/build/harbin-bachelor.pdf)
+预览效果：[universal-bachelor.pdf](https://github.com/chosertech/HIT-Thesis-Typst/blob/build/universal-bachelor.pdf)
 
 ## 使用
 
@@ -32,6 +32,25 @@ typst watch ./templates/<template-name>.typ --root ./
 ```
 
 并在 VS Code 中使用 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) 等插件来实现实时预览。
+
+> [!NOTE]
+> 调查发现，官方提供的本科毕业设计 Microsoft Word 论文模板 `本科毕业论文（设计）书写范例（理工类）.doc` 在一校三区是通用的，意味着本 Typst 模板的本科论文部分理论上也是在一校三区通用的，因此我们提供适用于各校区的本科毕业论文模板模块导出，即以下四种导入模块的效果相同：
+> ```typ
+> #import "../lib.typ": harbin-bachelor
+> #import harbin-bachelor: *
+> ```
+> ```typ
+> #import "../lib.typ": weihai-bachelor
+> #import weihai-bachelor: *
+> ```
+> ```typ
+> #import "../lib.typ": shenzhen-bachelor
+> #import shenzhen-bachelor: *
+> ```
+> ```typ
+> #import "../lib.typ": universal-bachelor
+> #import universal-bachelor: *
+> ```
 
 > [!TIP]
 > 本模板正处于积极开发阶段，更新较为频繁，并且尚未上传至 Typst Universe，这种情况下您可能遇到更新模板较为困难的问题.
