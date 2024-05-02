@@ -12,5 +12,5 @@ exclude = []
 
 [template]
 path = "templates"
-entrypoint = "harbin-bachelor.typ"
+entrypoint = "universal-bachelor.typ"
 thumbnail = "thumbnail.png"

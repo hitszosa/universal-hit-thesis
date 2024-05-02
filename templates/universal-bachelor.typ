@@ -1,9 +1,9 @@
-#import "../lib.typ": harbin-bachelor
-#import harbin-bachelor: *
+#import "../lib.typ": universal-bachelor
+#import universal-bachelor: *
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
-// 编译命令  typst compile ./templates/harbin-bachelor.typ --root ./
-// 实时预览  typst watch ./templates/harbin-bachelor.typ --root ./
+// 编译命令  typst compile ./templates/universal-bachelor.typ --root ./
+// 实时预览  typst watch ./templates/universal-bachelor.typ --root ./
 
 #show: doc.with(thesis-info: (
   title-cn: "局部多孔质气体静压轴承关键技术的研究",
@@ -411,7 +411,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #show: ending
 
-#bibliography-page(bibliography.with("harbin-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"))
+#bibliography-page(bibliography.with("universal-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"))
 
 #pagebreak()
 
