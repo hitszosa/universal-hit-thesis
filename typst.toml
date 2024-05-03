@@ -1,10 +1,10 @@
 [package]
-name = "hit-thesis"
+name = "universal-hit-thesis"
 version = "0.1.7"
 entrypoint = "lib.typ"
 authors = ["CHOSER Tech"]
 license = "MIT"
-description = "哈尔滨工业大学 Typst 论文模板 | Harbin Institute of Technology Thesis"
+description = "哈尔滨工业大学 Typst 论文模板 | Universal Harbin Institute of Technology Thesis"
 repository = "https://github.com/chosertech/HIT-Thesis-Typst"
 keywords = ["Harbin Institute of Technology", "thesis"]
 categories = ["thesis"]
