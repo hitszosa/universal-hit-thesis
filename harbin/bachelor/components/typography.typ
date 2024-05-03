@@ -3,7 +3,6 @@
 
   text(weight: weight)[
     #if it != none {
-      h(0.75em)
       it.body
     }
   ]

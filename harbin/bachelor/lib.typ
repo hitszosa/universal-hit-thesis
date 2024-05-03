@@ -2,6 +2,7 @@
 #import "pages/cover.typ": cover
 #import "pages/abstract.typ": abstract-cn, abstract-en
 #import "pages/outline.typ": outline-page
+#import "pages/conclusion.typ": conclusion
 #import "pages/bibliography.typ": bibliography-page
 #import "pages/acknowledgement.typ": acknowledgement
 #import "pages/achievement.typ": achievement
