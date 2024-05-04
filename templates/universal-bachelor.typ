@@ -318,8 +318,6 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 == 算法
 
 #[
-
-  #import "../common/components/figure.typ": algorithm-figure
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
@@ -370,8 +368,6 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 == 代码块
 
 #[
-
-  #import "../common/components/figure.typ": code-figure
 
   #code-figure(
     ```rs

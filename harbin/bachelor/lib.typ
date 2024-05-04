@@ -9,3 +9,5 @@
 #import "config/constants.typ": special-chapter-titles
 #import "pages/declaration-of-originality.typ": declaration-of-originality
 #import "../../common/components/typography.typ": indent
+#import "../../common/components/figure.typ": code-figure, algorithm-figure
+#import "../../common/theme/type.typ": 字号, 字体
