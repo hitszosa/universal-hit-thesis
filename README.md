@@ -67,3 +67,14 @@ typst watch ./templates/<template-name>.typ --root ./
 >
 > - 接着您需要在您的论文中将 `#import "../lib.typ"` 修改为 `#import "@local/hit-thesis:{version}"`，即可更新模板.
 
+## 依赖
+
+### 可选依赖
+
+若要书写和引用伪代码，您可以使用`algorithm-figure`，为此，您需要导入`@algorithmic` 包。
+```typst
+#import "@preview/algorithmic:0.1.0"
+#import algorithmic: algorithm
+```
+
+使用方式详见[模板](https://github.com/chosertech/HIT-Thesis-Typst/blob/main/templates/universal-bachelor.typ)中的`算法`节
