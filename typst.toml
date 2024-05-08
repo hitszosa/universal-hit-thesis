@@ -1,6 +1,6 @@
 [package]
 name = "universal-hit-thesis"
-version = "0.1.9"
+version = "0.1.10"
 entrypoint = "lib.typ"
 authors = ["CHOSER Tech"]
 license = "MIT"
