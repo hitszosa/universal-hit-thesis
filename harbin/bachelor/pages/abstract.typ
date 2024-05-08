@@ -21,7 +21,7 @@
   let abstract-key-words(content) = {
     set par(first-line-indent: 0em)
     text(font: 字体.黑体)[关键词：]
-    text(font: 字体.宋体)[#content.join("，")]
+    text(font: 字体.宋体)[#content.join("；")]
   }
 
   abstract-key-words(keywords)
@@ -48,7 +48,7 @@
     set par(first-line-indent: 0em)
 
     text(font: 字体.宋体, weight: "bold", "Keywords:  ")
-    text(font: 字体.宋体)[#content.join("，")]
+    text(font: 字体.宋体)[#content.join(", ")]
   }
 
   abstract-key-words(keywords)
