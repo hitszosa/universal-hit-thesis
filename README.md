@@ -11,7 +11,7 @@
 
 ## 关于本项目
 
-[Typst](https://typst.app/) 是使用 Rust 开发的全新文档排版系统，有望以 Markdown 级别的简洁语法和编译速度实现 LaTeX 级别的排版能力，即通过编写遵循 Typst 语法规则的文本文档、执行编译命令，来可生成目标格式的 PDF 文档。
+[Typst](https://typst.app/) 是使用 Rust 语言开发的全新文档排版系统，有望以 Markdown 级别的简洁语法和编译速度实现 LaTeX 级别的排版能力，即通过编写遵循 Typst 语法规则的文本文档、执行编译命令，来可生成目标格式的 PDF 文档。
 
 **HIT Thesis Typst** 是一套简单易用的哈尔滨工业大学学位论文 Typst 模板，受 [hithesis](https://github.com/hithesis/hithesis) 启发，计划囊括一校三区本科、硕士、博士的学位论文格式。
 
@@ -35,27 +35,25 @@ typst watch ./templates/<template-name>.typ --root ./
 
 > [!NOTE]
 > 注意到，官方提供的本科毕业设计 Microsoft Word 论文模板 `本科毕业论文（设计）书写范例（理工类）.doc` 在一校三区是通用的，意味着本 Typst 模板的本科论文部分理论上也是在一校三区通用的，因此我们提供适用于各校区的本科毕业论文模板模块导出，即以下四种导入模块的方式效果相同：
-> ```typst
-> #import "../lib.typ": harbin-bachelor
+> ```typ
+> #import "@preview/universal-hit-thesis:0.2.0": harbin-bachelor
 > #import harbin-bachelor: * // 哈尔滨校区本科
 > ```
-> ```typst
-> #import "../lib.typ": weihai-bachelor
+> ```typ
+> #import "@preview/universal-hit-thesis:0.2.0": weihai-bachelor
 > #import weihai-bachelor: * // 威海校区本科
 > ```
-> ```typst
-> #import "../lib.typ": shenzhen-bachelor
+> ```typ
+> #import "@preview/universal-hit-thesis:0.2.0": shenzhen-bachelor
 > #import shenzhen-bachelor: * // 深圳校区本科
 > ```
-> ```typst
-> #import "../lib.typ": universal-bachelor
+> ```typ
+> #import "@preview/universal-hit-thesis:0.2.0": universal-bachelor
 > #import universal-bachelor: * // 一校三区本科通用
 > ```
 
 > [!TIP]
-> 本模板正处于积极开发阶段，更新较为频繁，并且尚未上传至 Typst Universe，这种情况下您可能遇到更新模板较为困难的问题.
-> 
-> 如果您已经以某个版本的模板为基础开始撰写论文，又想获得后续更新，可以借助 Typst local packages 来实现，具体做法为：
+> 本模板正处于积极开发阶段，更新较为频繁，虽然已经上传至 Typst Universe，但是您依然可以借助 Typst local packages 来实现在 Typst Universe 同步本模板的最新版本前，在本地体验本模板的最新版本，具体做法为：
 > - 在 Release 页面下载对应版本的源码压缩包，并将其解压到 `{data-dir}/typst/packages/local/universal-hit-thesis/{version}`，`{data-dir}` 在不同操作系统下的值为：
 >   - `$XDG_DATA_HOME` or `~/.local/share` on Linux
 >   - `~/Library/Application` Support on macOS
@@ -71,8 +69,8 @@ typst watch ./templates/<template-name>.typ --root ./
 
 ### 可选依赖
 
-若要书写和引用伪代码，您可以使用`algorithm-figure`，为此，您需要导入`@algorithmic` 包。
-```typst
+若要书写和引用伪代码，您可以使用 `algorithm-figure`，为此，您需要导入 `@algorithmic` 包。
+```typ
 #import "@preview/algorithmic:0.1.0"
 #import algorithmic: algorithm
 ```
