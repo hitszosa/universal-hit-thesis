@@ -46,14 +46,13 @@
   set page(header: {
     [
       #set align(center)
-      #set text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)
       #set par(leading: 0em)
-      #text[
+      #text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)[
         哈尔滨工业大学本科毕业论文（设计）
       ]
-      #line(length: 100%)
-      #v(2pt, weak: true)
-      #line(length: 100%, stroke: 0.1mm)
+      #line(length: 100%, stroke: 2.2pt)
+      #v(2.2pt, weak: true)
+      #line(length: 100%, stroke: 0.6pt)
     ]
   })
 
