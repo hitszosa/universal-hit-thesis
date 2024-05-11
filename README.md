@@ -36,13 +36,13 @@ typst init @preview/universal-hit-thesis:0.2.0
 Typst 将会创建一个名为 `universal-hit-thesis` 的文件夹，进入该目录后，您可以直接修改目录下的 `universal-bachelor.typ` ，然后执行以下命令进行编译生成 `.pdf` 文档：
 
 ```sh
-`typst compile universal-bachelor.typ`
+typst compile universal-bachelor.typ
 ```
 
 或者使用以下命令进行实时预览：
 
 ```sh
-`typst watch universal-bachelor.typ`
+typst watch universal-bachelor.typ
 ```
 
 当您要实时预览时，我们推荐使用 VS Code 进行编辑，配合 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) 等插件可以大幅提升您的编辑体验。
