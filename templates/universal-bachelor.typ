@@ -21,8 +21,8 @@
 
 #cover()
 // 部分学院要求内封中的题目、专业、学号等文字居中显示，
-// 可通过设置参数 info-value-alignment 为 center 实现
-// #cover(info-value-alignment: alignment.center)
+// 可通过设置选项 info-value-alignment 为 center 实现
+// #cover(option: (info-value-alignment: alignment.center))
 
 #show: preface
 

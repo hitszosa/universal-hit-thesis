@@ -67,8 +67,12 @@
   year: current-date.year(),
   month: current-date.month(),
   day: current-date.day(),
-  info-value-alignment: alignment.left,
+  option: (:),
 ) = {
+  option = (
+    info-value-alignment: alignment.left,
+  ) + option
+
   align(center)[
 
     #let space-scale-ratio = 1.4
@@ -104,7 +108,7 @@
     }
 
     #let cover-info-value(content) = {
-      align(info-value-alignment)[
+      align(option.info-value-alignment)[
         #text(size: 字号.四号, font: 字体.宋体)[#content]
       ]
     }
@@ -141,7 +145,11 @@
   ]
 }
 
-#let cover(info-value-alignment: alignment.left) = {
+#let cover(option: (:)) = {
+  option = (
+    info-value-alignment: alignment.left,
+  ) + option
+
   context {
     let thesis-info = thesis-info-state.get()
     cover-primary(
@@ -171,7 +179,7 @@
       year: thesis-info.at("year"),
       month: thesis-info.at("month"),
       day: thesis-info.at("day"),
-      info-value-alignment: info-value-alignment,
+      option: option,
     )
   }
 }
