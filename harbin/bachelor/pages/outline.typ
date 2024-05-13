@@ -5,7 +5,7 @@
 
   #[
     #show heading: none
-    #heading(special-chapter-titles.目录, level: 1)
+    #heading(special-chapter-titles.目录, level: 1, outlined: false)
   ]
 
   #outline(title: align(center)[#special-chapter-titles.目录], indent: auto)
