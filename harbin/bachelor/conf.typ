@@ -22,7 +22,10 @@
     day: current-date.day(),
   ) + thesis-info
 
-  type-setting = (page-header-text: [哈尔滨工业大学本科毕业论文（设计）]) + type-setting
+  type-setting = (
+    page-header-text: [哈尔滨工业大学本科毕业论文（设计）],
+    cover-info-value-alignment: left,
+  ) + type-setting
 
   set document(
     title: thesis-info.at("title-cn"),

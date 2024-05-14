@@ -5,7 +5,8 @@
 // 编译命令  typst compile ./templates/universal-bachelor.typ --root ./
 // 实时预览  typst watch ./templates/universal-bachelor.typ --root ./
 
-#show: doc.with(thesis-info: (
+#show: doc.with(
+  thesis-info: (
   title-cn: "局部多孔质气体静压轴承关键技术的研究",
   title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
   author: "▢▢▢",
@@ -17,12 +18,18 @@
   // year: 2024,
   // month: 5,
   // day: 1,
-))
+),
+  type-setting: (:
+    // 可自定义页眉文字，满足学院的特殊要求
+    // page-header-text: [哈尔滨工业大学本科毕业论文（设计）],
+
+    // 可设置内封中的题目、专业、学号等文字的对齐方式
+    // 有些学院要求这些文本居中
+    // cover-info-value-alignment: alignment.center,
+  ),
+)
 
 #cover()
-// 部分学院要求内封中的题目、专业、学号等文字居中显示，
-// 可通过设置选项 info-value-alignment 为 center 实现
-// #cover(option: (info-value-alignment: alignment.center))
 
 #show: preface
 
