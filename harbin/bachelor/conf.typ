@@ -3,11 +3,11 @@
 #import "utils/numbering.typ": heading-numbering
 #import "config/constants.typ": special-chapter-titles
 #import "config/constants.typ": current-date
-#import "utils/states.typ": thesis-info-state
+#import "utils/states.typ": thesis-info-state, type-setting-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 
-#let doc(content, thesis-info: (:)) = {
+#let doc(content, thesis-info: (:), type-setting: (:)) = {
   thesis-info = (
     title-cn: "",
     title-en: "",
@@ -22,6 +22,8 @@
     day: current-date.day(),
   ) + thesis-info
 
+  type-setting = (page-header-text: [哈尔滨工业大学本科毕业论文（设计）]) + type-setting
+
   set document(
     title: thesis-info.at("title-cn"),
     author: thesis-info.author,
@@ -29,6 +31,10 @@
 
   thesis-info-state.update(current => {
     current + thesis-info
+  })
+
+  type-setting-state.update(current => {
+    current + type-setting
   })
 
 
@@ -44,16 +50,19 @@
 
 #let preface(content) = {
   set page(header: {
-    [
-      #set align(center)
-      #set par(leading: 0em)
-      #text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)[
-        哈尔滨工业大学本科毕业论文（设计）
+    context {
+      let type-setting = type-setting-state.get()
+      [
+        #set align(center)
+        #set par(leading: 0em)
+        #text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)[
+          #type-setting.page-header-text
+        ]
+        #line(length: 100%, stroke: 2.2pt)
+        #v(2.2pt, weak: true)
+        #line(length: 100%, stroke: 0.6pt)
       ]
-      #line(length: 100%, stroke: 2.2pt)
-      #v(2.2pt, weak: true)
-      #line(length: 100%, stroke: 0.6pt)
-    ]
+    }
   })
 
   set page(numbering: "I")
