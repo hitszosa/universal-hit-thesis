@@ -16,11 +16,3 @@
     day: current-date.day(),
   ),
 )
-
-#let type-setting-state = state(
-  "type-setting",
-  (
-    page-header-text: [哈尔滨工业大学本科毕业论文（设计）],
-    cover-info-value-alignment: left,
-  ),
-)

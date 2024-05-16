@@ -1,6 +1,6 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../config/constants.typ": current-date
-#import "../utils/states.typ": thesis-info-state, type-setting-state
+#import "../utils/states.typ": thesis-info-state
 
 #let cover-primary(
   title-cn: "",
@@ -68,8 +68,6 @@
   month: current-date.month(),
   day: current-date.day(),
 ) = {
-  let type-setting = type-setting-state.get()
-
   align(center)[
 
     #let space-scale-ratio = 1.4
@@ -105,7 +103,7 @@
     }
 
     #let cover-info-value(content) = {
-      align(type-setting.cover-info-value-alignment)[
+      align(left)[
         #text(size: 字号.四号, font: 字体.宋体)[#content]
       ]
     }
