@@ -3,25 +3,11 @@
 #import "utils/numbering.typ": heading-numbering
 #import "config/constants.typ": special-chapter-titles
 #import "config/constants.typ": current-date
-#import "utils/states.typ": thesis-info-state
+#import "utils/states.typ": thesis-info-state, bibliography-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 
-#let doc(content, thesis-info: (:)) = {
-  thesis-info = (
-    title-cn: "",
-    title-en: "",
-    author: "▢▢▢",
-    student-id: "▢▢▢▢▢▢▢▢▢▢",
-    supervisor: "▢▢▢ 教授",
-    profession: "▢▢▢ 专业",
-    collage: "▢▢▢ 学院",
-    institute: "哈尔滨工业大学",
-    year: current-date.year(),
-    month: current-date.month(),
-    day: current-date.day(),
-  ) + thesis-info
-
+#let doc(content, thesis-info: (:), bibliography: none) = {
   set document(
     title: thesis-info.at("title-cn"),
     author: thesis-info.author,
@@ -31,6 +17,7 @@
     current + thesis-info
   })
 
+  bibliography-state.update(current => bibliography)
 
   set page(
     paper: "a4",

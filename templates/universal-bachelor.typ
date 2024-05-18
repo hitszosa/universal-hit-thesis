@@ -1,23 +1,28 @@
 #import "@preview/universal-hit-thesis:0.2.0": universal-bachelor
+#import "../lib.typ": universal-bachelor
 #import universal-bachelor: *
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
 // 编译命令  typst compile ./templates/universal-bachelor.typ --root ./
 // 实时预览  typst watch ./templates/universal-bachelor.typ --root ./
 
-#show: doc.with(thesis-info: (
-  title-cn: "局部多孔质气体静压轴承关键技术的研究",
-  title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
-  author: "▢▢▢",
-  student-id: "▢▢▢▢▢▢▢▢▢▢",
-  supervisor: "▢▢▢ 教授",
-  profession: "机械制造及其自动化",
-  collage: "机电工程学院",
-  institute: "哈尔滨工业大学",
-  // year: 2024,
-  // month: 5,
-  // day: 1,
-))
+#show: doc.with(
+  thesis-info: (
+    title-cn: "局部多孔质气体静压轴承关键技术的研究",
+    title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
+    author: "▢▢▢",
+    student-id: "▢▢▢▢▢▢▢▢▢▢",
+    supervisor: "▢▢▢ 教授",
+    profession: "机械制造及其自动化",
+    collage: "机电工程学院",
+    institute: "哈尔滨工业大学",
+    // year: 2024,
+    // month: 5,
+    // day: 1,
+  ),
+  // 参考文献配置
+  bibliography: bibliography.with("universal-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"),
+)
 
 #cover()
 
@@ -408,7 +413,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 #pagebreak()
 
-#bibliography-page(bibliography.with("universal-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"))
+#bibliography-page()
 
 #pagebreak()
 
