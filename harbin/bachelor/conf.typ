@@ -48,12 +48,15 @@
 
   set page(numbering: "I")
 
-  set page(footer: context [
-    #align(center)[
-      #counter(page).display("- I -")
-    ]
-  ],
-  footer-descent: 15%)
+  set page(
+    footer: context [
+      #align(center)[
+        #set text(size: 字号.小五, font: 字体.宋体)
+        #counter(page).display("- I -")
+      ]
+    ],
+    footer-descent: 15%,
+  )
 
   counter(page).update(1)
 
@@ -89,6 +92,7 @@
 
   set page(footer: context [
     #align(center)[
+      #set text(size: 字号.小五, font: 字体.宋体)
       #counter(page).display("- 1 -")
     ]
   ])

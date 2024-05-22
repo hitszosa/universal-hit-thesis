@@ -7,11 +7,13 @@
 ) = {
   set par(leading: 1.25em)
 
+  v(0.25em)
   align(center)[
     #text(font: 字体.黑体, size: 字号.小二)[
       哈尔滨工业大学本科毕业论文（设计）
     ]
   ]
+  v(-1.75em)
 
   heading(special-chapter-titles.原创性声明, level: 1, numbering: none)
 
