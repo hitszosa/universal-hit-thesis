@@ -30,18 +30,21 @@
 }
 
 #let preface(content) = {
-  set page(header: {
-    [
-      #set align(center)
-      #set par(leading: 0em)
-      #text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)[
-        哈尔滨工业大学本科毕业论文（设计）
+  set page(
+    header: {
+      [
+        #set align(center)
+        #set par(leading: 0em)
+        #text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)[
+          哈尔滨工业大学本科毕业论文（设计）
+        ]
+        #line(length: 100%, stroke: 2.2pt)
+        #v(2.2pt, weak: true)
+        #line(length: 100%, stroke: 0.6pt)
       ]
-      #line(length: 100%, stroke: 2.2pt)
-      #v(2.2pt, weak: true)
-      #line(length: 100%, stroke: 0.6pt)
-    ]
-  })
+    },
+    header-ascent: 15%,
+  )
 
   set page(numbering: "I")
 
@@ -49,7 +52,8 @@
     #align(center)[
       #counter(page).display("- I -")
     ]
-  ])
+  ],
+  footer-descent: 15%)
 
   counter(page).update(1)
 
@@ -59,7 +63,9 @@
 
     if it.level == 1 {
       align(center)[
+        #v(1em)
         #special-chapter-format-heading(it: it, font: 字体.黑体, size: 字号.小二)
+        #v(.3em)
       ]
     } else {
       it
@@ -96,7 +102,9 @@
 
     if it.level == 1 {
       align(center)[
+        #v(1em)
         #main-format-heading(it: it, font: 字体.黑体, size: 字号.小二)
+        #v(.3em)
       ]
     } else if it.level == 2 {
       main-format-heading(it: it, font: 字体.黑体, size: 字号.小三)
@@ -159,7 +167,9 @@
 
     if it.level == 1 {
       align(center)[
+        #v(1em)
         #special-chapter-format-heading(it: it, font: 字体.黑体, size: 字号.小二)
+        #v(.3em)
       ]
     } else {
       it
