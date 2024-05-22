@@ -15,7 +15,6 @@
   text(weight: weight)[
     #counter(heading).display()
     #if it != none {
-      h(0.75em)
       it.body
     }
   ]
