@@ -63,7 +63,7 @@
   extra-kinds: (), extra-prefixes: (:),
 )
 
-= 绪 论
+= #[绪#h(1em)论]
 
 == 课题背景、研究目的和意义
 
@@ -89,7 +89,7 @@
 
 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
 
-（1）气体静压轴承 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @fig:气体润滑轴承的分类1 (a) 所示。……
+（1）*气体静压轴承* 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @fig:气体润滑轴承的分类1 (a) 所示。……
 
 #figure(
   grid(
@@ -272,7 +272,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 图表
 
-使用 `@fig:` 来引用图片： @fig:square
+使用`@fig:`来引用图片： @fig:square
 
 #figure(
   square(size: 8em, stroke: 2pt),
@@ -280,7 +280,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   supplement: [图],
 ) <square>
 
-#indent 图表之后默认不缩进，如需缩进，可以手动调用 `#indent` 实现缩进。
+#indent 图表之后默认不缩进，如需缩进，可以手动调用`#indent`实现缩进。
 
 #figure(
   table(
@@ -318,7 +318,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   supplement: [表],
 ) <time-results-three-line-table>
 
-使用 `@tbl:` 来引用表格： @tbl:time-results @tbl:time-results-three-line-table
+使用`@tbl:`来引用表格： @tbl:time-results @tbl:time-results-three-line-table
 
 == 算法
 
@@ -326,7 +326,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
-  使用 `@algo:` 来引用算法： @algo:XXX算法
+  使用`@algo:`来引用算法： @algo:XXX算法
 
   #algorithm-figure(
     algorithm({
@@ -385,7 +385,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     label-name: "XXX代码",
   )
 
-  #indent 与 Markdown 类似，代码可以高亮显示，使用 `@lst:` 来引用代码块： @lst:XXX代码
+  #indent 与 Markdown 类似，代码可以高亮显示，使用`@lst:`来引用代码块： @lst:XXX代码
 ]
 
 #pagebreak()

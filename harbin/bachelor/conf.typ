@@ -35,7 +35,7 @@
       [
         #set align(center)
         #set par(leading: 0em)
-        #text(font: 字体.宋体, size: 字号.小五, baseline: 6pt)[
+        #text(font: 字体.宋体, size: 字号.小五, baseline: 8.5pt)[
           哈尔滨工业大学本科毕业论文（设计）
         ]
         #line(length: 100%, stroke: 2.2pt)
@@ -116,11 +116,10 @@
   show heading: reset-counters.with(extra-kinds: ("algorithm",) + extra-kinds)
   show figure: show-figure.with(numbering: "1-1", extra-prefixes: ("algorithm": "algo:") + extra-prefixes)
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.where(kind: raw): set figure.caption(position: top)
   show figure.where(kind: "algorithm"): set figure.caption(position: top)
 
   show raw.where(block: false): box.with(
-    fill: luma(240),
+    fill: rgb("#fafafa"),
     inset: (x: 3pt, y: 0pt),
     outset: (y: 3pt),
     radius: 2pt,
@@ -131,7 +130,7 @@
     size: 10.5pt,
   )
   show raw.where(block: true): block.with(
-    fill: luma(240),
+    fill: rgb("#fafafa"),
     inset: 8pt,
     radius: 4pt,
     width: 100%,
