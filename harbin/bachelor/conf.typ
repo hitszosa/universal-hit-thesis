@@ -6,6 +6,7 @@
 #import "utils/states.typ": thesis-info-state, bibliography-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
+#import "@preview/lovelace:0.2.0": setup-lovelace
 
 #let doc(content, thesis-info: (:), bibliography: none) = {
   set document(
@@ -145,6 +146,8 @@
   )
 
   show math.equation: show-equation.with(numbering: "(1-1)")
+
+  show: setup-lovelace
 
   show ref: it => {
     let eq = math.equation
