@@ -1,5 +1,6 @@
 #import "../config/constants.typ": special-chapter-titles
 #import "../utils/states.typ": bibliography-state
+#import "../utils/bilingual-bibliography.typ": bilingual-bibliography
 
 #let bibliography-page() = context [
   #let bibliography = bibliography-state.get()
@@ -7,5 +8,6 @@
 
   #heading(special-chapter-titles.参考文献, level: 1, numbering: none)
 
-  #bibliography(title: none)
+  #bilingual-bibliography(bibliography: bibliography, title: none)
+  // #bibliography(title: none)
 ]
