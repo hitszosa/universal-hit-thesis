@@ -1,33 +1,51 @@
-#let algorithm-figure(content, caption: [], supplement: [算法], label-name: "") = {
-  let fig = figure(
-    [
-      #line(length: 100%, stroke: 0.1mm)
-      #v(0.5em, weak: true)
-      #align(left)[
-        #content
-      ]
-    ],
-    kind: "algorithm",
-    supplement: supplement,
-    caption: caption,
-  )
-  [
-    #if label-name == "" {
-      [
-        #line(length: 100%, stroke: 0.3mm)
-        #fig
-        #line(length: 100%, stroke: 0.3mm)
-      ]
-    } else {
-      let new-label = label(label-name)
-      box[
-        #line(length: 100%, stroke: 0.3mm)
-        #v(0.75em, weak: true)
-        #fig
-        #new-label
-        #v(0.5em, weak: true)
-        #line(length: 100%, stroke: 0.3mm)
-      ]
+#let algorithm-figure(content, caption: none, supplement: [算法], label-name: "", breakable: true) = {
+  block(stroke: rgb("#0000"))[
+    #let new-label = label(label-name)
+    #figure(
+      [],
+      kind: "algorithm",
+      supplement: supplement,
+    ) #new-label
+    #v(-1.25em)
+
+    #context {
+      let heading-number = counter(heading).get().at(0)
+      let lovelace-algo-number = counter(figure.where(kind: "algorithm")).get().at(0)
+      let numbers = (heading-number, lovelace-algo-number)
+
+      block(
+        stroke: (y: 1.3pt),
+        inset: 0pt,
+        breakable: breakable,
+        width: 100%,
+        {
+          set align(left)
+          block(
+            inset: (y: 5pt),
+            width: 100%,
+            stroke: (bottom: .8pt),
+            {
+              strong({
+                supplement
+                numbering("1-1", ..numbers)
+                if caption != none {
+                  [: ]
+                } else {
+                  [.]
+                }
+              })
+              if caption != none {
+                caption
+              }
+            },
+          )
+          v(-1em)
+          block(
+            breakable: breakable,
+            content,
+          )
+        },
+      )
     }
   ]
 }

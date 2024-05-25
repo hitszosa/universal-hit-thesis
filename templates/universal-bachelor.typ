@@ -320,13 +320,13 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 使用`@tbl:`来引用表格： @tbl:time-results @tbl:time-results-three-line-table
 
-== 算法
+== 伪代码
 
 #[
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
-  使用`@algo:`来引用算法： @algo:XXX算法
+  使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
 
   #algorithm-figure(
     algorithm({
@@ -364,10 +364,38 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
         },
       )
     }),
-    caption: [XXX算法],
+    caption: [二分查找],
     supplement: [算法],
     label-name: "XXX算法",
   )
+
+  #import "@preview/lovelace:0.2.0": *
+
+  #algorithm-figure(
+    pseudocode(
+      no-number,
+      [#h(-1.25em) *input:* integers $a$ and $b$],
+      no-number,
+      [#h(-1.25em) *output:* greatest common divisor of $a$ and $b$],
+      [*while* $a != b$ *do*],
+      ind,
+      [*if* $a > b$ *then*],
+      ind,
+      $a <- a - b$,
+      ded,
+      [*else*],
+      ind,
+      $b <- b - a$,
+      ded,
+      [*end*],
+      ded,
+      [*end*],
+      [*return* $a$],
+    ),
+    caption: [The Euclidean algorithm],
+    label-name: "lovelace-algo",
+  )
+
 ]
 
 == 代码块
