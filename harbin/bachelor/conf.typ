@@ -111,6 +111,7 @@
         #main-format-heading(it: it, font: 字体.黑体, size: 字号.小二)
         #v(.3em)
       ]
+      counter(figure.where(kind: "algorithm")).update(0)
     } else if it.level == 2 {
       main-format-heading(it: it, font: 字体.黑体, size: 字号.小三)
     } else if it.level >= 3 {
