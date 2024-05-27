@@ -10,8 +10,10 @@
 
     #context {
       let heading-number = counter(heading).get().at(0)
-      let lovelace-algo-number = counter(figure.where(kind: "algorithm")).get().at(0)
-      let numbers = (heading-number, lovelace-algo-number)
+      let _prefix = "i-figured-"
+      let algo-kind = "algorithm"
+      let prefix-alog-number = counter(figure.where(kind: _prefix + repr(algo-kind))).get().at(0)
+      let numbers = (heading-number, prefix-alog-number)
 
       block(
         stroke: (y: 1.3pt),
