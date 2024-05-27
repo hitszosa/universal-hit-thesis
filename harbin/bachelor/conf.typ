@@ -27,6 +27,8 @@
 
   show: show-cn-fakebold
 
+  set text(lang: "zh", region: "cn")
+
   content
 }
 
