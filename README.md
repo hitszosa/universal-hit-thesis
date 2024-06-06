@@ -45,7 +45,7 @@ typst compile universal-bachelor.typ
 typst watch universal-bachelor.typ
 ```
 
-当您要实时预览时，我们推荐使用 VS Code 进行编辑，配合 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) 等插件可以大幅提升您的编辑体验。
+当您要实时预览时，我们更推荐使用 Visual Studio Code 进行编辑，配合 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [Typst Preview](https://marketplace.visualstudio.com/items?itemName=mgt19937.typst-preview) 等插件可以大幅提升您的编辑体验。
 
 ### 本地编辑 Ⅱ
 
@@ -105,11 +105,20 @@ typst watch ./templates/<template-name>.typ --root ./
 
 ### 可选依赖
 
-若要书写和引用伪代码，您可以使用 `algorithm-figure`，为此，您需要导入 `@algorithmic` 包。
+若要书写和引用伪代码，您可以使用 `algorithm-figure`，为此，您需要导入 `algorithmic` 或 `lovelace` 包。
 
 ```typ
 #import "@preview/algorithmic:0.1.0"
 #import algorithmic: algorithm
+
+#import "@preview/lovelace:0.2.0": *
 ```
 
-使用方式详见[模板](https://github.com/chosertech/HIT-Thesis-Typst/blob/main/templates/universal-bachelor.typ)中的`算法`节
+使用方式详见[模板](https://github.com/chosertech/HIT-Thesis-Typst/blob/main/templates/universal-bachelor.typ)中的`伪代码`节
+
+
+## 致谢
+
++ 感谢 [HUST-typst-template](https://github.com/werifu/HUST-typst-template) 为本模板早期版本的框架提供思路.
++ 感谢 [@csimide](https://gist.github.com/csimide) 和 [@OrangeX4](https://github.com/OrangeX4) 提供的中英双语参考文献实现.
++ 感谢 [modern-nju-thesis](https://github.com/nju-lug/modern-nju-thesis) 为本模板的一些特性提供实现思路.
