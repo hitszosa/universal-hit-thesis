@@ -7,30 +7,14 @@
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 #import "@preview/lovelace:0.2.0": setup-lovelace
-
-#let doc(content, thesis-info: (:), bibliography: none) = {
-  set document(
-    title: thesis-info.at("title-cn"),
-    author: thesis-info.author,
-  )
-
-  thesis-info-state.update(current => {
-    current + thesis-info
-  })
-
-  bibliography-state.update(current => bibliography)
-
-  set page(
-    paper: "a4",
-    margin: (top: 3.8cm, left: 3cm, right: 3cm, bottom: 3cm),
-  )
-
-  show: show-cn-fakebold
-
-  set text(lang: "zh", region: "cn")
-
-  content
-}
+#import "pages/cover.typ": cover
+#import "pages/abstract.typ": abstract-cn as abstract-cn-page, abstract-en as abstract-en-page
+#import "pages/outline.typ": outline-page
+#import "pages/conclusion.typ": conclusion as conclusion-page
+#import "pages/bibliography.typ": bibliography-page
+#import "pages/acknowledgement.typ": acknowledgement as acknowledgement-page
+#import "pages/achievement.typ": achievement as achievement-page
+#import "pages/declaration-of-originality.typ": declaration-of-originality
 
 #let preface(content) = {
   set page(
@@ -88,9 +72,14 @@
 
 #let main(
   content,
-  extra-kinds: (),
-  extra-prefixes: (:),
+  figure-options: (:),
 ) = {
+
+  figure-options = figure-options + (
+    extra-kinds: (),
+    extra-prefixes: (:),
+  )
+
   set page(numbering: "1")
 
   set page(footer: context [
@@ -120,8 +109,11 @@
     }
   }
 
-  show heading: reset-counters.with(extra-kinds: ("algorithm",) + extra-kinds)
-  show figure: show-figure.with(numbering: "1-1", extra-prefixes: ("algorithm": "algo:") + extra-prefixes)
+  show heading: reset-counters.with(extra-kinds: ("algorithm",) + figure-options.extra-kinds)
+  show figure: show-figure.with(
+    numbering: "1-1",
+    extra-prefixes: ("algorithm": "algo:") + figure-options.extra-prefixes,
+  )
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: "algorithm"): set figure.caption(position: top)
   show figure: set text(size: 字号.五号)
@@ -170,7 +162,67 @@
   content
 }
 
-#let ending(content) = {
+#let doc(
+  content,
+  thesis-info: (:),
+  abstract-cn: none,
+  keywords-cn: (),
+  abstract-en: none,
+  keywords-en: (),
+  figure-options: (:),
+  bibliography: none,
+) = {
+  set document(
+    title: thesis-info.at("title-cn"),
+    author: thesis-info.author,
+  )
+
+  thesis-info-state.update(current => {
+    current + thesis-info
+  })
+
+  bibliography-state.update(current => bibliography)
+
+  set page(
+    paper: "a4",
+    margin: (top: 3.8cm, left: 3cm, right: 3cm, bottom: 3cm),
+  )
+
+  show: show-cn-fakebold
+
+  set text(lang: "zh", region: "cn")
+
+  cover()
+
+  show: preface
+
+  if abstract-cn != none {
+    abstract-cn-page(keywords: keywords-cn)[
+      #abstract-cn
+    ]
+    pagebreak()
+  }
+
+  if abstract-en != none {
+    abstract-en-page(keywords: keywords-en)[
+      #abstract-en
+    ]
+    pagebreak()
+  }
+
+  outline-page()
+
+  figure-options = figure-options + (
+    extra-kinds: (),
+    extra-prefixes: (:),
+  )
+
+  show: main.with(figure-options: figure-options)
+
+  content
+}
+
+#let ending(content, conclusion: none, achievement: none, acknowledgement: none) = {
   show heading: it => {
     set par(first-line-indent: 0em)
 
@@ -185,6 +237,37 @@
     }
   }
   set heading(numbering: none)
+
+  if conclusion != none {
+
+    conclusion-page[
+      #conclusion
+    ]
+
+    pagebreak()
+
+  }
+
+  bibliography-page()
+
+  pagebreak()
+
+  if achievement != none {
+    achievement-page[
+      #achievement
+    ]
+    pagebreak()
+  }
+
+  declaration-of-originality()
+
+  pagebreak()
+
+  if acknowledgement != none {
+    acknowledgement-page[
+      #acknowledgement
+    ]
+  }
 
   content
 }

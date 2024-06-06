@@ -2,9 +2,7 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../utils/states.typ": thesis-info-state
 
-#let declaration-of-originality(
-  title: none,
-) = {
+#let declaration-of-originality() = {
   set par(leading: 1.25em)
 
   v(0.25em)
@@ -30,13 +28,11 @@
   context {
     let thesis-info = thesis-info-state.get()
 
-    let title = if title == none {
-      thesis-info.at("title-cn")
-    } else {
-      title
+    let title = thesis-info.at("title-cn")
+
+    if type(title) == str {
+      title = title.split("\n").sum()
     }
-
-
 
     text()[
 
