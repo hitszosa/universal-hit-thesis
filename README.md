@@ -80,6 +80,31 @@ typst watch ./templates/<template-name>.typ --root ./
 
 本模板已上传 Typst Universe，您可以使用 Typst 的官方 Web App 进行编辑。
 
+具体来说，在 Typst Web App 登录后，点击 `Start from template`，在弹出的窗口中选择 `universal-hit-thesis`，即可从模板创建项目。
+
+![hit-thesis-web-app-create](https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20240426-HIT-Thesis-Typst/hit-thesis-web-app-create.jpg)
+
+![hit-thesis-web-app-demo](https://vonbrank-images.oss-cn-hangzhou.aliyuncs.com/20240426-HIT-Thesis-Typst/hit-thesis-web-app-demo.jpg)
+
+> [!NOTE]
+>
+> Typst Web App 的排版渲染在浏览器本地执行，所以实时预览体验几乎与在本地编辑无异。
+> 
+> 默认情况下，当您在 Web App 使用模板创建论文项目后，可能在项目中看到大量针对中文文本的拼写错误警告，您可以通过在 `#cover()` 函数调用点前插入语句 `#set text(lang: "zh")` 来消除这些警告，该问题将在未来的版本中得到修复.
+> 
+> 此外您可能已经注意到，Web App 中的模板字体显示与预期存在差距，这是因为 Web App 默认不提供 `SimSun`, `Times New Roman` 等中文排版常用字体。为了解决这个问题，您可以在搜索引擎搜索以下字体文件：
+> 
+> - `TimesNewRoman.ttf` （包括 `Bold`, `Italic` `Bold-Italic` 等版本）
+> - `SimSun.ttf`
+> - `SimHei.ttf`
+> - `Kaiti.ttf`
+> - `Consolas.ttf`
+> - `Courier New.ttf`
+> 
+> 并将这些文件手动上传至 Web App 项目根目录中，或为了目录整洁，可以创建一个 `fonts` 文件夹并将字体置于其中，Typst Web App 将自动加载这些字体，并正确渲染到预览窗口中.
+> 
+> 由于每次在 Typst Web App 中打开项目时都需要重新下载字体，而中文字体体积普遍较大，加载时间较长，因此我们更推荐**本地编辑**。
+
 ---
 
 > [!NOTE]
