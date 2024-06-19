@@ -30,7 +30,7 @@
 安装好 Typst 之后，您只需要选择一个您喜欢的目录，并在此目录下执行以下命令：
 
 ```sh
-typst init @preview/universal-hit-thesis:0.2.0
+typst init @preview/universal-hit-thesis:0.2.1
 ```
 
 Typst 将会创建一个名为 `universal-hit-thesis` 的文件夹，进入该目录后，您可以直接修改目录下的 `universal-bachelor.typ` ，然后执行以下命令进行编译生成 `.pdf` 文档：
@@ -74,7 +74,7 @@ typst watch ./templates/<template-name>.typ --root ./
 >   
 >   解压完成后 `typst.toml` 文件应该出现在 `{data-dir}/typst/packages/local/universal-hit-thesis/{version}` 目录下.
 >
-> - 接着您需要在您的论文中将 `#import "@preview/universal-hit-thesis:0.2.0"` 修改为 `#import "@local/universal-hit-thesis:{version}"`，即可更新模板.
+> - 接着您需要在您的论文中将 `#import "@preview/universal-hit-thesis:0.2.1"` 修改为 `#import "@local/universal-hit-thesis:{version}"`，即可更新模板.
 
 ### 在线编辑
 
@@ -110,19 +110,19 @@ typst watch ./templates/<template-name>.typ --root ./
 > [!NOTE]
 > 注意到，官方提供的本科毕业设计 Microsoft Word 论文模板 `本科毕业论文（设计）书写范例（理工类）.doc` 在一校三区是通用的，意味着本 Typst 模板的本科论文部分理论上也是在一校三区通用的，因此我们提供适用于各校区的本科毕业论文模板模块导出，即以下四种导入模块的方式效果相同：
 > ```typ
-> #import "@preview/universal-hit-thesis:0.2.0": harbin-bachelor
+> #import "@preview/universal-hit-thesis:0.2.1": harbin-bachelor
 > #import harbin-bachelor: * // 哈尔滨校区本科
 > ```
 > ```typ
-> #import "@preview/universal-hit-thesis:0.2.0": weihai-bachelor
+> #import "@preview/universal-hit-thesis:0.2.1": weihai-bachelor
 > #import weihai-bachelor: * // 威海校区本科
 > ```
 > ```typ
-> #import "@preview/universal-hit-thesis:0.2.0": shenzhen-bachelor
+> #import "@preview/universal-hit-thesis:0.2.1": shenzhen-bachelor
 > #import shenzhen-bachelor: * // 深圳校区本科
 > ```
 > ```typ
-> #import "@preview/universal-hit-thesis:0.2.0": universal-bachelor
+> #import "@preview/universal-hit-thesis:0.2.1": universal-bachelor
 > #import universal-bachelor: * // 一校三区本科通用
 > ```
 
