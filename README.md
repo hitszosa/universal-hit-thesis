@@ -147,9 +147,7 @@ typst watch ./templates/<template-name>.typ --root ./
 
 ### 参考文献
 
-- 学校对参考文献格式的要求与标准的 `GB/T 7714-2015 numeric` 格式存在差异，我们已修改相关 CSL 文件并形成 `gb-t-7714-2015-numeric-hit.csl` 以修复作者名字大小写等问题，但仍有以下已知特性尚未支持：
-  - 仅纯电子资源（如网页、软件）显示引用日期和 URL
-  - 无 DOI
+- 学校对参考文献格式的要求与标准的 `GB/T 7714-2015 numeric` 格式存在差异，我们已修改相关 CSL 文件并形成 `gb-t-7714-2015-numeric-hit.csl` 以修复作者名字大小写等问题。
 - 引用其他学校的学位论文时参考文献页对应条目存在格式问题，因为 Typst 尚不支持 CSL 文件中的 `school` 等字段.
 - 目前版本的 Typst 对 CSL 支持程度成谜，更多问题可参考 [SEU-Typst-Template 参考文献已知问题](https://github.com/csimide/SEU-Typst-Template/?tab=readme-ov-file#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE).
 
