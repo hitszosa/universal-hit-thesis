@@ -17,7 +17,7 @@
 
 **预览效果**
 
-- 本科通用：[universal-bachelor.pdf](https://github.com/chosertech/HIT-Thesis-Typst/blob/build/universal-bachelor.pdf)
+- 本科通用：[universal-bachelor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-bachelor.pdf)
 
 ## 使用
 
@@ -90,9 +90,7 @@ typst watch ./templates/<template-name>.typ --root ./
 >
 > Typst Web App 的排版渲染在浏览器本地执行，所以实时预览体验几乎与在本地编辑无异。
 > 
-> 默认情况下，当您在 Web App 使用模板创建论文项目后，可能在项目中看到大量针对中文文本的拼写错误警告，您可以通过在 `#cover()` 函数调用点前插入语句 `#set text(lang: "zh")` 来消除这些警告，该问题将在未来的版本中得到修复.
-> 
-> 此外您可能已经注意到，Web App 中的模板字体显示与预期存在差距，这是因为 Web App 默认不提供 `SimSun`, `Times New Roman` 等中文排版常用字体。为了解决这个问题，您可以在搜索引擎搜索以下字体文件：
+> 默认情况下，Web App 中的模板字体显示与预期可能存在差异，这是因为 Web App 默认不提供 `SimSun`, `Times New Roman` 等中文排版常用字体。为了解决这个问题，您可以在搜索引擎搜索以下字体文件：
 > 
 > - `TimesNewRoman.ttf` （包括 `Bold`, `Italic` `Bold-Italic` 等版本）
 > - `SimSun.ttf`
