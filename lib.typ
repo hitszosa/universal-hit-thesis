@@ -2,3 +2,5 @@
 #import "harbin/bachelor/lib.typ" as weihai-bachelor
 #import "harbin/bachelor/lib.typ" as shenzhen-bachelor
 #import "harbin/bachelor/lib.typ" as universal-bachelor
+
+#import "shenzhen/master/lib.typ" as shenzhen-master
