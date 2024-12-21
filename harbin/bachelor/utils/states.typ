@@ -1,4 +1,4 @@
-#import "../config/constants.typ": current-date
+#import "../../../common/config/constants.typ": current-date
 
 #let thesis-info-state = state(
   "thesis-info",
