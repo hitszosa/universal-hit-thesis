@@ -22,7 +22,7 @@
 
     #v(字号.小四 * 6 * space-scale-ratio)
 
-    #text(size: 字号.小一, font: 字体.宋体, weight: "bold")[*本科毕业论文（设计）*]
+    #text(size: 字号.小一, font: 字体.宋体, weight: "bold")[*硕士学位论文*]
 
     #v(字号.小四 * 2 * space-scale-ratio)
 
@@ -63,6 +63,7 @@
   supervisor: "",
   profession: "",
   collage: "",
+  affiliation: "",  
   institute: "",
   year: current-date.year(),
   month: current-date.month(),
@@ -72,13 +73,22 @@
 
     #let space-scale-ratio = 1.4
 
-    #align(right)[
-      #text(size: 字号.四号, font: 字体.宋体)[密级：公开]
-    ]
+    #grid(
+      columns: (1fr, 1fr),
+      align(left)[
+        #text(size: 字号.小四, font: 字体.宋体)[国内图书分类号：××××] \
+        #text(size: 字号.小四, font: 字体.宋体)[国际图书分类号：××××]
+      ],
+      align(right)[
+        #text(size: 字号.小四, font: 字体.宋体)[学校代码：×××] \
+        #text(size: 字号.小四, font: 字体.宋体)[密级：公开]
+      ]
+    )
+
 
     #v(字号.小四 * 3 * space-scale-ratio)
 
-    #text(size: 字号.小二, font: 字体.宋体)[*本科毕业论文（设计）*]
+    #text(size: 字号.小二, font: 字体.宋体)[*硕士学位论文*]
 
     #v(字号.小四 * 2 * space-scale-ratio)
 
@@ -108,34 +118,127 @@
       ]
     }
 
-    #let base-space = 0.8
-    #let key-width = 字号.四号 * (4 + base-space * 3)
+    // #let base-space = 0.8
+    #let key-width = 字号.四号 * 6
+    #let get-tracking-by-characters-count(count) = (key-width - count * 1em) / (count - 1)
 
     #grid(
       columns: (auto, 1em, auto),
       rows: (字号.四号, 字号.四号),
       row-gutter: 1.5em,
-      cover-info-key(text(spacing: (key-width - 3em) / 2)[本 科 生]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(5))[硕士研究生]),
       cover-info-colon[：],
       cover-info-value(author),
-      cover-info-key(text(spacing: (key-width - 2em))[学 号]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[导师]),
       cover-info-colon[：],
-      cover-info-value(student-id),
-      cover-info-key(text(spacing: base-space * 1em)[指 导 教 师]),
-      cover-info-colon[：],
-      cover-info-value(supervisor),
-      cover-info-key(text(spacing: (key-width - 2em))[专 业]),
+      cover-info-value(supervisor), 
+      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[申请学位]),
       cover-info-colon[：],
       cover-info-value(profession),
-      cover-info-key(text(spacing: (key-width - 2em))[学 院]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(5))[学科或类别]),
       cover-info-colon[：],
       cover-info-value(collage),
-      cover-info-key(text(spacing: base-space * 1em)[答 辩 日 期]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[学校]),
+      cover-info-colon[：],
+      cover-info-value(affiliation),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[答辩日期]),
       cover-info-colon[：],
       cover-info-value([#[#year]年#[#month]月]),
-      cover-info-key(text(spacing: (key-width - 2em))[学 校]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(6))[授予学位单位]),
       cover-info-colon[：],
       cover-info-value(institute),
+    )
+  ]
+}
+
+#let cover-secondary-en(
+  title-en: "",
+  author-en: "",
+  student-id: "",
+  supervisor-en: "",
+  profession-en: "",
+  collage-en: "",
+  affiliation-en: "",  
+  institute-en: "",
+  year: current-date.year(),
+  month: current-date.month(),
+  day: current-date.day(),
+) = {
+  align(center)[
+
+    #let space-scale-ratio = 1.4
+
+    #grid(
+      columns: (1fr, 1fr),
+      align(left)[
+        #text(size: 字号.小四, font: 字体.宋体)[Classified Index: ××××] \
+        #text(size: 字号.小四, font: 字体.宋体)[U.D.C: ×××× ]
+      ],
+      align(right)[
+
+      ]
+    )
+
+    #v(字号.小四 * 3 * space-scale-ratio)
+
+    #text(size: 字号.小二, font: 字体.宋体)[Dissertation for the Master Degree]
+
+    #v(字号.小四 * 2 * space-scale-ratio)
+
+    #text(size: 字号.小二, font: 字体.黑体)[*#title-en*]
+
+    #v(字号.小四 * 1 * space-scale-ratio)
+
+    #v(字号.二号 * 4 * space-scale-ratio)
+
+    // #v(字号.小四 * space-scale-ratio)
+
+    #let cover-info-key(content) = {
+      align(left)[
+        #text(size: 字号.四号, font: 字体.黑体)[*#content*]
+      ]
+    }
+
+    #let cover-info-colon(content) = {
+      align(left)[
+        #text(size: 字号.四号, font: 字体.黑体)[#content]
+      ]
+    }
+
+    #let cover-info-value(content) = {
+      align(left)[
+        #text(size: 字号.四号, font: 字体.宋体)[#content]
+      ]
+    }
+
+    // #let base-space = 0.8
+    #let key-width = 字号.四号 * 6
+    #let get-tracking-by-characters-count(count) = (key-width - count * 1em) / (count - 1)
+
+    #grid(
+      columns: (auto, 1fr),
+      row-gutter: 1.5em,
+      column-gutter: 0.25em,
+      cover-info-key(text()[Candidate：]),
+      cover-info-value(author-en),
+
+      cover-info-key(text()[Supervisor：]),
+      cover-info-value(supervisor-en), 
+
+      cover-info-key(text()[Academic Degree Applied for：]),
+      cover-info-value(profession-en),
+
+      cover-info-key(text()[Specialty：]),
+      cover-info-value(collage-en),
+
+      cover-info-key(text()[Affiliation：]),
+      cover-info-value(affiliation-en),
+
+      cover-info-key(text()[Date of Defense：]),
+      cover-info-value([#[#year]年#[#month]月]),
+
+      cover-info-key(text()[Degree-Conferring-Institution：]),
+      cover-info-value(institute-en),
     )
   ]
 }
@@ -150,7 +253,7 @@
       student-id: thesis-info.at("student-id"),
       supervisor: thesis-info.at("supervisor"),
       profession: thesis-info.at("profession"),
-      collage: thesis-info.at("collage"),
+      collage: thesis-info.at("specialty"),
       institute: thesis-info.at("institute"),
       year: thesis-info.at("year"),
       month: thesis-info.at("month"),
@@ -165,8 +268,25 @@
       student-id: thesis-info.at("student-id"),
       supervisor: thesis-info.at("supervisor"),
       profession: thesis-info.at("profession"),
-      collage: thesis-info.at("collage"),
+      collage: thesis-info.at("specialty"),
+      affiliation: thesis-info.at("affiliation"),
       institute: thesis-info.at("institute"),
+      year: thesis-info.at("year"),
+      month: thesis-info.at("month"),
+      day: thesis-info.at("day"),
+    )
+
+    pagebreak()
+
+    cover-secondary-en(
+      title-en: thesis-info.at("title-en"),
+      author-en: thesis-info.at("author-en"),
+      student-id: thesis-info.at("student-id"),
+      supervisor-en: thesis-info.at("supervisor-en"),
+      profession-en: thesis-info.at("profession-en"),
+      collage-en: thesis-info.at("specialty-en"),
+      affiliation-en: thesis-info.at("affiliation-en"),
+      institute-en: thesis-info.at("institute-en"),
       year: thesis-info.at("year"),
       month: thesis-info.at("month"),
       day: thesis-info.at("day"),

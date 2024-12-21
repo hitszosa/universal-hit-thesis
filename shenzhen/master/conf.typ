@@ -15,6 +15,7 @@
 #import "pages/acknowledgement.typ": acknowledgement as acknowledgement-page
 #import "pages/achievement.typ": achievement as achievement-page
 #import "pages/declaration-of-originality.typ": declaration-of-originality
+#import "pages/personal-resume.typ": personal-resume-page
 
 #let preface(content) = {
 
@@ -109,7 +110,7 @@
   content
 }
 
-#let ending-content(conclusion: none, achievement: none, acknowledgement: none) = {
+#let ending-content(conclusion: none, achievement: none, acknowledgement: none, personal-resume: none) = {
   if conclusion != none {
 
     conclusion-page[
@@ -140,6 +141,12 @@
       #acknowledgement
     ]
   }
+
+  if personal-resume != none {
+    personal-resume-page[
+      #personal-resume
+    ]
+  }
 }
 
 #let doc(
@@ -153,7 +160,8 @@
   bibliography: none,
   conclusion: none, 
   achievement: none, 
-  acknowledgement: none
+  acknowledgement: none,
+  personal-resume: none,
 ) = {
   set document(
     title: thesis-info.at("title-cn"),
@@ -211,7 +219,8 @@
   ending-content(
     conclusion: conclusion,
     achievement: achievement,
-    acknowledgement: acknowledgement
+    acknowledgement: acknowledgement,
+    personal-resume: personal-resume,
   )
 
 }

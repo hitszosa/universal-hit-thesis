@@ -1,10 +1,13 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../config/constants.typ": special-chapter-titles
+#import "../components/header.typ": use-hit-header
 
 #let abstract-cn(
   content,
   keywords: (),
 ) = {
+
+  show: use-hit-header.with(header-text: special-chapter-titles.摘要)
 
   heading(special-chapter-titles.摘要, level: 1)
 
@@ -27,6 +30,8 @@
   content,
   keywords: (),
 ) = {
+
+  show: use-hit-header.with(header-text: special-chapter-titles.Abstract)
 
   heading(special-chapter-titles.Abstract, level: 1)
 

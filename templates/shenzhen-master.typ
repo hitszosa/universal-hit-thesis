@@ -12,11 +12,18 @@
     title-cn: "局部多孔质气体静压轴承关键技术的研究",
     title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
     author: "▢▢▢",
+    author-en: "▢▢▢",
     student-id: "▢▢▢▢▢▢▢▢▢▢",
     supervisor: "▢▢▢ 教授",
-    profession: "机械制造及其自动化",
-    collage: "机电工程学院",
+    supervisor-en: "Prof. ▢▢▢",
+    profession: "工学硕士",
+    profession-en: "Master of Engineering",
+    specialty: "机械制造及其自动化",
+    specialty-en: "Mechanical Manufacturing and Automation",
+    affiliation: "哈尔滨工业大学（深圳）",
+    affiliation-en: "Harbin Institute of Technology, Shenzhen",
     institute: "哈尔滨工业大学",
+    institute-en: "Harbin Institute of Technology",
     // year: 2024,
     // month: 5,
     // day: 1,
@@ -113,6 +120,20 @@
 
     ……
   ],
+  // 个人简历
+  personal-resume: [
+    ××××年××月××日出生于××××。
+
+    ××××年××月考入××大学××院（系）××专业，××××年××月本科毕业并获得××学学士学位。
+
+    ××××年××月——××××年××月，在××大学××院（系）××学科学习并获得××学硕士学位。
+
+    ××××年××月——××××年××月，在××大学××院（系）××学科攻读博士学位。
+
+    获奖情况：如获三好学生、优秀团干部、×奖学金等（不含科研学术获奖）。
+
+    工作经历：
+  ]
 )
 
 = #[绪#h(1em)论]
@@ -219,11 +240,11 @@ $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
 $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
-式中 $D_p$ —— 多孔质材料的平均粒子直径（m）；
+式中 $D_p$ —— 多孔质材料的平均粒子直径（$m$）；
 
 #h(1em) $psi$ —— 孔隙度（孔隙体积占总体积的百分比）；
 
-#h(1em) $phi$ —— 特征渗透性或固有渗透性（m2）。
+#h(1em) $phi$ —— 特征渗透性或固有渗透性（$m^2$）。
 ……
 
 == 本章小结
@@ -447,7 +468,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   #code-figure(
     ```rs
     fn main() {
-        println!("Hello, World!"); // 苟利国家生死以
+        println!("Hello, World!"); // 这是一行注释
     }
     ```,
     caption: [XXX代码],
