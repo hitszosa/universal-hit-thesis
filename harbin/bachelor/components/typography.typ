@@ -1,4 +1,5 @@
  #import "../../../common/theme/type.typ": 字体, 字号
+ #import "../../../common/components/typography.typ": fake-par
  #import "@preview/numbly:0.1.0": numbly
  
  #let special-chapter-format-heading(it: none, font: none, size: none, weight: "regular") = {
@@ -39,6 +40,7 @@
   show: heading-level-1-style
   pagebreak(weak: true)
   it
+  fake-par
 }
 
 
@@ -59,21 +61,24 @@
     "{1}.{2}.{3}.{4}.{5}  ",
   ))
 
-  // show heading.where(level: 1): heading-level-1
+  show heading.where(level: 1): heading-level-1
   show heading.where(level: 2): it => {
     set text(font: 字体.黑体, size: 字号.小三, weight: "regular")
     set block(above: 0.5em * heading-block-unit-multiplier, below: 0.5em * heading-block-unit-multiplier)
     it
+    fake-par
   }
   show heading.where(level: 3): it => {
     set text(font: 字体.黑体, size: 字号.小四, weight: "regular")
     set block(above: 0.5em * heading-block-unit-multiplier, below: 0.5em * heading-block-unit-multiplier)
     it
+    fake-par
   }
   show heading: it => {
       set text(font: 字体.黑体, size: 字号.小四, weight: "regular")
       set block(above: 0.5em * heading-block-unit-multiplier, below: 0.5em * heading-block-unit-multiplier)
       it
+      fake-par
   }
   content
 }
