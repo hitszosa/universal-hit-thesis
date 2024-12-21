@@ -39,6 +39,20 @@
 
   #if bilingual {
     pagebreak()
-    // TODO 添加英文版目录
+    context {
+      heading(level: 1, numbering: none, outlined: false)[Contents] 
+      let elems = query(metadata.where(label: <enheading>))
+      for e in elems {
+        let heading_before = query(heading.where().before(e.location())).first()
+        // indent according to level
+        h(1em * (heading_before.level - 1))
+        if heading_before.numbering != none{
+          numbering("1.1 ", ..counter(heading).at(e.location()))
+        }
+        [#e.value#box(width: 1fr, repeat([.]))]
+        numbering(e.location().page-numbering(), ..counter(page).at(e.location()))
+        parbreak()
+      }
+    }
   }
 ]
