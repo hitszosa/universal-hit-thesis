@@ -22,3 +22,6 @@
   header: 3cm,
   footer: 2.3cm,
 )
+
+#let main-text-line-spacing-multiplier = 1.25
+#let single-line-spacing = 19.75pt

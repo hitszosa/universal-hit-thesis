@@ -2,8 +2,7 @@
 #import "components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
 #import "components/header.typ": use-hit-header
 #import "components/footer.typ": use-footer-preface, use-footer-main
-#import "config/constants.typ": special-chapter-titles
-#import "config/constants.typ": current-date
+#import "config/constants.typ": special-chapter-titles, current-date, main-text-line-spacing-multiplier, single-line-spacing
 #import "utils/states.typ": thesis-info-state, bibliography-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
@@ -178,7 +177,7 @@
 
   cover()
 
-  set par(first-line-indent: 2em, leading: 1em, justify: true, spacing: 1em)
+  set par(first-line-indent: 2em, leading: main-text-line-spacing-multiplier * single-line-spacing - 1em, justify: true, spacing: 1em)
 
   set text(font: 字体.宋体, size: 字号.小四)
 
