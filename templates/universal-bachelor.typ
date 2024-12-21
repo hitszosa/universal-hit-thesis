@@ -227,6 +227,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 本章小结
 
+= 局部多孔质静压轴承的试验研究
 
 == 引言
 
@@ -326,7 +327,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   supplement: [图],
 ) <square>
 
-#indent 图表之后默认不缩进，如需缩进，可以手动调用`#indent`实现缩进。
+#indent 图表和 `heading` 之后第一段默认不缩进，如需缩进，可以手动调用`#indent`实现缩进。
 
 #figure(
   table(
