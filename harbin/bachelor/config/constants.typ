@@ -10,3 +10,15 @@
 )
 
 #let current-date = datetime.today()
+
+#let page-margins = (
+  top: 3.8cm,
+  bottom: 3cm,
+  left: 3cm,
+  right: 3cm,
+)
+
+#let distance-to-the-edges = (
+  header: 3cm,
+  footer: 2.3cm,
+)
