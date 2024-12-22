@@ -63,6 +63,9 @@
   collage: "",
   affiliation: "",  
   institute: "",
+  chinese-library-classification: "××××",
+  universal-decimal-classification: "××××",
+  school-identification-code: "×××",
   year: current-date.year(),
   month: current-date.month(),
   day: current-date.day(),
@@ -74,11 +77,11 @@
     #grid(
       columns: (1fr, 1fr),
       align(left)[
-        #text(size: 字号.小四, font: 字体.宋体)[国内图书分类号：××××] \
-        #text(size: 字号.小四, font: 字体.宋体)[国际图书分类号：××××]
+        #text(size: 字号.小四, font: 字体.宋体)[国内图书分类号：#chinese-library-classification] \
+        #text(size: 字号.小四, font: 字体.宋体)[国际图书分类号：#universal-decimal-classification]
       ],
       align(right)[
-        #text(size: 字号.小四, font: 字体.宋体)[学校代码：×××] \
+        #text(size: 字号.小四, font: 字体.宋体)[学校代码：#school-identification-code] \
         #text(size: 字号.小四, font: 字体.宋体)[密级：公开]
       ]
     )
@@ -157,6 +160,8 @@
   collage-en: "",
   affiliation-en: "",  
   institute-en: "",
+  chinese-library-classification: "××××",
+  universal-decimal-classification: "××××",
   year: current-date.year(),
   month: current-date.month(),
   day: current-date.day(),
@@ -168,8 +173,8 @@
     #grid(
       columns: (1fr, 1fr),
       align(left)[
-        #text(size: 字号.小四, font: 字体.宋体)[Classified Index: ××××] \
-        #text(size: 字号.小四, font: 字体.宋体)[U.D.C: ×××× ]
+        #text(size: 字号.小四, font: 字体.宋体)[Classified Index: #chinese-library-classification] \
+        #text(size: 字号.小四, font: 字体.宋体)[U.D.C: #universal-decimal-classification]
       ],
       align(right)[
 
@@ -266,6 +271,9 @@
       collage: thesis-info.at("specialty"),
       affiliation: thesis-info.at("affiliation"),
       institute: thesis-info.at("institute"),
+      chinese-library-classification: thesis-info.at("chinese-library-classification"),
+      universal-decimal-classification: thesis-info.at("universal-decimal-classification"),
+      school-identification-code: thesis-info.at("school-identification-code"),
       year: thesis-info.at("year"),
       month: thesis-info.at("month"),
       day: thesis-info.at("day"),
@@ -281,6 +289,8 @@
       collage-en: thesis-info.at("specialty-en"),
       affiliation-en: thesis-info.at("affiliation-en"),
       institute-en: thesis-info.at("institute-en"),
+      chinese-library-classification: thesis-info.at("chinese-library-classification"),
+      universal-decimal-classification: thesis-info.at("universal-decimal-classification"),
       year: thesis-info.at("year"),
       month: thesis-info.at("month"),
       day: thesis-info.at("day"),

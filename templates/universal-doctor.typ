@@ -23,6 +23,12 @@
     affiliation-en: "School of Mechatronics Engineering",
     institute: "哈尔滨工业大学",
     institute-en: "Harbin Institute of Technology",
+    // 国内图书分类号
+    chinese-library-classification: "××××",
+    // 国际图书分类号
+    universal-decimal-classification: "××××",
+    // 学校代码
+    school-identification-code: "×××",
     // year: 2024,
     // month: 5,
     // day: 1,

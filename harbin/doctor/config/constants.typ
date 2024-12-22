@@ -13,4 +13,7 @@
   affiliation: "机电工程学院",
   affiliation-en: "School of Mechatronics Engineering",
   institute-en: "Harbin Institute of Technology",
+  chinese-library-classification: "××××",
+  universal-decimal-classification: "××××",
+  school-identification-code: "×××",
 )
