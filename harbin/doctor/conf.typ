@@ -208,7 +208,10 @@
     ]
   }
 
-  outline-page(use-same-header-text: true)
+  outline-page(
+    bilingual: true,
+    use-same-header-text: true
+  )
 
   figure-options = figure-options + (
     extra-kinds: (),

@@ -3,6 +3,7 @@
 #import "../../../common/components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
 #import "../../../common/utils/states.typ": thesis-info-state
 #import "../../../common/components/header.typ": use-hit-header
+#import "../../../common/components/enheading.typ": enheading
 #import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state
 
 #let declaration-of-originality() = context {
@@ -14,6 +15,7 @@
   [
     #show heading: none
     #heading(special-chapter-titles.原创性声明, level: 1)
+    #enheading(special-chapter-titles.原创性声明-en)
   ]
 
   v(0em, weak: true)

@@ -1,10 +1,16 @@
 #let special-chapter-titles-default-value = (
   摘要: text(spacing: 1em)[摘 要],
-  Abstract: "Abstract",
+  摘要-en: [Abstract(Chinese)],
+  Abstract: [Abstract],
+  Abstract-en: [Abstract(English)],
   目录: text(spacing: 1em)[目 录],
+  目录-en: [Contents],
   结论: text(spacing: 1em)[结 论],
-  参考文献: "参考文献",
+  结论-en: [Conclusions],
+  参考文献: [参考文献],
+  参考文献-en: [References],
   致谢: text(spacing: 1em)[致 谢],
+  致谢-en: [Acknowledgements],
 )
 
 #let current-date = datetime.today()

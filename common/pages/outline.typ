@@ -40,17 +40,30 @@
   #if bilingual {
     pagebreak()
     context {
-      heading(level: 1, numbering: none, outlined: false)[Contents] 
+      heading(level: 1, numbering: none, outlined: false)[#special-chapter-titles.目录-en] 
       let elems = query(metadata.where(label: <enheading>))
       for e in elems {
-        let heading_before = query(heading.where().before(e.location())).first()
+        let heading_before = query(heading.where().before(e.location())).last()
+        let entry = []
         // indent according to level
         h(1em * (heading_before.level - 1))
-        if heading_before.numbering != none{
-          numbering("1.1 ", ..counter(heading).at(e.location()))
+        // display bold for level 1
+        let t = if heading_before.level == 1{
+          text.with(weight: "bold")
+        } else {
+          text
         }
-        [#e.value#box(width: 1fr, repeat([.]))]
-        numbering(e.location().page-numbering(), ..counter(page).at(e.location()))
+        if heading_before.numbering != none{
+          if heading_before.level == 1{
+            entry += t()[Chapter ]
+          }
+          entry += t(numbering("1.1  ", ..counter(heading).at(e.location())))
+          
+        }
+        entry += t(e.value)
+        entry += box(width: 1fr, repeat([.]))
+        entry += numbering(e.location().page-numbering(), ..counter(page).at(e.location()))
+        link(heading_before.location(), entry)
         parbreak()
       }
     }

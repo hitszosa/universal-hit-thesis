@@ -1,5 +1,6 @@
 #import "../../../common/components/header.typ": use-hit-header
 #import "../../../common/utils/states.typ": special-chapter-titles-state
+#import "../../../common/components/enheading.typ": enheading
 
 #let personal-resume-page(
   content,
@@ -15,6 +16,6 @@
 
   #show: use-hit-header.with(header-text: special-chapter-titles.个人简历)
   #heading(special-chapter-titles.个人简历, level: 1, numbering: none)
-
+  #enheading(special-chapter-titles.个人简历-en)
   #content
 ]

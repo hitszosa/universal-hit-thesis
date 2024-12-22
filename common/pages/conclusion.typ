@@ -1,4 +1,5 @@
 #import "../components/header.typ": use-hit-header
+#import "../components/enheading.typ": addif_enheading
 #import "../utils/states.typ": special-chapter-titles-state
 
 #let conclusion(
@@ -14,6 +15,7 @@
   )
 
   #heading(special-chapter-titles.结论, level: 1, numbering: none)
+  #addif_enheading(special-chapter-titles.at("结论-en", default: none))
 
   #content
 ]

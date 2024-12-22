@@ -1,4 +1,5 @@
 #import "../components/header.typ": use-hit-header
+#import "../components/enheading.typ": addif_enheading
 #import "../utils/states.typ": special-chapter-titles-state
 
 #let acknowledgement(
@@ -15,6 +16,7 @@
   )
 
   #heading(special-chapter-titles.致谢, level: 1, numbering: none)
+  #addif_enheading(special-chapter-titles.at("致谢-en", default: none))
 
   #content
 ]
