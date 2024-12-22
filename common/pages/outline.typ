@@ -1,13 +1,14 @@
-#import "../config/constants.typ": special-chapter-titles
 #import "../theme/type.typ": 字体
 #import "../components/header.typ": use-hit-header
-#import "../utils/states.typ": default-header-text-state
+#import "../utils/states.typ": default-header-text-state, special-chapter-titles-state
 
 #let outline-page(
   use-same-header-text: false,
   bilingual: false
-) = [
+) = context [
   
+  #let special-chapter-titles = special-chapter-titles-state.get()
+
   #show: use-hit-header.with(
     header-text: if use-same-header-text {
       special-chapter-titles.目录

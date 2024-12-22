@@ -1,18 +1,21 @@
 #import "../theme/type.typ": 字体, 字号
 #import "../config/constants.typ": page-margins, distance-to-the-edges
-#import "../config/constants.typ": special-chapter-titles
 #import "../utils/states.typ": default-header-text-state
 
-#let use-hit-header(header-text: none, content) =  {
-  let default-header-text = context default-header-text-state.get()
-  if header-text == none {
-    header-text = default-header-text
+#let use-hit-header(header-text: none, content) = context {
+  let default-header-text = default-header-text-state.get()
+
+  let internal-header-text = if header-text == none {
+    default-header-text
+  } else {
+    header-text
   }
+
   let header-body = [
     #set align(center)
     #text(font: 字体.宋体, size: 字号.小五)[
       #block(below: 2.2pt + 0.25em)[
-        #header-text
+        #internal-header-text
       ]
     ]
     #line(length: 100%, stroke: 2.2pt)

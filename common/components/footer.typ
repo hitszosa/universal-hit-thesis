@@ -1,5 +1,5 @@
-#import "../../../common/theme/type.typ": 字体, 字号
-#import "../../../common/config/constants.typ": page-margins, distance-to-the-edges
+#import "../theme/type.typ": 字体, 字号
+#import "../config/constants.typ": page-margins, distance-to-the-edges
 
 #let use-footer-preface(content) = {
   context {

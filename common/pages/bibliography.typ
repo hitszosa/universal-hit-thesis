@@ -1,4 +1,3 @@
-#import "../config/constants.typ": special-chapter-titles
 #import "../utils/states.typ": bibliography-state
 #import "../components/bilingual-bibliography.typ": bilingual-bibliography
 #import "../utils/states.typ": special-chapter-titles-state

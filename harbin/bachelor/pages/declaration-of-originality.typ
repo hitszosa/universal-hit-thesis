@@ -1,10 +1,12 @@
 #import "../config/constants.typ": special-chapter-titles
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../../../common/components/typography.typ": indent
-#import "../components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
-#import "../utils/states.typ": thesis-info-state
+#import "../../../common/components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
+#import "../../../common/utils/states.typ": thesis-info-state
 
-#let declaration-of-originality() = {
+#let declaration-of-originality() = context {
+
+  let special-chapter-titles = special-chapter-titles-state.get()
 
   heading-level-1-style[#block()[哈尔滨工业大学本科毕业论文（设计）]]
 

@@ -1,12 +1,11 @@
 #import "../../common/theme/type.typ": 字体, 字号
-#import "components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
+#import "../../common/components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
 #import "../../common/components/header.typ": use-hit-header
-#import "components/footer.typ": use-footer-preface, use-footer-main
-#import "config/constants.typ": special-chapter-titles, special-chapter-titles-additional
+#import "../../common/components/footer.typ": use-footer-preface, use-footer-main
+#import "config/constants.typ": special-chapter-titles, special-chapter-titles-additional, thesis-info-additional
 #import "../../common/config/constants.typ": current-date, main-text-line-spacing-multiplier, single-line-spacing
 #import "../../common/utils/states.typ": special-chapter-titles-state
-#import "utils/states.typ": thesis-info-state
-#import "../../common/utils/states.typ": default-header-text-state, bibliography-state
+#import "../../common/utils/states.typ": default-header-text-state, bibliography-state, thesis-info-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 #import "@preview/lovelace:0.2.0": setup-lovelace
@@ -168,7 +167,7 @@
   )
 
   thesis-info-state.update(current => {
-    current + thesis-info
+    current + thesis-info-additional + thesis-info
   })
 
   bibliography-state.update(current => bibliography)

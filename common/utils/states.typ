@@ -1,4 +1,4 @@
-#import "../config/constants.typ": special-chapter-titles-default-value
+#import "../config/constants.typ": special-chapter-titles-default-value, thesis-info-default-value
 
 #let default-header-text-state = state(
   "default-header-text",
@@ -11,3 +11,8 @@
 )
 
 #let bibliography-state = state("bibliography")
+
+#let thesis-info-state = state(
+  "thesis-info",
+  thesis-info-default-value,
+)

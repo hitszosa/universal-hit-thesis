@@ -6,7 +6,6 @@
 #import "../../common/pages/bibliography.typ": bibliography-page
 #import "../../common/pages/acknowledgement.typ": acknowledgement
 #import "../../common/pages/achievement.typ": achievement
-#import "config/constants.typ": special-chapter-titles
 #import "pages/declaration-of-originality.typ": declaration-of-originality
 #import "../../common/components/typography.typ": indent
 #import "../../common/components/figure.typ": code-figure, algorithm-figure
