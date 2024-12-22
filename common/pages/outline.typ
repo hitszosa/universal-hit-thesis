@@ -38,8 +38,12 @@
   #outline(title: align(center)[#special-chapter-titles.目录], indent: n => [#h(1em)] * n)
 
   #if bilingual {
-    pagebreak()
-    context {
+      pagebreak()
+      show: use-hit-header.with(
+        header-text: if use-same-header-text {
+          special-chapter-titles.目录-en
+        }
+      )
       heading(level: 1, numbering: none, outlined: false)[#special-chapter-titles.目录-en] 
       let elems = query(metadata.where(label: <enheading>))
       for e in elems {
@@ -57,7 +61,7 @@
           if heading_before.level == 1{
             entry += t()[Chapter ]
           }
-          entry += t(numbering("1.1  ", ..counter(heading).at(e.location())))
+          entry += t(numbering("1.1    ", ..counter(heading).at(e.location())))
           
         }
         entry += t(e.value)
@@ -67,5 +71,4 @@
         parbreak()
       }
     }
-  }
 ]

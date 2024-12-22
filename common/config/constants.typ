@@ -1,8 +1,8 @@
 #let special-chapter-titles-default-value = (
   摘要: text(spacing: 1em)[摘 要],
-  摘要-en: [Abstract(Chinese)],
+  摘要-en: [Abstract (In Chinese)],
   Abstract: [Abstract],
-  Abstract-en: [Abstract(English)],
+  Abstract-en: [Abstract (In English)],
   目录: text(spacing: 1em)[目 录],
   目录-en: [Contents],
   结论: text(spacing: 1em)[结 论],

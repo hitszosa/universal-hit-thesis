@@ -242,7 +242,8 @@
 
 = 基于FLUENT软件的轴承静态特性研究
 // 对于过长的英文标题需要手动处理换行和缩进
-#enheading()[Study on the static characteristics of bearings based on FLUENT #linebreak()#h(4em) software]
+#enheading()[Research on static characteristics of bearing based on FLUENT 
+ #linebreak()#h(4em) software]
 
 == 引言
 #enheading()[Introduction]
@@ -269,7 +270,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 #enheading()[Brief summary]
 
 = 局部多孔质静压轴承的试验研究
-#enheading()[Experimental study on partial porous externally thrust bearings]
+#enheading()[Experiment on partial porous thrust bearing]
 
 == 引言
 #enheading()[Introduction]
