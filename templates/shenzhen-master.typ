@@ -10,7 +10,7 @@
   // 学位类型. 
   // e-master-type.academic: 学硕
   // e-master-type.professional: 专硕
-  master-type: e-master-type.professional,
+  master-type: e-master-type.academic,
   thesis-info: (
     // 论文标题，可使用 \n 进行换行
     title-cn: "局部多孔质气体静压轴承关键技术的研究",
