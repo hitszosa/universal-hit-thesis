@@ -2,20 +2,21 @@
 #import "components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
 #import "../../common/components/header.typ": use-hit-header
 #import "components/footer.typ": use-footer-preface, use-footer-main
-#import "config/constants.typ": special-chapter-titles, 
+#import "config/constants.typ": special-chapter-titles, special-chapter-titles-additional
 #import "../../common/config/constants.typ": current-date, main-text-line-spacing-multiplier, single-line-spacing
-#import "utils/states.typ": thesis-info-state, bibliography-state
-#import "../../common/utils/states.typ": default-header-text-state
+#import "../../common/utils/states.typ": special-chapter-titles-state
+#import "utils/states.typ": thesis-info-state
+#import "../../common/utils/states.typ": default-header-text-state, bibliography-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 #import "@preview/lovelace:0.2.0": setup-lovelace
 #import "pages/cover.typ": cover
-#import "pages/abstract.typ": abstract-cn as abstract-cn-page, abstract-en as abstract-en-page
+#import "../../common/pages/abstract.typ": abstract-cn as abstract-cn-page, abstract-en as abstract-en-page
 #import "../../common/pages/outline.typ": outline-page
-#import "pages/conclusion.typ": conclusion as conclusion-page
-#import "pages/bibliography.typ": bibliography-page
-#import "pages/acknowledgement.typ": acknowledgement as acknowledgement-page
-#import "pages/achievement.typ": achievement as achievement-page
+#import "../../common/pages/conclusion.typ": conclusion as conclusion-page
+#import "../../common/pages/bibliography.typ": bibliography-page
+#import "../../common/pages/acknowledgement.typ": acknowledgement as acknowledgement-page
+#import "../../common/pages/achievement.typ": achievement as achievement-page
 #import "pages/declaration-of-originality.typ": declaration-of-originality
 
 #let preface(content) = {
@@ -173,6 +174,8 @@
   bibliography-state.update(current => bibliography)
 
   default-header-text-state.update(current => "哈尔滨工业大学本科毕业论文（设计）")
+
+  special-chapter-titles-state.update(current => current + special-chapter-titles-additional)
 
   set page(
     paper: "a4",

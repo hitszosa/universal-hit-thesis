@@ -16,5 +16,3 @@
     day: current-date.day(),
   ),
 )
-
-#let bibliography-state = state("bibliography")

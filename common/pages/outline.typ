@@ -7,15 +7,12 @@
   use-same-header-text: false,
   bilingual: false
 ) = [
-  #context [
-  #let default-header-text = default-header-text-state.get()
-  #let header-text = if use-same-header-text {
-    special-chapter-titles.目录
-  } else { 
-    default-header-text
-  }
+  
   #show: use-hit-header.with(
-  header-text: header-text)
+    header-text: if use-same-header-text {
+      special-chapter-titles.目录
+    }
+  )
 
   #set par(first-line-indent: 0em)
 
@@ -43,5 +40,4 @@
     pagebreak()
     // TODO 添加英文版目录
   }
-  ]
 ]
