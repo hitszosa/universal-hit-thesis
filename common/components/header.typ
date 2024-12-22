@@ -1,12 +1,21 @@
-#import "../../../common/theme/type.typ": 字体, 字号
+#import "../theme/type.typ": 字体, 字号
 #import "../config/constants.typ": page-margins, distance-to-the-edges
+#import "../utils/states.typ": default-header-text-state
 
-#let use-hit-header(content) = {
+#let use-hit-header(header-text: none, content) = context {
+  let default-header-text = default-header-text-state.get()
+
+  let internal-header-text = if header-text == none {
+    default-header-text
+  } else {
+    header-text
+  }
+
   let header-body = [
     #set align(center)
     #text(font: 字体.宋体, size: 字号.小五)[
       #block(below: 2.2pt + 0.25em)[
-        哈尔滨工业大学本科毕业论文（设计）
+        #internal-header-text
       ]
     ]
     #line(length: 100%, stroke: 2.2pt)

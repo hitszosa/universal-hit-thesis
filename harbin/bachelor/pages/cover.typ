@@ -1,6 +1,6 @@
 #import "../../../common/theme/type.typ": 字体, 字号
-#import "../config/constants.typ": current-date
-#import "../utils/states.typ": thesis-info-state
+#import "../../../common/config/constants.typ": current-date
+#import "../../../common/utils/states.typ": thesis-info-state
 
 #let cover-primary(
   title-cn: "",
