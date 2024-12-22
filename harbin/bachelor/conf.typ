@@ -2,7 +2,7 @@
 #import "../../common/components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
 #import "../../common/components/header.typ": use-hit-header
 #import "../../common/components/footer.typ": use-footer-preface, use-footer-main
-#import "config/constants.typ": special-chapter-titles, special-chapter-titles-additional, thesis-info-additional
+#import "config/constants.typ": special-chapter-titles-additional, thesis-info-additional
 #import "../../common/config/constants.typ": current-date, main-text-line-spacing-multiplier, single-line-spacing
 #import "../../common/utils/states.typ": special-chapter-titles-state
 #import "../../common/utils/states.typ": default-header-text-state, bibliography-state, thesis-info-state

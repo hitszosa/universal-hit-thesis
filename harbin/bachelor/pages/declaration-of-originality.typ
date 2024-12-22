@@ -1,8 +1,7 @@
-#import "../config/constants.typ": special-chapter-titles
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../../../common/components/typography.typ": indent
 #import "../../../common/components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
-#import "../../../common/utils/states.typ": thesis-info-state
+#import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state
 
 #let declaration-of-originality() = context {
 
