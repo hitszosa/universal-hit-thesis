@@ -1,4 +1,5 @@
 #import "@preview/universal-hit-thesis:0.2.1": universal-bachelor
+#import "../lib.typ": universal-bachelor
 #import universal-bachelor: *
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
