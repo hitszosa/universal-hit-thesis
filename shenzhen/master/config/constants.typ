@@ -8,9 +8,20 @@
   author-en: "▢▢▢",
   supervisor-en: "Prof. ▢▢▢",
   profession-en: "Master of Engineering",
+  co-supervisor: none,
+  co-supervisor-en: none,
   specialty: "机械制造及其自动化",
   specialty-en: "Mechanical Manufacturing and Automation",
   affiliation: "哈尔滨工业大学（深圳）",
   affiliation-en: "Harbin Institute of Technology, Shenzhen",
   institute-en: "Harbin Institute of Technology",
+  chinese-library-classification: "××××",
+  universal-decimal-classification: "××××",
+  school-identification-code: "×××",
+)
+
+#let e-master-type = (
+  "none": "master-type.none",
+  "academic": "master-type.academic",
+  "professional": "master-type.professional",
 )

@@ -1,6 +1,8 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../../../common/config/constants.typ": current-date
 #import "../../../common/utils/states.typ": thesis-info-state
+#import "../utils/states.typ": master-type-state
+#import "../config/constants.typ": e-master-type
 
 #let cover-primary(
   title-cn: "",
@@ -14,16 +16,27 @@
   year: current-date.year(),
   month: current-date.month(),
   day: current-date.day(),
-) = {
+) = context {
+
+  let master-type = master-type-state.get()
+
   align(center)[
 
     #let space-scale-ratio = 1.25
 
-    #v(字号.小四 * 6 * space-scale-ratio)
+    #v(字号.小四 * 3 * space-scale-ratio)
 
     #text(size: 字号.小一, font: 字体.宋体, weight: "bold")[*硕士学位论文*]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(字号.小四 * 1 * space-scale-ratio)
+
+    #if master-type == e-master-type.academic [
+      #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[（学术学位论文）]
+    ] else if master-type == e-master-type.professional [
+      #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[（专业学位论文）]
+    ]
+
+          #v(字号.小四 * 2 * space-scale-ratio)
 
     #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
@@ -59,14 +72,19 @@
   title-cn: "",
   author: "",
   supervisor: "",
+  co-supervisor: "",
   profession: "",
   collage: "",
   affiliation: "",  
   institute: "",
+  chinese-library-classification: "××××",
+  universal-decimal-classification: "××××",
+  school-identification-code: "×××",
   year: current-date.year(),
   month: current-date.month(),
   day: current-date.day(),
-) = {
+) = context {
+  let master-type = master-type-state.get()
   align(center)[
 
     #let space-scale-ratio = 1.4
@@ -74,11 +92,11 @@
     #grid(
       columns: (1fr, 1fr),
       align(left)[
-        #text(size: 字号.小四, font: 字体.宋体)[国内图书分类号：××××] \
-        #text(size: 字号.小四, font: 字体.宋体)[国际图书分类号：××××]
+        #text(size: 字号.小四, font: 字体.宋体)[国内图书分类号：#chinese-library-classification] \
+        #text(size: 字号.小四, font: 字体.宋体)[国际图书分类号：#universal-decimal-classification]
       ],
       align(right)[
-        #text(size: 字号.小四, font: 字体.宋体)[学校代码：×××] \
+        #text(size: 字号.小四, font: 字体.宋体)[学校代码：#school-identification-code] \
         #text(size: 字号.小四, font: 字体.宋体)[密级：公开]
       ]
     )
@@ -120,31 +138,47 @@
     #let key-width = 字号.四号 * 6
     #let get-tracking-by-characters-count(count) = (key-width - count * 1em) / (count - 1)
 
+    #let line-key-value-array = (
+      cover-info-key(text(tracking: get-tracking-by-characters-count(5))[硕士研究生]),
+      cover-info-colon[：],
+      cover-info-value(author),
+
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[导师]),
+      cover-info-colon[：],
+      cover-info-value(supervisor), 
+
+      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[申请学位]),
+      cover-info-colon[：],
+      cover-info-value(profession),
+
+      cover-info-key(text(tracking: get-tracking-by-characters-count(5))[学科或类别]),
+      cover-info-colon[：],
+      cover-info-value(collage),
+
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[学校]),
+      cover-info-colon[：],
+      cover-info-value(affiliation),
+
+      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[答辩日期]),
+      cover-info-colon[：],
+      cover-info-value([#[#year]年#[#month]月]),
+
+      cover-info-key(text(tracking: get-tracking-by-characters-count(6))[授予学位单位]),
+      cover-info-colon[：],
+      cover-info-value(institute),
+    )
+
+    #if master-type == e-master-type.professional and co-supervisor != none {
+      line-key-value-array.insert(6, cover-info-key(text(tracking: get-tracking-by-characters-count(4))[合作导师]))
+      line-key-value-array.insert(7, cover-info-colon[：])
+      line-key-value-array.insert(8, cover-info-value(co-supervisor))
+    }
+
     #grid(
       columns: (auto, 1em, auto),
       rows: (字号.四号, 字号.四号),
       row-gutter: 1.5em,
-      cover-info-key(text(tracking: get-tracking-by-characters-count(5))[硕士研究生]),
-      cover-info-colon[：],
-      cover-info-value(author),
-      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[导师]),
-      cover-info-colon[：],
-      cover-info-value(supervisor), 
-      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[申请学位]),
-      cover-info-colon[：],
-      cover-info-value(profession),
-      cover-info-key(text(tracking: get-tracking-by-characters-count(5))[学科或类别]),
-      cover-info-colon[：],
-      cover-info-value(collage),
-      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[学校]),
-      cover-info-colon[：],
-      cover-info-value(affiliation),
-      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[答辩日期]),
-      cover-info-colon[：],
-      cover-info-value([#[#year]年#[#month]月]),
-      cover-info-key(text(tracking: get-tracking-by-characters-count(6))[授予学位单位]),
-      cover-info-colon[：],
-      cover-info-value(institute),
+      ..line-key-value-array,
     )
   ]
 }
@@ -153,14 +187,18 @@
   title-en: "",
   author-en: "",
   supervisor-en: "",
+  co-supervisor-en: "",
   profession-en: "",
   collage-en: "",
   affiliation-en: "",  
   institute-en: "",
+  chinese-library-classification: "××××",
+  universal-decimal-classification: "××××",
   year: current-date.year(),
   month: current-date.month(),
   day: current-date.day(),
-) = {
+) = context {
+  let master-type = master-type-state.get()
   align(center)[
 
     #let space-scale-ratio = 1.4
@@ -168,8 +206,8 @@
     #grid(
       columns: (1fr, 1fr),
       align(left)[
-        #text(size: 字号.小四, font: 字体.宋体)[Classified Index: ××××] \
-        #text(size: 字号.小四, font: 字体.宋体)[U.D.C: ×××× ]
+        #text(size: 字号.小四, font: 字体.宋体)[Classified Index: #chinese-library-classification] \
+        #text(size: 字号.小四, font: 字体.宋体)[U.D.C: #universal-decimal-classification]
       ],
       align(right)[
 
@@ -212,10 +250,7 @@
     #let key-width = 字号.四号 * 6
     #let get-tracking-by-characters-count(count) = (key-width - count * 1em) / (count - 1)
 
-    #grid(
-      columns: (auto, 1fr),
-      row-gutter: 1.5em,
-      column-gutter: 0.25em,
+    #let line-key-value-array = (
       cover-info-key(text()[Candidate：]),
       cover-info-value(author-en),
 
@@ -236,6 +271,18 @@
 
       cover-info-key(text()[Degree-Conferring-Institution：]),
       cover-info-value(institute-en),
+    )
+
+    #if master-type == e-master-type.professional and co-supervisor-en != none {
+      line-key-value-array.insert(4, cover-info-key(text()[Co-Supervisor off Campus：]))
+      line-key-value-array.insert(5, cover-info-value(co-supervisor-en))
+    }
+
+    #grid(
+      columns: (auto, 1fr),
+      row-gutter: 1.5em,
+      column-gutter: 0.25em,
+      ..line-key-value-array,
     )
   ]
 }
@@ -262,10 +309,14 @@
       title-cn: thesis-info.at("title-cn"),
       author: thesis-info.at("author"),
       supervisor: thesis-info.at("supervisor"),
+      co-supervisor: thesis-info.at("co-supervisor"),
       profession: thesis-info.at("profession"),
       collage: thesis-info.at("specialty"),
       affiliation: thesis-info.at("affiliation"),
       institute: thesis-info.at("institute"),
+      chinese-library-classification: thesis-info.at("chinese-library-classification"),
+      universal-decimal-classification: thesis-info.at("universal-decimal-classification"),
+      school-identification-code: thesis-info.at("school-identification-code"),
       year: thesis-info.at("year"),
       month: thesis-info.at("month"),
       day: thesis-info.at("day"),
@@ -277,10 +328,13 @@
       title-en: thesis-info.at("title-en"),
       author-en: thesis-info.at("author-en"),
       supervisor-en: thesis-info.at("supervisor-en"),
+      co-supervisor-en: thesis-info.at("co-supervisor-en"),
       profession-en: thesis-info.at("profession-en"),
       collage-en: thesis-info.at("specialty-en"),
       affiliation-en: thesis-info.at("affiliation-en"),
       institute-en: thesis-info.at("institute-en"),
+      chinese-library-classification: thesis-info.at("chinese-library-classification"),
+      universal-decimal-classification: thesis-info.at("universal-decimal-classification"),
       year: thesis-info.at("year"),
       month: thesis-info.at("month"),
       day: thesis-info.at("day"),

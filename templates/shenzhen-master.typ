@@ -7,6 +7,10 @@
 // 实时预览  typst watch ./templates/universal-bachelor.typ --root ./
 
 #show: doc.with(
+  // 学位类型. 
+  // e-master-type.academic: 学硕
+  // e-master-type.professional: 专硕
+  master-type: e-master-type.professional,
   thesis-info: (
     // 论文标题，可使用 \n 进行换行
     title-cn: "局部多孔质气体静压轴承关键技术的研究",
@@ -15,6 +19,10 @@
     author-en: "▢▢▢",
     supervisor: "▢▢▢ 教授",
     supervisor-en: "Prof. ▢▢▢",
+    // master-type = e-master-type.professional 时
+    // 如有联合培养的校外合作指导教师则填写此行；无则设置为 none 或注释掉
+    // co-supervisor: "▢▢▢",
+    // co-supervisor-en: "▢▢▢",
     profession: "工学硕士",
     profession-en: "Master of Engineering",
     specialty: "机械制造及其自动化",
@@ -23,6 +31,12 @@
     affiliation-en: "Harbin Institute of Technology, Shenzhen",
     institute: "哈尔滨工业大学",
     institute-en: "Harbin Institute of Technology",
+    // 国内图书分类号
+    chinese-library-classification: "××××",
+    // 国际图书分类号
+    universal-decimal-classification: "××××",
+    // 学校代码
+    school-identification-code: "×××",
     // year: 2024,
     // month: 5,
     // day: 1,

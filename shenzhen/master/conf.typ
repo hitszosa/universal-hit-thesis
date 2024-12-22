@@ -17,6 +17,8 @@
 #import "../../common/pages/achievement.typ": achievement as achievement-page
 #import "pages/declaration-of-originality.typ": declaration-of-originality
 #import "pages/personal-resume.typ": personal-resume-page
+#import "config/constants.typ": e-master-type
+#import "utils/states.typ": master-type-state
 
 #let preface(content) = {
 
@@ -163,6 +165,7 @@
   achievement: none, 
   acknowledgement: none,
   personal-resume: none,
+  master-type: none,
 ) = {
   set document(
     title: thesis-info.at("title-cn"),
@@ -178,6 +181,13 @@
   default-header-text-state.update(current => "哈尔滨工业大学硕士学位论文")
 
   special-chapter-titles-state.update(current => current + special-chapter-titles-additional)
+
+  if master-type != none {
+    assert(
+      e-master-type.values().contains(master-type), message: "master-type 需传入类型为 e-master-type 的数据"
+    )
+    master-type-state.update(current => master-type)
+  }
 
   set page(
     paper: "a4",

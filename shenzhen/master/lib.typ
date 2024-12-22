@@ -10,3 +10,4 @@
 #import "../../common/components/typography.typ": indent
 #import "../../common/components/figure.typ": code-figure, algorithm-figure
 #import "../../common/theme/type.typ": 字号, 字体
+#import "config/constants.typ": e-master-type
