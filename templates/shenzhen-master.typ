@@ -13,7 +13,6 @@
     title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
     author: "▢▢▢",
     author-en: "▢▢▢",
-    student-id: "▢▢▢▢▢▢▢▢▢▢",
     supervisor: "▢▢▢ 教授",
     supervisor-en: "Prof. ▢▢▢",
     profession: "工学硕士",

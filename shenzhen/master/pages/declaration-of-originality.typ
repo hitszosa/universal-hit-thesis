@@ -1,11 +1,13 @@
-#import "../config/constants.typ": special-chapter-titles
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../../../common/components/typography.typ": indent
-#import "../components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
-#import "../utils/states.typ": thesis-info-state
-#import "../components/header.typ": use-hit-header
+#import "../../../common/components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
+#import "../../../common/utils/states.typ": thesis-info-state
+#import "../../../common/components/header.typ": use-hit-header
+#import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state
 
-#let declaration-of-originality() = {
+#let declaration-of-originality() = context {
+
+  let special-chapter-titles = special-chapter-titles-state.get()
   
   show: use-hit-header.with(header-text: special-chapter-titles.原创性声明)
 

@@ -1,19 +1,20 @@
 #import "../../common/theme/type.typ": 字体, 字号
-#import "components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
-#import "components/header.typ": use-hit-header
-#import "components/footer.typ": use-footer-preface, use-footer-main
-#import "config/constants.typ": special-chapter-titles, current-date, main-text-line-spacing-multiplier, single-line-spacing
-#import "utils/states.typ": thesis-info-state, bibliography-state
+#import "../../common/components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
+#import "../../common/components/header.typ": use-hit-header
+#import "../../common/components/footer.typ": use-footer-preface, use-footer-main
+#import "config/constants.typ": thesis-info-additional, special-chapter-titles-additional
+#import "../../common/config/constants.typ": current-date, main-text-line-spacing-multiplier, single-line-spacing
+#import "../../common/utils/states.typ": thesis-info-state, bibliography-state, default-header-text-state, special-chapter-titles-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 #import "@preview/lovelace:0.2.0": setup-lovelace
 #import "pages/cover.typ": cover
-#import "pages/abstract.typ": abstract-cn as abstract-cn-page, abstract-en as abstract-en-page
-#import "pages/outline.typ": outline-page
-#import "pages/conclusion.typ": conclusion as conclusion-page
-#import "pages/bibliography.typ": bibliography-page
-#import "pages/acknowledgement.typ": acknowledgement as acknowledgement-page
-#import "pages/achievement.typ": achievement as achievement-page
+#import "../../common/pages/abstract.typ": abstract-cn as abstract-cn-page, abstract-en as abstract-en-page
+#import "../../common/pages/outline.typ": outline-page
+#import "../../common/pages/conclusion.typ": conclusion as conclusion-page
+#import "../../common/pages/bibliography.typ": bibliography-page
+#import "../../common/pages/acknowledgement.typ": acknowledgement as acknowledgement-page
+#import "../../common/pages/achievement.typ": achievement as achievement-page
 #import "pages/declaration-of-originality.typ": declaration-of-originality
 #import "pages/personal-resume.typ": personal-resume-page
 
@@ -113,7 +114,7 @@
 #let ending-content(conclusion: none, achievement: none, acknowledgement: none, personal-resume: none) = {
   if conclusion != none {
 
-    conclusion-page[
+    conclusion-page(use-same-header-text: true)[
       #conclusion
     ]
 
@@ -121,12 +122,12 @@
 
   }
 
-  bibliography-page()
+  bibliography-page(use-same-header-text: true)
 
   pagebreak()
 
   if achievement != none {
-    achievement-page[
+    achievement-page(use-same-header-text: true)[
       #achievement
     ]
     pagebreak()
@@ -137,13 +138,13 @@
   pagebreak()
 
   if acknowledgement != none {
-    acknowledgement-page[
+    acknowledgement-page(use-same-header-text: true)[
       #acknowledgement
     ]
   }
 
   if personal-resume != none {
-    personal-resume-page[
+    personal-resume-page()[
       #personal-resume
     ]
   }
@@ -169,10 +170,14 @@
   )
 
   thesis-info-state.update(current => {
-    current + thesis-info
+    current + thesis-info-additional + thesis-info
   })
 
   bibliography-state.update(current => bibliography)
+
+  default-header-text-state.update(current => "哈尔滨工业大学硕士学位论文")
+
+  special-chapter-titles-state.update(current => current + special-chapter-titles-additional)
 
   set page(
     paper: "a4",
@@ -192,13 +197,13 @@
   show: preface
 
   if abstract-cn != none {
-    abstract-cn-page(keywords: keywords-cn)[
+    abstract-cn-page(keywords: keywords-cn, use-same-header-text: true)[
       #abstract-cn
     ]
   }
 
   if abstract-en != none {
-    abstract-en-page(keywords: keywords-en)[
+    abstract-en-page(keywords: keywords-en, use-same-header-text: true)[
       #abstract-en
     ]
   }

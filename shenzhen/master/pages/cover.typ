@@ -1,12 +1,11 @@
 #import "../../../common/theme/type.typ": 字体, 字号
-#import "../config/constants.typ": current-date
-#import "../utils/states.typ": thesis-info-state
+#import "../../../common/config/constants.typ": current-date
+#import "../../../common/utils/states.typ": thesis-info-state
 
 #let cover-primary(
   title-cn: "",
   title-en: "",
   author: "",
-  student-id: "",
   supervisor: "",
   profession: "",
   collage: "",
@@ -59,7 +58,6 @@
 #let cover-secondary(
   title-cn: "",
   author: "",
-  student-id: "",
   supervisor: "",
   profession: "",
   collage: "",
@@ -154,7 +152,6 @@
 #let cover-secondary-en(
   title-en: "",
   author-en: "",
-  student-id: "",
   supervisor-en: "",
   profession-en: "",
   collage-en: "",
@@ -250,7 +247,6 @@
       title-cn: thesis-info.at("title-cn"),
       title-en: thesis-info.at("title-en"),
       author: thesis-info.at("author"),
-      student-id: thesis-info.at("student-id"),
       supervisor: thesis-info.at("supervisor"),
       profession: thesis-info.at("profession"),
       collage: thesis-info.at("specialty"),
@@ -265,7 +261,6 @@
     cover-secondary(
       title-cn: thesis-info.at("title-cn"),
       author: thesis-info.at("author"),
-      student-id: thesis-info.at("student-id"),
       supervisor: thesis-info.at("supervisor"),
       profession: thesis-info.at("profession"),
       collage: thesis-info.at("specialty"),
@@ -281,7 +276,6 @@
     cover-secondary-en(
       title-en: thesis-info.at("title-en"),
       author-en: thesis-info.at("author-en"),
-      student-id: thesis-info.at("student-id"),
       supervisor-en: thesis-info.at("supervisor-en"),
       profession-en: thesis-info.at("profession-en"),
       collage-en: thesis-info.at("specialty-en"),
