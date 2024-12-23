@@ -174,30 +174,37 @@
 
 （1）*气体静压轴承* 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @fig:气体润滑轴承的分类1 (a) 所示。……
 
-#figure(
+#bilingual-figure(
   grid(
-    columns: (auto, auto),
-    rows: (auto, auto),
-    row-gutter: 1em,
-    column-gutter: 1em,
-    [ #align(left)[(a)]
-      #square(size: 8em, stroke: 2pt)
-      // 可替换为实际的图片
-      // image("path/to/image.png", width: 50%)
-    ],
-    [ #align(left)[(b)] #square(size: 8em, stroke: 2pt) ],
+      columns: (auto, auto),
+      rows: (auto, auto),
+      row-gutter: 1em,
+      column-gutter: 1em,
+      [ #align(left)[(a)]
+        #square(size: 8em, stroke: 2pt)
+        // 可替换为实际的图片
+        // image("path/to/image.png", width: 50%)
+      ],
+      [ #align(left)[(b)] #square(size: 8em, stroke: 2pt) ],
 
-    [ #align(left)[(c)] #square(size: 8em, stroke: 2pt) ], [ #align(left)[(d)] #square(size: 8em, stroke: 2pt) ],
+      [ #align(left)[(c)] #square(size: 8em, stroke: 2pt) ], [ #align(left)[(d)] #square(size: 8em, stroke: 2pt) ],
+    ),
+  caption: (
+    zh: [气体润滑轴承的分类],
+    en: [Classification of the gas-lubricated bearing]
   ),
-  caption: [气体润滑轴承的分类],
-  supplement: [图],
-)<气体润滑轴承的分类1>
+  supplement: (
+    zh: [图],
+    en: [Fig.]
+  ),
+  label-name: "气体润滑轴承的分类1",
+)
 
 #align(center)[(a) 气体静压轴承; (b) 气体动压轴承; (c) 气体动静压轴承; (d) 气体压膜轴承]
 
 （也可以按照下图范例书写）
 
-#figure(
+#bilingual-figure(
     grid(
       columns: (auto, auto),
       rows: (auto, auto),
@@ -209,9 +216,16 @@
       [ #square(size: 8em, stroke: 2pt) #text()[ (d) 气体压膜轴承 ]],
     ),
     // image("path/to/image.png", width: 50%),
-    caption: [气体润滑轴承的分类],
-    supplement: [图],
-)<气体润滑轴承的分类2>
+    caption: (
+      zh: [气体润滑轴承的分类],
+      en: [Classification of the gas-lubricated bearing]
+    ),
+    // supplement: (
+    //   zh: [图],
+    //   en: [Fig.]
+    // ),
+    label-name: "气体润滑轴承的分类2"
+)
 
 === 多孔质气体静压轴承的研究
 #enheading()[Research on porous gas-lubricated bearings]
@@ -284,7 +298,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 1号试样的试验数据见 @tbl:1号试样的实验数据。
 
-#figure(
+#bilingual-figure(
   table(
     columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
     stroke: none,
@@ -314,13 +328,17 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     [-5.338 76],
     table.hline(),
   ),
-  caption: [1号试样渗透率测试数据(温度：T=16 ℃ 高度：H=5.31 mm)],
-  supplement: [表],
-)<1号试样的实验数据>
+  caption: (
+    zh: [1号试样渗透率测试数据(温度：T=16 ℃ 高度：H=5.31 mm)],
+    en: [Data of measured permeability of sample 1 #linebreak() (Temperature: T=16 ℃  Height: H=5.31 mm)],
+  ),
+  // supplement: [表],
+  label-name: "1号试样的实验数据",
+)
 
 #linebreak()
 
-#figure(
+#bilingual-figure(
   table(
     columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
     stroke: none,
@@ -350,9 +368,12 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     [-5.338 76],
     table.hline(),
   ),
-  caption: [试样渗透率测试数据],
-  supplement: [表],
-)<试样渗透率测试数据>
+  caption: (
+    zh: [试样渗透率测试数据],
+    en: [Data of measured permeability of sample 1],
+  ),
+  label-name: "试样渗透率测试数据",
+)
 
 == 本章小结
 #enheading()[Brief summary]
@@ -367,17 +388,26 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 == 图表
 #enheading()[Figures and tables]
 
-使用`@fig:`来引用图片： @fig:square
+使用`@fig:`来引用图片： @fig:square，则图表会以默认
 
-#figure(
+#bilingual-figure(
   square(size: 8em, stroke: 2pt),
-  caption: [A curious figure.],
-  supplement: [图],
-) <square>
+  caption: (
+    zh: [一张有趣的图表],
+    en: [A curious figure.],
+  ),
+  supplement: (
+    zh: [图表],
+    en: [Figure],
+  ),
+  label-name: "square",
+)
 
-#indent 图表之后第一段默认不缩进，如需缩进，可以手动调用`#indent`实现缩进。
+#indent 若传入中英双语 `caption`，则 `bilingual-figure` 默认以中英双语显示。传入 `supplement` 字段可用于自定义中英双语的 `supplement`，若不传入则显示默认的 `supplement`.
 
-#figure(
+图表之后第一段默认不缩进，如需缩进，可以手动调用`#indent`实现缩进。
+
+#bilingual-figure(
   table(
     columns: 4,
     [t], [1], [2], [3],
@@ -385,9 +415,10 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   ),
   caption: [Timing results],
   supplement: [表],
-) <time-results>
+  label-name: "time-results",
+)
 
-#figure(
+#bilingual-figure(
   table(
     columns: 4,
     stroke: none,
@@ -403,9 +434,12 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     [0.8s],
     table.hline(),
   ),
-  caption: [Timing results（三线表）],
-  supplement: [表],
-) <time-results-three-line-table>
+  caption: (
+    zh: [三线表],
+    en: [Three-line table],
+  ),
+  label-name: "time-results-three-line-table",
+) 
 
 #indent 使用`@tbl:`来引用表格： @tbl:time-results @tbl:time-results-three-line-table
 

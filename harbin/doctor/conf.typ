@@ -17,6 +17,7 @@
 #import "../../common/pages/achievement.typ": achievement as achievement-page
 #import "pages/declaration-of-originality.typ": declaration-of-originality
 #import "pages/personal-resume.typ": personal-resume-page
+#import "../../common/components/figure.typ": bilingual-figure-caption
 
 #let preface(content) = {
 
@@ -54,6 +55,7 @@
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: "algorithm"): set figure.caption(position: top)
   show figure: set text(size: 字号.五号)
+  show figure.caption: bilingual-figure-caption
 
   show raw.where(block: false): box.with(
     fill: rgb("#fafafa"),
