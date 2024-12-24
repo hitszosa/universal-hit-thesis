@@ -38,7 +38,37 @@
   #outline(title: align(center)[#special-chapter-titles.目录], indent: n => [#h(1em)] * n)
 
   #if bilingual {
-    pagebreak()
-    // TODO 添加英文版目录
-  }
+      pagebreak()
+      show: use-hit-header.with(
+        header-text: if use-same-header-text {
+          special-chapter-titles.目录-en
+        }
+      )
+      heading(level: 1, numbering: none, outlined: false)[#special-chapter-titles.目录-en] 
+      let elems = query(metadata.where(label: <enheading>))
+      for e in elems {
+        let heading_before = query(heading.where().before(e.location())).last()
+        let entry = []
+        // indent according to level
+        h(1em * (heading_before.level - 1))
+        // display bold for level 1
+        let t = if heading_before.level == 1{
+          text.with(weight: "bold")
+        } else {
+          text
+        }
+        if heading_before.numbering != none{
+          if heading_before.level == 1{
+            entry += t()[Chapter ]
+          }
+          entry += t(numbering("1.1    ", ..counter(heading).at(e.location())))
+          
+        }
+        entry += t(e.value)
+        entry += box(width: 1fr, repeat([.]))
+        entry += numbering(e.location().page-numbering(), ..counter(page).at(e.location()))
+        link(heading_before.location(), entry)
+        parbreak()
+      }
+    }
 ]

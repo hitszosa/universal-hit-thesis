@@ -1,5 +1,6 @@
 #import "../theme/type.typ": 字体, 字号
 #import "../components/header.typ": use-hit-header
+#import "../components/enheading.typ": enheading
 #import "../utils/states.typ": special-chapter-titles-state
 
 #let abstract-cn(
@@ -17,6 +18,7 @@
   )
 
   heading(special-chapter-titles.摘要, level: 1)
+  enheading(special-chapter-titles.摘要-en)
 
   text(
     font: 字体.宋体,
@@ -48,6 +50,7 @@
   )
 
   heading(special-chapter-titles.Abstract, level: 1)
+  enheading(special-chapter-titles.Abstract-en)
 
   text(
     font: 字体.宋体,
