@@ -7,3 +7,5 @@
 
 #import "harbin/doctor/lib.typ" as harbin-doctor
 #import "harbin/doctor/lib.typ" as universal-doctor
+
+#import "common/utils/word-template-diff-tool.typ": auto-diff as word-template-auto-diff
