@@ -20,6 +20,8 @@
 
 #let preface(content) = {
 
+  [#metadata("") <preface-start>]
+
   context {
     let header-text = default-header-text-state.get()
     show: use-hit-header.with(header-text: header-text)
@@ -39,6 +41,8 @@
   content,
   figure-options: (:),
 ) = {
+
+  [#metadata("") <main-start>]
 
   figure-options = figure-options + (
     extra-kinds: (),
@@ -107,6 +111,8 @@
 
 
 #let ending(content) = {
+
+  [#metadata("") <ending-start>]
 
   show: use-heading-end
 
