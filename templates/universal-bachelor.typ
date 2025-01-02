@@ -34,7 +34,7 @@
   bibliography: bibliography.with("universal-bachelor-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"),
 
   abstract-cn: [
-    气体静压轴承由于具有运动精度高、摩擦损耗小、发热变形小、寿命长、无污染等特点，在航空航天工业、半导体工业、纺织工业和测量仪器中得到广泛应用。本文在分析国内外气体静压轴承的基础上，以改善气体静压轴承的静态特性和稳定性为目的，通过理论分析、仿真计算和实验研究对局部多孔质气体静压止推轴承进行了研究，同时分析轴承的结构参数和工作参数对局部多孔质气体静压止推轴承工作特性的影响，为局部多孔质气体静压轴承的设计和工程应用奠定理论基础。
+    #indent 气体静压轴承由于具有运动精度高、摩擦损耗小、发热变形小、寿命长、无污染等特点，在航空航天工业、半导体工业、纺织工业和测量仪器中得到广泛应用。本文在分析国内外气体静压轴承的基础上，以改善气体静压轴承的静态特性和稳定性为目的，通过理论分析、仿真计算和实验研究对局部多孔质气体静压止推轴承进行了研究，同时分析轴承的结构参数和工作参数对局部多孔质气体静压止推轴承工作特性的影响，为局部多孔质气体静压轴承的设计和工程应用奠定理论基础。
 
     建立基于分形几何理论的多孔质石墨渗透率与分形维数之间关系的数学模型，该模型可预测多孔质石墨的渗透率，并可直观描述孔隙的大小对渗透率的影响。
 
@@ -45,29 +45,31 @@
   keywords-cn: ("多孔质石墨", "……", "稳定性"),
 
   abstract-en: [
-    Externally pressurized gas bearing has been widely used in the field of aviation, semiconductor, weave, and measurement apparatus because of its advantage of high accuracy, little friction, low heat distortion, long life-span, and no pollution. In this thesis, based on the domestic and overseas researching development about externally pressurized gas bearing, the author investigated the partial porous externally pressurized gas thrust bearing by theoretical analysis, computer simulation, and experiments to improve its static charaterictics and stability. The effects of structure and operating parameters on partial porous externally pressurized gas bearing has been studied. Therefore, a theoretical foundation for the designing and application for the partial porous externally pressurized gas bearing has been presented.
+    #indent Externally pressurized gas bearing has been widely used in the field of aviation, semiconductor, weave, and measurement apparatus because of its advantage of high accuracy, little friction, low heat distortion, long life-span, and no pollution. In this thesis, based on the domestic and overseas researching development about externally pressurized gas bearing, the author investigated the partial porous externally pressurized gas thrust bearing by theoretical analysis, computer simulation, and experiments to improve its static charaterictics and stability. The effects of structure and operating parameters on partial porous externally pressurized gas bearing has been studied. Therefore, a theoretical foundation for the designing and application for the partial porous externally pressurized gas bearing has been presented.
 
     Based on the fractal theory, a model was established to demonstrate the relationship between the porous graphite permeability and the fractal dimension. It can predict the permeability of porous graphite and show the effects of the pore size on the permeability.
 
     In this thesis, the author established a model about the static characteristics of partial porous externally pressurized gas thrust bearing, and it was analyzed by engineering solution and Finite Element Method (FEM). While using FEM, the second-order partial differential equation was reduced to one-order by adopting Galerkin weighted residual method, for decreasing the continuity degree requirement of the interpolation function and facilitating to the calculation.
+
+    …
   ],
   keywords-en: ("porous graphite", "…", "Stability"),
 
 // 结论
   conclusion: [
-    本文对局部多孔质气体静压止推轴承的静态特性和稳定性进行了理论研究，对于局部多孔质气体静压径向轴承、圆锥轴承和球轴承仅需对止推轴承压力分布的数学模型进行适当的坐标变换即可对其特性进行求解。同时，本文对局部多孔质气体静压止推轴承进行了实验研究并与整体多孔质和小孔节流止推轴承的静态特性和稳定性进行了实验对比。
+    #indent 本文对局部多孔质气体静压止推轴承的静态特性和稳定性进行了理论研究，对于局部多孔质气体静压径向轴承、圆锥轴承和球轴承仅需对止推轴承压力分布的数学模型进行适当的坐标变换即可对其特性进行求解。同时，本文对局部多孔质气体静压止推轴承进行了实验研究并与整体多孔质和小孔节流止推轴承的静态特性和稳定性进行了实验对比。
 
     本论文的主要创造性工作归纳如下：
 
-    1. 建立了基于分形几何理论的多孔质石墨渗透率与分形维数之间关系的数学模型，该模型可预测多孔质石墨的渗透率，并可直观描述各种孔隙的大小对渗透率的影响。通过实验验证了该模型的正确性。
+    \1. 建立了基于分形几何理论的多孔质石墨渗透率与分形维数之间关系的数学模型，该模型可预测多孔质石墨的渗透率，并可直观描述各种孔隙的大小对渗透率的影响。通过实验验证了该模型的正确性。
 
-    2. 分别建立了基于气体连续性方程、Navier-Stokes 方程、Darcy 定律以及气体状态方程的局部多孔质气体静压轴承的承载能力、静态刚度和质量流量的数学模型，利用有限元法进行求解，给出了局部多孔质气体静压轴承的承载能力、静态刚度和质量流量特性曲线。
+    \2. 分别建立了基于气体连续性方程、Navier-Stokes 方程、Darcy 定律以及气体状态方程的局部多孔质气体静压轴承的承载能力、静态刚度和质量流量的数学模型，利用有限元法进行求解，给出了局部多孔质气体静压轴承的承载能力、静态刚度和质量流量特性曲线。
 
     ……
 
     今后还应在以下几个方面继续深入研究：
 
-    1. 本文仅是采用了局部多孔质圆柱塞这种节流方式，在以后的研究中，可以通过改变局部多孔质材料的形状来改变节流方式，从而通过性能对比，获得最优的节流效果。
+    \1. 本文仅是采用了局部多孔质圆柱塞这种节流方式，在以后的研究中，可以通过改变局部多孔质材料的形状来改变节流方式，从而通过性能对比，获得最优的节流效果。
 
     ……
   ],
@@ -105,7 +107,7 @@
   ],
   // 致谢
   acknowledgement: [
-    衷心感谢导师×××教授对本人的精心指导。他的言传身教将使我终身受益。
+    #indent 衷心感谢导师×××教授对本人的精心指导。他的言传身教将使我终身受益。
 
     感谢×××教授，以及实验室全体老师和同窗们的热情帮助和支持！
 
@@ -117,21 +119,22 @@
 
 = #[绪#h(1em)论]
 
-== 课题背景、研究目的和意义
 
-发展国防工业、微电子工业等尖端技术需要精密和超精密的仪器设备，精密仪器设备要求高速、……
+== 课题背景及研究的目的和意义
+
+#indent 发展国防工业、微电子工业等尖端技术需要精密和超精密的仪器设备，精密仪器设备要求高速、……
 
 ……
 
 == 气体润滑轴承及其相关理论的发展概况
 
-气体轴承是利用气膜支撑负荷或减少摩擦的机械构件。……
+#indent 气体轴承是利用气膜支撑负荷或减少摩擦的机械构件。……
 
-// ……
+……
 
 === 气体润滑轴承的发展
 
-1828年，*R.R.Willis* @林来兴1992空间控制技术 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
+#indent 1828年，*R.R.Willis* @林来兴1992空间控制技术 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
 
 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式：
 
@@ -139,9 +142,11 @@
 
 === 气体润滑轴承的分类
 
-根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
+#indent 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
 
 （1）*气体静压轴承* 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @fig:气体润滑轴承的分类1 (a) 所示。……
+
+……
 
 #figure(
   grid(
@@ -184,15 +189,15 @@
 
 === 多孔质气体静压轴承的研究
 
-由于气体的压力低和可压缩性，……。
+#indent 由于气体的压力低和可压缩性，……。
 
 ==== 多孔质静压轴承的分类
 
-轴承工作面的整体或……。
+#indent 轴承工作面的整体或……。
 
 ==== 多孔质材料特性的研究
 
-材料的主要特点是具有一定的……。
+#indent 材料的主要特点是具有一定的……。
 
 （1）孔隙特性 多孔质材料是由……。
 
@@ -200,7 +205,7 @@
 
 == 本文主要研究内容
 
-本课题的研究内容主要是针对局部多孔质止推轴承的多孔质材料的渗透
+#indent 本课题的研究内容主要是针对局部多孔质止推轴承的多孔质材料的渗透
 率、静压轴承的静态特性、稳定性及其影响因素进行展开，……。
 
 #pagebreak()
@@ -209,11 +214,11 @@
 
 == 引言
 
-利用现成的商用软件来研究流场，可以免去对N-S方程求解程序的……
+#indent 利用现成的商用软件来研究流场，可以免去对N-S方程求解程序的……
 
-== 问题的提出
+=== 边界条件的设定
 
-本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
+#indent 本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
 
 $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
@@ -224,19 +229,22 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 #h(1em) $psi$ —— 孔隙度（孔隙体积占总体积的百分比）；
 
 #h(1em) $phi$ —— 特征渗透性或固有渗透性（m2）。
+
 ……
 
 == 本章小结
+
+#indent ……
 
 = 局部多孔质静压轴承的试验研究
 
 == 引言
 
-在前面几章中，分别对局部多孔质材料的渗透率……
+#indent 在前面几章中，分别对局部多孔质材料的渗透率……
 
 == 多孔质石墨渗透率测试试验
 
-……
+#indent ……
 
 1号试样的试验数据见 @tbl:1号试样的实验数据。
 
@@ -312,7 +320,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 本章小结
 
-……
+#indent ……
 
 #pagebreak()
 
@@ -320,7 +328,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 图表
 
-使用`@fig:`来引用图片： @fig:square
+#indent 使用`@fig:`来引用图片： @fig:square #lorem(4)
 
 #figure(
   square(size: 8em, stroke: 2pt),
@@ -336,7 +344,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     [t], [1], [2], [3],
     [y], [0.3s], [0.4s], [0.8s],
   ),
-  caption: [Timing results],
+  caption: text(lang: "en")[Timing results],
   supplement: [表],
 ) <time-results>
 
@@ -368,7 +376,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
-  使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
+  #indent 使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
 
   #algorithm-figure(
     algorithm({
