@@ -207,18 +207,18 @@
   show: preface
 
   if abstract-cn != none {
-    abstract-cn-page(keywords: keywords-cn)[
+    abstract-cn-page(keywords: keywords-cn, text-tracking: 0.72pt)[
       #abstract-cn
     ]
   }
 
   if abstract-en != none {
-    abstract-en-page(keywords: keywords-en)[
+    abstract-en-page(keywords: keywords-en, par-leading: 0.775em, par-spacing: 0.77em, text-tracking: 0.2pt, text-spacing: 4.76pt)[
       #abstract-en
     ]
   }
 
-  outline-page()
+  outline-page(par-leading: 0.89em)
 
   figure-options = figure-options + (
     extra-kinds: (),

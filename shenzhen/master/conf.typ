@@ -22,6 +22,8 @@
 
 #let preface(content) = {
 
+  [#metadata("") <preface-start>]
+
   show: use-hit-header
   show: use-footer-preface
 
@@ -37,6 +39,8 @@
   content,
   figure-options: (:),
 ) = {
+
+  [#metadata("") <main-start>]
 
   figure-options = figure-options + (
     extra-kinds: (),
@@ -105,6 +109,8 @@
 
 
 #let ending(content) = {
+
+  [#metadata("") <ending-start>]
 
   show: use-heading-end
 
@@ -200,25 +206,29 @@
 
   cover()
 
-  set par(first-line-indent: 2em, leading: main-text-line-spacing-multiplier * single-line-spacing - 1em, justify: true, spacing: 1em)
+  let par-spacing-base = 1.55em
+  let par-spacing-multiplier = 1.25
+  let leading = par-spacing-multiplier * par-spacing-base - 1em
+  let spacing = par-spacing-multiplier * par-spacing-base - 1em
+  set par(first-line-indent: 2em, leading: leading, justify: true, spacing: spacing)
 
   set text(font: 字体.宋体, size: 字号.小四)
 
   show: preface
 
   if abstract-cn != none {
-    abstract-cn-page(keywords: keywords-cn, use-same-header-text: true)[
+    abstract-cn-page(keywords: keywords-cn, use-same-header-text: true, text-tracking: 0.72pt)[
       #abstract-cn
     ]
   }
 
   if abstract-en != none {
-    abstract-en-page(keywords: keywords-en, use-same-header-text: true)[
+    abstract-en-page(keywords: keywords-en, use-same-header-text: true, par-leading: 0.84em, par-spacing: 0.8em, text-tracking: 0.2pt, text-spacing: 4.76pt)[
       #abstract-en
     ]
   }
 
-  outline-page()
+  outline-page(par-leading: 0.83em)
 
   figure-options = figure-options + (
     extra-kinds: (),
