@@ -7,6 +7,7 @@
   content,
   keywords: (),
   use-same-header-text: false,
+  text-tracking: 0pt,
 ) = context {
 
   let special-chapter-titles = special-chapter-titles-state.get()
@@ -23,7 +24,7 @@
   text(
     font: 字体.宋体,
     size: 字号.小四,
-    tracking: 0.72pt
+    tracking: text-tracking,
   )[#content]
 
   let abstract-key-words(content) = {
@@ -40,6 +41,10 @@
   content,
   keywords: (),
   use-same-header-text: false,
+  par-leading: 0.65em,
+  par-spacing: 1.2em,
+  text-tracking: 0pt,
+  text-spacing: 100% + 0pt,
 ) = context {
 
   let special-chapter-titles = special-chapter-titles-state.get()
@@ -53,7 +58,7 @@
   heading(special-chapter-titles.Abstract, level: 1)
   enheading(special-chapter-titles.Abstract-en)
 
-  set par(leading: 0.775em, spacing: 0.77em)
+  set par(leading: par-leading, spacing: par-spacing)
 
   let abstract-key-words(content) = {
     par(first-line-indent: 0em)[
@@ -65,8 +70,8 @@
   text(
     font: 字体.宋体,
     size: 字号.小四,
-    tracking: 0.2pt,
-    spacing: 4.76pt,
+    tracking: text-tracking,
+    spacing: text-spacing,
   )[
     #content
     #abstract-key-words(keywords)

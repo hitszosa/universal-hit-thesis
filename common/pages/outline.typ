@@ -4,7 +4,8 @@
 
 #let outline-page(
   use-same-header-text: false,
-  bilingual: false
+  bilingual: false,
+  par-leading: 0.65em,
 ) = context [
   
   #let special-chapter-titles = special-chapter-titles-state.get()
@@ -15,7 +16,7 @@
     }
   )
 
-  #set par(leading: 0.89em)
+  #set par(leading: par-leading)
 
   #[
     #show heading: none
