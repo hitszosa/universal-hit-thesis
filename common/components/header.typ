@@ -14,7 +14,7 @@
   let header-body = [
     #set align(center)
     #text(font: 字体.宋体, size: 字号.小五)[
-      #block(below: 2.2pt + 0.25em)[
+      #block(below: 2.2pt + 2.5pt)[
         #internal-header-text
       ]
     ]
@@ -32,7 +32,8 @@
           #header-body
         ]
       },
-      header-ascent: header-ascent,
+      header-ascent: 6.7pt,
+      // header-ascent: header-ascent,
     )
     content
   }

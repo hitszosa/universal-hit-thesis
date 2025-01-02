@@ -13,8 +13,7 @@
 #let heading-level-1-style(it) = {
   set align(center)
   set text(font: 字体.黑体, size: 字号.小二, weight: "regular")
-  set block(below: 0.8em * heading-block-unit-multiplier, inset: (top: 1em))
-
+  set block(below: 1.7em, above: 0em, inset: (top: 1.4em))
   it
 }
 
@@ -22,7 +21,6 @@
   show: heading-level-1-style
   pagebreak(weak: true)
   it
-  fake-par
 }
 
 #let use-heading-preface(content) = {
@@ -35,31 +33,32 @@
 #let use-heading-main(content) = {
 
   set heading(numbering: numbly(
-    "第 {1:1} 章  ",
-    "{1}.{2}  ",
-    "{1}.{2}.{3}  ",
-    "{1}.{2}.{3}.{4}  ",
-    "{1}.{2}.{3}.{4}.{5}  ",
+    "第 {1:1} 章   ",
+    "{1}.{2}   ",
+    "{1}.{2}.{3}   ",
+    "{1}.{2}.{3}.{4}   ",
+    "{1}.{2}.{3}.{4}.{5}   ",
   ))
 
   show heading.where(level: 1): heading-level-1
   show heading.where(level: 2): it => {
     set text(font: 字体.黑体, size: 字号.小三, weight: "regular")
-    set block(above: 0.5em * heading-block-unit-multiplier, below: 0.5em * heading-block-unit-multiplier)
+    set block(above: 1.5em, below: 1.51em)
     it
-    fake-par
   }
   show heading.where(level: 3): it => {
-    set text(font: 字体.黑体, size: 字号.小四, weight: "regular")
-    set block(above: 0.5em * heading-block-unit-multiplier, below: 0.5em * heading-block-unit-multiplier)
+    set text(font: 字体.黑体, size: 字号.四号, weight: "regular")
+    set block(above: 1.56em, below: 1.58em)
     it
-    fake-par
   }
   show heading: it => {
-      set text(font: 字体.黑体, size: 字号.小四, weight: "regular")
-      set block(above: 0.5em * heading-block-unit-multiplier, below: 0.5em * heading-block-unit-multiplier)
-      it
-      fake-par
+      if it.level > 3 {
+        set text(font: 字体.黑体, size: 字号.小四, weight: "regular")
+        set block(above: 0.95em, below: 0.94em)
+        it
+      } else {
+        it
+      }
   }
   content
 }
