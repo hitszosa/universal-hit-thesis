@@ -23,6 +23,7 @@
   text(
     font: 字体.宋体,
     size: 字号.小四,
+    tracking: 0.72pt
   )[#content]
 
   let abstract-key-words(content) = {
@@ -52,17 +53,22 @@
   heading(special-chapter-titles.Abstract, level: 1)
   enheading(special-chapter-titles.Abstract-en)
 
-  text(
-    font: 字体.宋体,
-    size: 字号.小四,
-  )[#content]
+  set par(leading: 0.775em, spacing: 0.77em)
 
   let abstract-key-words(content) = {
     par(first-line-indent: 0em)[
-      #text(font: 字体.宋体, weight: "bold", "Keywords:  ")
+      #text(font: 字体.宋体, weight: "bold", "Keywords: ")
       #text(font: 字体.宋体)[#content.join(", ")]
     ]
   }
 
-  abstract-key-words(keywords)
+  text(
+    font: 字体.宋体,
+    size: 字号.小四,
+    tracking: 0.2pt,
+    spacing: 4.76pt,
+  )[
+    #content
+    #abstract-key-words(keywords)
+  ]
 }

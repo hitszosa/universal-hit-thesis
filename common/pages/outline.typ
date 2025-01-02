@@ -15,7 +15,7 @@
     }
   )
 
-  #set par(first-line-indent: 0em)
+  #set par(leading: 0.89em)
 
   #[
     #show heading: none
@@ -39,6 +39,7 @@
 
   #if bilingual {
       pagebreak()
+      set par(spacing: 0.89em)
       show: use-hit-header.with(
         header-text: if use-same-header-text {
           special-chapter-titles.目录-en

@@ -36,7 +36,8 @@
 
     set page(
       footer: footer-body,
-      footer-descent: footer-ascent,
+      footer-descent: 11.5pt,
+      // footer-descent: footer-ascent,
     )
 
     content
