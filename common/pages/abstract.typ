@@ -7,6 +7,8 @@
   content,
   keywords: (),
   use-same-header-text: false,
+  par-leading: 0.65em,
+  par-spacing: 1.2em,
   text-tracking: 0pt,
 ) = context {
 
@@ -20,6 +22,8 @@
 
   heading(special-chapter-titles.摘要, level: 1)
   enheading(special-chapter-titles.摘要-en)
+
+  set par(leading: par-leading, spacing: par-spacing)
 
   text(
     font: 字体.宋体,
