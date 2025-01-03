@@ -6,6 +6,8 @@
   use-same-header-text: false,
   bilingual: false,
   par-leading: 0.65em,
+  par-leading-en: 0.65em,
+  par-spacing-en: 1.2em,
 ) = context [
   
   #let special-chapter-titles = special-chapter-titles-state.get()
@@ -40,7 +42,7 @@
 
   #if bilingual {
       pagebreak()
-      set par(spacing: 0.89em)
+      set par(first-line-indent: 0em, leading: par-leading-en, spacing: par-spacing-en)
       show: use-hit-header.with(
         header-text: if use-same-header-text {
           special-chapter-titles.目录-en
