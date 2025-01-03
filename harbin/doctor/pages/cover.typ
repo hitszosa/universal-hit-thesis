@@ -19,22 +19,21 @@
 
     #let space-scale-ratio = 1.25
 
-    #v(字号.小四 * 6 * space-scale-ratio)
+    #v(50pt)
 
     #text(size: 字号.小一, font: 字体.宋体, weight: "bold")[*博士学位论文*]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(87.5pt)
 
     #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(33pt)
 
     #par(justify: false)[
       #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[#title-en]
     ]
 
-    #v(字号.小四 * 1 * space-scale-ratio)
-    #v(字号.二号 * 2 * space-scale-ratio)
+    #v(64pt)
 
     #align(center)[
       #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[
@@ -42,8 +41,7 @@
       ]
     ]
 
-    #v(字号.小二 * 2 * space-scale-ratio)
-    #v(字号.小四 * 6 * space-scale-ratio)
+    #v(137pt)
 
     #align(center)[
       #text(size: 字号.小二, font: 字体.楷体, weight: "bold")[#institute]
@@ -74,32 +72,29 @@
 
     #let space-scale-ratio = 1.4
 
-    #grid(
-      columns: (1fr, 1fr),
-      align(left)[
-        #text(size: 字号.小四, font: 字体.宋体)[国内图书分类号：#chinese-library-classification] \
-        #text(size: 字号.小四, font: 字体.宋体)[国际图书分类号：#universal-decimal-classification]
-      ],
-      align(right)[
-        #text(size: 字号.小四, font: 字体.宋体)[学校代码：#school-identification-code] \
-        #text(size: 字号.小四, font: 字体.宋体)[密级：公开]
-      ]
-    )
+    #block(inset: (top: 4pt))[
+      #grid(
+        columns: (1fr, 1fr),
+        align(left)[
+          #text(size: 字号.小四, font: 字体.宋体)[国内图书分类号：#chinese-library-classification] \
+          #text(size: 字号.小四, font: 字体.宋体)[国际图书分类号：#universal-decimal-classification]
+        ],
+        align(right)[
+          #text(size: 字号.小四, font: 字体.宋体)[学校代码：#school-identification-code] \
+          #text(size: 字号.小四, font: 字体.宋体)[密级：公开]
+        ]
+      )
+    ]
 
-
-    #v(字号.小四 * 3 * space-scale-ratio)
+    #v(90pt)
 
     #text(size: 字号.小二, font: 字体.宋体)[*博士学位论文*]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(32pt)
 
     #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
-    #v(字号.小四 * 1 * space-scale-ratio)
-
-    #v(字号.二号 * 4 * space-scale-ratio)
-
-    // #v(字号.小四 * space-scale-ratio)
+    #v(151pt)
 
     #let cover-info-key(content) = {
       align(right)[
@@ -124,7 +119,7 @@
     #let get-tracking-by-characters-count(count) = (key-width - count * 1em) / (count - 1)
 
     #grid(
-      columns: (auto, 1em, auto),
+      columns: (76fr, 1.5em, 100fr),
       rows: (字号.四号, 字号.四号),
       row-gutter: 1.5em,
       cover-info-key(text(tracking: get-tracking-by-characters-count(5))[博士研究生]),
@@ -170,30 +165,32 @@
 
     #let space-scale-ratio = 1.4
 
-    #grid(
-      columns: (1fr, 1fr),
-      align(left)[
-        #text(size: 字号.小四, font: 字体.宋体)[Classified Index: #chinese-library-classification] \
-        #text(size: 字号.小四, font: 字体.宋体)[U.D.C: #universal-decimal-classification]
-      ],
-      align(right)[
+    #block(inset: (top: 6pt))[
+      #grid(
+        columns: (1fr, 1fr),
+        align(left)[
+          #set par(spacing: 1em)
 
-      ]
-    )
+          #text(size: 字号.小四, font: 字体.宋体)[Classified Index: #chinese-library-classification]
 
-    #v(字号.小四 * 3 * space-scale-ratio)
+          #text(size: 字号.小四, font: 字体.宋体)[U.D.C: #universal-decimal-classification]
+        ],
+        align(right)[
+
+        ]
+      )
+    ]
+
+
+    #v(58pt)
 
     #text(size: 字号.小二, font: 字体.宋体)[Dissertation for the Doctoral Degree]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(68pt)
 
     #text(size: 字号.小二, font: 字体.黑体)[*#title-en*]
 
-    #v(字号.小四 * 1 * space-scale-ratio)
-
-    #v(字号.二号 * 4 * space-scale-ratio)
-
-    // #v(字号.小四 * space-scale-ratio)
+    #v(109pt)
 
     #let cover-info-key(content) = {
       align(left)[
@@ -218,9 +215,9 @@
     #let get-tracking-by-characters-count(count) = (key-width - count * 1em) / (count - 1)
 
     #grid(
-      columns: (auto, 1fr),
-      row-gutter: 1.5em,
-      column-gutter: 0.25em,
+      columns: (96fr, 100fr),
+      row-gutter: 11.6pt,
+      column-gutter: 0em,
       cover-info-key(text()[Candidate：]),
       cover-info-value(author-en),
 
@@ -237,7 +234,15 @@
       cover-info-value(affiliation-en),
 
       cover-info-key(text()[Date of Defense：]),
-      cover-info-value([#[#year]年#[#month]月]),
+      cover-info-value([
+        #import "@preview/datify:0.1.3": custom-date-format
+        #let year-month = datetime(
+          year: year,
+          month: month,
+          day: 3,
+        )
+        #custom-date-format(year-month, "Month, YYYY")
+      ]),
 
       cover-info-key(text()[Degree-Conferring-Institution：]),
       cover-info-value(institute-en),
