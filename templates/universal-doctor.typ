@@ -62,12 +62,14 @@
     Based on the fractal theory, a model was established to demonstrate the relationship between the porous graphite permeability and the fractal dimension. It can predict the permeability of porous graphite and show the effects of the pore size on the permeability.
 
     In this thesis, the author established a model about the static characteristics of partial porous externally pressurized gas thrust bearing, and it was analyzed by engineering solution and Finite Element Method (FEM). While using FEM, the second-order partial differential equation was reduced to one-order by adopting Galerkin weighted residual method, for decreasing the continuity degree requirement of the interpolation function and facilitating to the calculation.
+
+    …
   ],
   keywords-en: ("porous graphite", "…", "Stability"),
 
 // 结论
   conclusion: [
-    本文对局部多孔质气体静压止推轴承的静态特性和稳定性进行了理论研究，对于局部多孔质气体静压径向轴承、圆锥轴承和球轴承仅需对止推轴承压力分布的数学模型进行适当的坐标变换即可对其特性进行求解。同时，本文对局部多孔质气体静压止推轴承进行了实验研究并与整体多孔质和小孔节流止推轴承的静态特性和稳定性进行了实验对比。
+    #indent 本文对局部多孔质气体静压止推轴承的静态特性和稳定性进行了理论研究，对于局部多孔质气体静压径向轴承、圆锥轴承和球轴承仅需对止推轴承压力分布的数学模型进行适当的坐标变换即可对其特性进行求解。同时，本文对局部多孔质气体静压止推轴承进行了实验研究并与整体多孔质和小孔节流止推轴承的静态特性和稳定性进行了实验对比。
 
     本论文的主要创造性工作归纳如下：
 
@@ -117,7 +119,7 @@
   ],
   // 致谢
   acknowledgement: [
-    衷心感谢导师×××教授对本人的精心指导。他的言传身教将使我终身受益。
+    #indent 衷心感谢导师×××教授对本人的精心指导。他的言传身教将使我终身受益。
 
     感谢×××教授，以及实验室全体老师和同窗们的热情帮助和支持！
 
@@ -127,7 +129,7 @@
   ],
   // 个人简历
   personal-resume: [
-    ××××年××月××日出生于××××。
+    #indent ××××年××月××日出生于××××。
 
     ××××年××月考入××大学××院（系）××专业，××××年××月本科毕业并获得××学学士学位。
 
@@ -147,21 +149,21 @@
 == 课题背景、研究目的和意义
 #enheading()[Background, objectives and significance of the research]
 
-发展国防工业、微电子工业等尖端技术需要精密和超精密的仪器设备，精密仪器设备要求高速、……
+#indent 发展国防工业、微电子工业等尖端技术需要精密和超精密的仪器设备，精密仪器设备要求高速、……
 
 ……
 
 == 气体润滑轴承及其相关理论的发展概况
 #enheading()[Development of gas-lubricated bearings and related theories]
 
-气体轴承是利用气膜支撑负荷或减少摩擦的机械构件。……
+#indent 气体轴承是利用气膜支撑负荷或减少摩擦的机械构件。……
 
-// ……
+……
 
 === 气体润滑轴承的发展
 #enheading()[Development of gas-lubricated bearings]
 
-1828年，*R.R.Willis* @林来兴1992空间控制技术 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
+#indent 1828年，*R.R.Willis* @林来兴1992空间控制技术 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
 
 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式：
 
@@ -170,7 +172,7 @@
 === 气体润滑轴承的分类
 #enheading()[Classification of gas-lubricated bearings]
 
-根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
+#indent 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
 
 （1）*气体静压轴承* 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @fig:气体润滑轴承的分类1 (a) 所示。……
 
@@ -230,17 +232,17 @@
 === 多孔质气体静压轴承的研究
 #enheading()[Research on porous gas-lubricated bearings]
 
-由于气体的压力低和可压缩性，……。
+#indent 由于气体的压力低和可压缩性，……。
 
 ==== 多孔质静压轴承的分类
 #enheading()[Classification of porous externally pressurized bearings]
 
-轴承工作面的整体或……。
+#indent 轴承工作面的整体或……。
 
 ==== 多孔质材料特性的研究
 #enheading()[Study on the characteristics of porous materials]
 
-材料的主要特点是具有一定的……。
+#indent 材料的主要特点是具有一定的……。
 
 （1）孔隙特性 多孔质材料是由……。
 
@@ -249,7 +251,7 @@
 == 本文主要研究内容
 #enheading()[Main research content of this thesis]
 
-本课题的研究内容主要是针对局部多孔质止推轴承的多孔质材料的渗透
+#indent 本课题的研究内容主要是针对局部多孔质止推轴承的多孔质材料的渗透
 率、静压轴承的静态特性、稳定性及其影响因素进行展开，……。
 
 #pagebreak()
@@ -262,12 +264,12 @@
 == 引言
 #enheading()[Introduction]
 
-利用现成的商用软件来研究流场，可以免去对N-S方程求解程序的……
+#indent 利用现成的商用软件来研究流场，可以免去对N-S方程求解程序的……
 
-== 问题的提出
+=== 边界条件的设定
 #enheading()[Problem statement]
 
-本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
+#indent 本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
 
 $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
@@ -289,7 +291,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 == 引言
 #enheading()[Introduction]
 
-在前面几章中，分别对局部多孔质材料的渗透率……
+#indent 在前面几章中，分别对局部多孔质材料的渗透率……
 
 == 多孔质石墨渗透率测试试验
 #enheading()[Permeability test of porous graphite]
@@ -388,7 +390,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 == 图表
 #enheading()[Figures and tables]
 
-使用`@fig:`来引用图片： @fig:square，则图表会以默认
+#indent 使用`@fig:`来引用图片： @fig:square，则图表会以默认
 
 #bilingual-figure(
   square(size: 8em, stroke: 2pt),
@@ -450,7 +452,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
-  使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
+  #indent 使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
 
   #algorithm-figure(
     algorithm({
