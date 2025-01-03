@@ -217,7 +217,7 @@
   show: preface
 
   if abstract-cn != none {
-    abstract-cn-page(keywords: keywords-cn, use-same-header-text: true, text-tracking: 0.72pt)[
+    abstract-cn-page(keywords: keywords-cn, use-same-header-text: true, par-leading: 0.94em, par-spacing: 0.94em, text-tracking: 0.72pt)[
       #abstract-cn
     ]
   }
