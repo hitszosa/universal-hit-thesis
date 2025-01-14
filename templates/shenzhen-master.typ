@@ -2,9 +2,9 @@
 #import "../lib.typ": shenzhen-master
 #import shenzhen-master: *
 
-// 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
-// 编译命令  typst compile ./templates/universal-bachelor.typ --root ./
-// 实时预览  typst watch ./templates/universal-bachelor.typ --root ./
+// 参考 哈尔滨工业大学（深圳）全日制硕士研究生学位论文书写范例-理工类-学术型（2023版）.doc 进行编写
+// 编译命令  typst compile ./templates/shenzhen-master.typ --root ./
+// 实时预览  typst watch ./templates/shenzhen-master.typ --root ./
 
 #show: doc.with(
   // 学位类型. 
