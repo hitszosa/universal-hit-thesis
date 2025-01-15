@@ -1,5 +1,5 @@
-#import "@preview/universal-hit-thesis:0.2.1": universal-bachelor
-#import "../lib.typ": shenzhen-master
+#import "@preview/universal-hit-thesis:0.2.1": shenzhen-master // 用户使用
+// #import "../lib.typ": shenzhen-master // 模板开发
 #import shenzhen-master: *
 
 // 参考 哈尔滨工业大学（深圳）全日制硕士研究生学位论文书写范例-理工类-学术型（2023版）.doc 进行编写
