@@ -1,0 +1,14 @@
+name: Build Templates
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v3
+      - run: ci/mode_switch.py dev templates/*.typ
+      - run: ci/build.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          path: build/*.pdf
