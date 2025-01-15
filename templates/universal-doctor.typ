@@ -1,5 +1,5 @@
-#import "@preview/universal-hit-thesis:0.2.1": universal-bachelor
-#import "../lib.typ": universal-doctor
+#import "@preview/universal-hit-thesis:0.2.1": universal-doctor // 用户使用
+// #import "../lib.typ": universal-doctor // 模板开发
 #import universal-doctor: *
 
 // 参考 学位论文书写范例（理工类）.doc 进行编写
