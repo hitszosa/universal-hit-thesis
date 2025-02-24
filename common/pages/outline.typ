@@ -25,20 +25,9 @@
     #heading(special-chapter-titles.目录, level: 1, outlined: false)
   ]
 
-  #show outline.entry: (entry, label: <outline-page-modified-entry>) => {
+  #show outline.entry.where(level: 1): set text(font: 字体.黑体)
 
-    if entry.at("label", default: none) == label {
-      entry // prevent infinite recursion
-    } else {
-      let fields = entry.fields()
-      if entry.level == 1 {
-        fields.body = [#text(font: 字体.黑体)[#fields.body]]
-      }
-      [#outline.entry(..fields.values()) #label]
-    }
-  }
-
-  #outline(title: align(center)[#special-chapter-titles.目录], indent: n => [#h(1em)] * n)
+  #outline(title: align(center)[#special-chapter-titles.目录], indent: n => 1em * n)
 
   #if bilingual {
       pagebreak()
