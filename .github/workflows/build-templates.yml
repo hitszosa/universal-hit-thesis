@@ -3,9 +3,12 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: windows-latest
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
     env:
-      PYTHONUTF8: 1
+      PYTHONUTF8: ${{ matrix.os == 'windows-latest' && '1' || '' }}
     steps:
       - uses: actions/checkout@v4
       - name: Checkout Haixing-Hu/latex-chinese-fonts

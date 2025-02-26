@@ -24,11 +24,12 @@ for basename in file_basenames:
         "--font-path",
         "fonts",
     ]
-    print(f"[build.py] Running command: {' '.join(command)}")
+    print(f"[build.py] Running command: {' '.join(command)}", flush=True)
     res = subprocess.run(command)
     if res.returncode != 0:
         print(
-            f"[build.py] Error: Build {input_file} failed with exit code {res.returncode}"
+            f"[build.py] Error: Build {input_file} failed with exit code {res.returncode}",
+            flush=True,
         )
         exit(res.returncode)
-    print()
+    print(flush=True)
