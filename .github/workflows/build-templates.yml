@@ -22,4 +22,5 @@ jobs:
       - run: python3 ci/build.py
       - uses: actions/upload-artifact@v4
         with:
+          name: templates-build-${{ github.run_id }}-${{ matrix.os }}
           path: build/*.pdf
