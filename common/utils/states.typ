@@ -1,4 +1,4 @@
-#import "../config/constants.typ": special-chapter-titles-default-value, thesis-info-default-value
+#import "../config/constants.typ": special-chapter-titles-default-value, thesis-info-default-value, digital-signature-option-default-value
 
 #let default-header-text-state = state(
   "default-header-text",
@@ -15,4 +15,9 @@
 #let thesis-info-state = state(
   "thesis-info",
   thesis-info-default-value,
+)
+
+#let digital-signature-option-state = state(
+  "digital-signature",
+  digital-signature-option-default-value,
 )

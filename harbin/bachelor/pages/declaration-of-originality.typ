@@ -1,9 +1,70 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../../../common/components/typography.typ": indent
 #import "../../../common/components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
-#import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state
+#import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state, digital-signature-option-state
+#import "../../../common/config/constants.typ": e-digital-signature-mode
 
 #let declaration-of-originality() = context {
+  
+
+
+  let digital-signature-option = digital-signature-option-state.get()
+  let digital-signature-mode = digital-signature-option.at("mode")
+
+  show: it => {
+
+    if digital-signature-mode == e-digital-signature-mode.scanned-copy {
+        set page(
+          footer: none,
+          header: none,
+          background: digital-signature-option.at("scanned-copy")
+        )
+    } else {
+      if not digital-signature-option.show-declaration-of-originality-page-number {
+        set page(
+          footer: none,
+        )
+        it
+      } else {
+        it
+      }
+    }
+
+
+
+  }
+
+  for offset in digital-signature-option.at("author-signature-offsets") {
+    place(
+      dx: offset.dx,
+      dy: offset.dy,
+    )[
+      #digital-signature-option.at("author-signature")
+    ]
+  }
+
+  for offset in digital-signature-option.at("supervisor-signature-offsets") {
+    place(
+      dx: offset.dx,
+      dy: offset.dy,
+    )[
+      #digital-signature-option.at("supervisor-signature")
+    ]
+  }
+
+  for offset-array in digital-signature-option.at("date-offsets").zip(digital-signature-option.at("date-array")) {
+
+    let number-offset-array = offset-array.at(1).zip(offset-array.at(0))
+
+    for number-offset in number-offset-array {
+      place(
+        dx: number-offset.at(1).dx,
+        dy: number-offset.at(1).dy,
+      )[
+        #number-offset.at(0)
+      ]
+    }
+  }
 
   let special-chapter-titles = special-chapter-titles-state.get()
 
