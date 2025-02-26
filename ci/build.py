@@ -14,7 +14,16 @@ for basename in file_basenames:
     input_file = f"templates/{basename}.typ"
     output_file = f"build/{basename}.pdf"
 
-    command = ["typst", "compile", input_file, output_file, "--root", "."]
+    command = [
+        "typst",
+        "compile",
+        input_file,
+        output_file,
+        "--root",
+        ".",
+        "--font-path",
+        "fonts",
+    ]
     print(f"[build.py] Running command: {' '.join(command)}")
     res = subprocess.run(command)
     if res.returncode != 0:
