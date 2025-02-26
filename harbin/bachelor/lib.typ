@@ -10,3 +10,4 @@
 #import "../../common/components/typography.typ": indent, fake-par
 #import "../../common/components/figure.typ": code-figure, algorithm-figure
 #import "../../common/theme/type.typ": 字号, 字体
+#import "../../common/config/constants.typ": e-digital-signature-mode

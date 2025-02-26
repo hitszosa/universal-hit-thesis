@@ -140,7 +140,61 @@
     获奖情况：如获三好学生、优秀团干部、×奖学金等（不含科研学术获奖）。
 
     工作经历：
-  ]
+  ],
+  digital-signature-option: (
+    mode: e-digital-signature-mode.default,
+
+    // default mode
+    // 作者电子签名图片及其偏移
+    author-signature: [ #lorem(2) ],
+    author-signature-offsets: (
+      (dx: 13em, dy: 19.5em),
+      (dx: 13em, dy: 47em),
+    ),
+    // 导师电子签名图片及其偏移
+    supervisor-signature: [ #lorem(3) ],
+    supervisor-signature-offsets: (
+      (dx: 13em, dy: 50em),
+    ),
+
+    // 日期及其偏移
+    date-array: (
+      (datetime.today().year(), datetime.today().month(), datetime.today().day(), ),
+      (datetime.today().year(), datetime.today().month(), datetime.today().day(), ),
+      (datetime.today().year(), datetime.today().month(), datetime.today().day(), ),
+    ),
+    date-offsets: (
+      (
+        (dx: 25em, dy: 19.5em),
+        (dx: 29.5em, dy: 19.5em),
+        (dx: 31.5em, dy: 19.5em),
+      ),
+      (
+        (dx: 26em, dy: 47em),
+        (dx: 30em, dy: 47em),
+        (dx: 32.5em, dy: 47em),
+      ),
+      (
+        (dx: 26em, dy: 50em),
+        (dx: 30em, dy: 50em),
+        (dx: 32.5em, dy: 50em),
+      ),
+    ),
+    // 是否显示原创性声明页的页码
+    // show-declaration-of-originality-page-number: false,
+
+    // scanned-copy mode
+    // mode 设置为 e-digital-signature-mode.scanned-copy 时允许您直接插入扫描件
+    scanned-copy: [
+      // 若扫描件是图片，则可以直接设置图片
+      // #image("../image/templates/shenzhen-master/shenzhen-master_页面_21.png")
+
+      // 若扫描件是 pdf，则可以转换成图片或使用 muchpdf 来插入
+      // #import "@preview/muchpdf:0.1.0": muchpdf
+      // #let data = read("universal-bachelor.pdf", encoding: none)
+      // #muchpdf(data, pages: 13)
+    ]
+  )
 )
 
 = #[绪#h(1em)论]
