@@ -3,12 +3,12 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: typst-community/setup-typst@v3
-      - run: ci/mode_switch.py dev templates/*.typ
-      - run: ci/build.sh
+      - uses: typst-community/setup-typst@v4
+      - run: python3 ci/mode_switch.py dev templates/*.typ
+      - run: python3 ci/build.py
       - uses: actions/upload-artifact@v4
         with:
           path: build/*.pdf
