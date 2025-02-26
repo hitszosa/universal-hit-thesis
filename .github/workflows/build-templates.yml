@@ -9,6 +9,6 @@ jobs:
       - uses: typst-community/setup-typst@v3
       - run: ci/mode_switch.py dev templates/*.typ
       - run: ci/build.sh
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: build/*.pdf
