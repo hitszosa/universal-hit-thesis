@@ -4,6 +4,9 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
     steps:
       - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v4
