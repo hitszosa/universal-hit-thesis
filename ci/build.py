@@ -32,4 +32,3 @@ for basename in file_basenames:
             flush=True,
         )
         exit(res.returncode)
-    print(flush=True)
