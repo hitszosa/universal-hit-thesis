@@ -4,12 +4,17 @@
 #import "../../../common/utils/states.typ": thesis-info-state
 #import "../../../common/components/header.typ": use-hit-header
 #import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state
+#import "../../../common/components/digital-signature.typ": use-digital-signature
 
 #let declaration-of-originality() = context {
+  
 
   let special-chapter-titles = special-chapter-titles-state.get()
   
+  
   show: use-hit-header.with(header-text: special-chapter-titles.原创性声明)
+  
+  show: use-digital-signature
 
   [
     #show heading: none

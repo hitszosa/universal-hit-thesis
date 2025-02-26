@@ -161,7 +161,7 @@
     // mode 设置为 e-digital-signature-mode.scanned-copy 时允许您直接插入扫描件
     scanned-copy: [
       // 若扫描件是图片，则可以直接设置图片
-      #image("../image/templates/shenzhen-master/shenzhen-master_页面_21.png")
+      // #image("../image/templates/shenzhen-master/shenzhen-master_页面_21.png")
 
       // 若扫描件是 pdf，则可以转换成图片或使用 muchpdf 来插入
       // #import "@preview/muchpdf:0.1.0": muchpdf

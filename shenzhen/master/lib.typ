@@ -11,3 +11,4 @@
 #import "../../common/components/figure.typ": code-figure, algorithm-figure
 #import "../../common/theme/type.typ": 字号, 字体
 #import "config/constants.typ": e-master-type
+#import "../../common/config/constants.typ": e-digital-signature-mode
