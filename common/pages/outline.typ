@@ -27,7 +27,7 @@
 
   #show outline.entry.where(level: 1): set text(font: 字体.黑体)
 
-  #outline(title: align(center)[#special-chapter-titles.目录], indent: n => 1em * n)
+  #outline(title: align(center)[#special-chapter-titles.目录], indent: 1em)
 
   #if bilingual {
       pagebreak()
