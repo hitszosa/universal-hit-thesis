@@ -29,6 +29,7 @@
 )
 
 #let e-digital-signature-mode = (
+  "off": "digital-signature-mode.off",
   "default": "digital-signature-mode.default",
   "scanned-copy": "digital-signature-mode.scanned-copy",
 )
