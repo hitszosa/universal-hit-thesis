@@ -1,4 +1,4 @@
-# 哈尔滨工业大学论文模板
+# 哈尔滨工业大学论文模板 · [![Build Templates](https://github.com/hitszosa/universal-hit-thesis/actions/workflows/build-templates.yml/badge.svg?branch=dev)](https://github.com/hitszosa/universal-hit-thesis/actions/workflows/build-templates.yml)
 
 适用于哈尔滨工业大学学位论文的 Typst 模板
 
@@ -18,6 +18,8 @@
 **预览效果**
 
 - 本科通用：[universal-bachelor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-bachelor.pdf)
+- 深圳硕士：[shenzhen-master.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/shenzhen-master.pdf)
+- 博士通用：[universal-doctor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-bachelor.pdf)
 
 ## 使用
 
@@ -45,7 +47,7 @@ typst compile universal-bachelor.typ
 typst watch universal-bachelor.typ
 ```
 
-当您要实时预览时，我们更推荐使用 Visual Studio Code 进行编辑，配合 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp), [Typst Preview](https://marketplace.visualstudio.com/items?itemName=mgt19937.typst-preview) 等插件可以大幅提升您的编辑体验。
+当您要实时预览时，我们更推荐使用 Visual Studio Code 进行编辑，配合 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) 等插件可以大幅提升您的编辑体验。
 
 ### 本地编辑 Ⅱ
 
@@ -64,17 +66,7 @@ typst watch ./templates/<template-name>.typ --root ./
 ```
 
 > [!TIP]
-> 本模板正处于积极开发阶段，更新较为频繁，虽然已经上传至 Typst Universe，但是您依然可以借助 Typst local packages 来实现在 Typst Universe 同步本模板的最新版本前，在本地体验本模板的最新版本，具体做法为：
-> - 在 Release 页面下载对应版本的源码压缩包，并将其解压到 `{data-dir}/typst/packages/local/universal-hit-thesis/{version}`，`{data-dir}` 在不同操作系统下的值为：
->   - `$XDG_DATA_HOME` or `~/.local/share` on Linux
->   - `~/Library/Application` Support on macOS
->   - `%LOCALAPPDATA%` on Windows
->   
->   `{version}` 的值为 `typst.toml` 中 `version` 项的值.
->   
->   解压完成后 `typst.toml` 文件应该出现在 `{data-dir}/typst/packages/local/universal-hit-thesis/{version}` 目录下.
->
-> - 接着您需要在您的论文中将 `#import "@preview/universal-hit-thesis:0.2.1"` 修改为 `#import "@local/universal-hit-thesis:{version}"`，即可更新模板.
+> 本模板正处于积极开发阶段，更新较为频繁，虽然已经上传至 Typst Universe，但是您依然可以借助 Typst local packages 来实现待 Typst Universe 同步本模板的最新版本前，在本地体验本模板的最新版本，推荐使用 [Typship](https://github.com/sjfhsjfh/typship) 来实现这一点.
 
 ### 在线编辑
 
@@ -152,6 +144,7 @@ typst watch ./templates/<template-name>.typ --root ./
   - 无 DOI
 - 引用其他学校的学位论文时参考文献页对应条目存在格式问题，因为 Typst 尚不支持 CSL 文件中的 `school` 等字段.
 - 目前版本的 Typst 对 CSL 支持程度成谜，更多问题可参考 [SEU-Typst-Template 参考文献已知问题](https://github.com/csimide/SEU-Typst-Template/?tab=readme-ov-file#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE).
+- 目前的行距、段间距等仅针对 Windows 下的中文字体做适配，Linux/Mac OS 下可能存在字体适配问题.
 
 ## 致谢
 
