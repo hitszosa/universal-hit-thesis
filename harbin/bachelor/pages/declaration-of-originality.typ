@@ -1,9 +1,13 @@
 #import "../../../common/theme/type.typ": 字体, 字号
 #import "../../../common/components/typography.typ": indent
 #import "../../../common/components/typography.typ": heading-level-1-style, heading-block-unit-multiplier
-#import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state
+#import "../../../common/utils/states.typ": thesis-info-state, special-chapter-titles-state, digital-signature-option-state
+#import "../../../common/config/constants.typ": e-digital-signature-mode
+#import "../../../common/components/digital-signature.typ": use-digital-signature
 
 #let declaration-of-originality() = context {
+  
+  show: use-digital-signature
 
   let special-chapter-titles = special-chapter-titles-state.get()
 

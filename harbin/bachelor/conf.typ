@@ -5,7 +5,7 @@
 #import "config/constants.typ": special-chapter-titles-additional, thesis-info-additional
 #import "../../common/config/constants.typ": current-date, main-text-line-spacing-multiplier, single-line-spacing
 #import "../../common/utils/states.typ": special-chapter-titles-state
-#import "../../common/utils/states.typ": default-header-text-state, bibliography-state, thesis-info-state
+#import "../../common/utils/states.typ": default-header-text-state, bibliography-state, thesis-info-state, digital-signature-option-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 #import "@preview/lovelace:0.2.0": setup-lovelace
@@ -165,7 +165,8 @@
   bibliography: none,
   conclusion: none, 
   achievement: none, 
-  acknowledgement: none
+  acknowledgement: none,
+  digital-signature-option: (:),
 ) = {
   set document(
     title: thesis-info.at("title-cn"),
@@ -181,6 +182,8 @@
   default-header-text-state.update(current => "哈尔滨工业大学本科毕业论文（设计）")
 
   special-chapter-titles-state.update(current => current + special-chapter-titles-additional)
+
+  digital-signature-option-state.update(current => current + digital-signature-option)
 
   set page(
     paper: "a4",

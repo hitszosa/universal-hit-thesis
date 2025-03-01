@@ -28,6 +28,27 @@
   day: current-date.day(),
 )
 
+#let e-digital-signature-mode = (
+  "off": "digital-signature-mode.off",
+  "default": "digital-signature-mode.default",
+  "scanned-copy": "digital-signature-mode.scanned-copy",
+)
+
+#let digital-signature-option-default-value = (
+  mode: e-digital-signature-mode.default,
+  // default mode
+  author-signature: [ ],
+  author-signature-offsets: (),
+  supervisor-signature: [ ],
+  supervisor-signature-offsets: (),
+  date-array: (),
+  date-offsets: (),
+  show-declaration-of-originality-page-number: true,
+
+  // scanned-copy mode
+  scanned-copy: [ ],
+)
+
 #let page-margins = (
   top: 3.8cm,
   bottom: 3cm,
