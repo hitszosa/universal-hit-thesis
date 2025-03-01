@@ -142,6 +142,10 @@
     工作经历：
   ],
   digital-signature-option: (
+    // 三种电子签名模式
+    // e-digital-signature-mode.off 不启用电子签名功能
+    // e-digital-signature-mode.default 直接添加电子版签名图片
+    // e-digital-signature-mode.scanned-copy 不显示此页的 typst 渲染结果，并将其替换为扫描件，允许传入 image 或者 pdf
     mode: e-digital-signature-mode.default,
 
     // default mode

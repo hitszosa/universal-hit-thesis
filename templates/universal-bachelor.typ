@@ -1,5 +1,5 @@
-#import "@preview/universal-hit-thesis:0.2.1": universal-bachelor // 用户使用
-// #import "../lib.typ": universal-bachelor // 模板开发
+// #import "@preview/universal-hit-thesis:0.2.1": universal-bachelor // 用户使用
+#import "../lib.typ": universal-bachelor // 模板开发
 #import universal-bachelor: *
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
@@ -116,6 +116,10 @@
     ……
   ],
   digital-signature-option: (
+    // 三种电子签名模式
+    // e-digital-signature-mode.off 不启用电子签名功能
+    // e-digital-signature-mode.default 直接添加电子版签名图片
+    // e-digital-signature-mode.scanned-copy 不显示此页的 typst 渲染结果，并将其替换为扫描件，允许传入 image 或者 pdf
     mode: e-digital-signature-mode.default,
 
     // default mode
