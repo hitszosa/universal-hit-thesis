@@ -34,7 +34,7 @@
   bibliography: bibliography.with("hit-thesis-ref.bib", full: true, style: "gb-t-7714-2015-numeric-hit.csl"),
 
   abstract-cn: [
-    #indent 气体静压轴承由于具有运动精度高、摩擦损耗小、发热变形小、寿命长、无污染等特点，在航空航天工业、半导体工业、纺织工业和测量仪器中得到广泛应用。本文在分析国内外气体静压轴承的基础上，以改善气体静压轴承的静态特性和稳定性为目的，通过理论分析、仿真计算和实验研究对局部多孔质气体静压止推轴承进行了研究，同时分析轴承的结构参数和工作参数对局部多孔质气体静压止推轴承工作特性的影响，为局部多孔质气体静压轴承的设计和工程应用奠定理论基础。
+    气体静压轴承由于具有运动精度高、摩擦损耗小、发热变形小、寿命长、无污染等特点，在航空航天工业、半导体工业、纺织工业和测量仪器中得到广泛应用。本文在分析国内外气体静压轴承的基础上，以改善气体静压轴承的静态特性和稳定性为目的，通过理论分析、仿真计算和实验研究对局部多孔质气体静压止推轴承进行了研究，同时分析轴承的结构参数和工作参数对局部多孔质气体静压止推轴承工作特性的影响，为局部多孔质气体静压轴承的设计和工程应用奠定理论基础。
 
     建立基于分形几何理论的多孔质石墨渗透率与分形维数之间关系的数学模型，该模型可预测多孔质石墨的渗透率，并可直观描述孔隙的大小对渗透率的影响。
 
@@ -45,7 +45,7 @@
   keywords-cn: ("多孔质石墨", "……", "稳定性"),
 
   abstract-en: [
-    #indent Externally pressurized gas bearing has been widely used in the field of aviation, semiconductor, weave, and measurement apparatus because of its advantage of high accuracy, little friction, low heat distortion, long life-span, and no pollution. In this thesis, based on the domestic and overseas researching development about externally pressurized gas bearing, the author investigated the partial porous externally pressurized gas thrust bearing by theoretical analysis, computer simulation, and experiments to improve its static charaterictics and stability. The effects of structure and operating parameters on partial porous externally pressurized gas bearing has been studied. Therefore, a theoretical foundation for the designing and application for the partial porous externally pressurized gas bearing has been presented.
+    Externally pressurized gas bearing has been widely used in the field of aviation, semiconductor, weave, and measurement apparatus because of its advantage of high accuracy, little friction, low heat distortion, long life-span, and no pollution. In this thesis, based on the domestic and overseas researching development about externally pressurized gas bearing, the author investigated the partial porous externally pressurized gas thrust bearing by theoretical analysis, computer simulation, and experiments to improve its static charaterictics and stability. The effects of structure and operating parameters on partial porous externally pressurized gas bearing has been studied. Therefore, a theoretical foundation for the designing and application for the partial porous externally pressurized gas bearing has been presented.
 
     Based on the fractal theory, a model was established to demonstrate the relationship between the porous graphite permeability and the fractal dimension. It can predict the permeability of porous graphite and show the effects of the pore size on the permeability.
 
@@ -57,7 +57,7 @@
 
 // 结论
   conclusion: [
-    #indent 本文对局部多孔质气体静压止推轴承的静态特性和稳定性进行了理论研究，对于局部多孔质气体静压径向轴承、圆锥轴承和球轴承仅需对止推轴承压力分布的数学模型进行适当的坐标变换即可对其特性进行求解。同时，本文对局部多孔质气体静压止推轴承进行了实验研究并与整体多孔质和小孔节流止推轴承的静态特性和稳定性进行了实验对比。
+    本文对局部多孔质气体静压止推轴承的静态特性和稳定性进行了理论研究，对于局部多孔质气体静压径向轴承、圆锥轴承和球轴承仅需对止推轴承压力分布的数学模型进行适当的坐标变换即可对其特性进行求解。同时，本文对局部多孔质气体静压止推轴承进行了实验研究并与整体多孔质和小孔节流止推轴承的静态特性和稳定性进行了实验对比。
 
     本论文的主要创造性工作归纳如下：
 
@@ -107,7 +107,7 @@
   ],
   // 致谢
   acknowledgement: [
-    #indent 衷心感谢导师×××教授对本人的精心指导。他的言传身教将使我终身受益。
+    衷心感谢导师×××教授对本人的精心指导。他的言传身教将使我终身受益。
 
     感谢×××教授，以及实验室全体老师和同窗们的热情帮助和支持！
 
@@ -180,19 +180,19 @@
 
 == 课题背景、研究目的和意义
 
-#indent 发展国防工业、微电子工业等尖端技术需要精密和超精密的仪器设备，精密仪器设备要求高速、……
+发展国防工业、微电子工业等尖端技术需要精密和超精密的仪器设备，精密仪器设备要求高速、……
 
 ……
 
 == 气体润滑轴承及其相关理论的发展概况
 
-#indent 气体轴承是利用气膜支撑负荷或减少摩擦的机械构件。……
+气体轴承是利用气膜支撑负荷或减少摩擦的机械构件。……
 
 ……
 
 === 气体润滑轴承的发展
 
-#indent 1828年，*R.R.Willis* @林来兴1992空间控制技术 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
+1828年，*R.R.Willis* @林来兴1992空间控制技术 发表了一篇关于小孔节流平板中压力分布的文章，这是有记载的研究气体润滑的最早文献。……
 
 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式：
 
@@ -200,7 +200,7 @@
 
 === 气体润滑轴承的分类
 
-#indent 根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
+根据间隙内气膜压力的产生原理，气体轴承可以分为四种基本形式，其结构如图1-1所示。
 
 （1）*气体静压轴承* 加压气体经过节流器进入间隙，在间隙内产生压力气膜使物体浮起的气体轴承，结构如 @fig:气体润滑轴承的分类1 (a) 所示。……
 
@@ -245,15 +245,15 @@
 
 === 多孔质气体静压轴承的研究
 
-#indent 由于气体的压力低和可压缩性，……。
+由于气体的压力低和可压缩性，……。
 
 ==== 多孔质静压轴承的分类
 
-#indent 轴承工作面的整体或……。
+轴承工作面的整体或……。
 
 ==== 多孔质材料特性的研究
 
-#indent 材料的主要特点是具有一定的……。
+材料的主要特点是具有一定的……。
 
 （1）孔隙特性 多孔质材料是由……。
 
@@ -261,7 +261,7 @@
 
 == 本文主要研究内容
 
-#indent 本课题的研究内容主要是针对局部多孔质止推轴承的多孔质材料的渗透
+本课题的研究内容主要是针对局部多孔质止推轴承的多孔质材料的渗透
 率、静压轴承的静态特性、稳定性及其影响因素进行展开，……。
 
 #pagebreak()
@@ -270,11 +270,12 @@
 
 == 引言
 
-#indent 利用现成的商用软件来研究流场，可以免去对N-S方程求解程序的……
+利用现成的商用软件来研究流场，可以免去对N-S方程求解程序的……
 
 === 边界条件的设定
 
-#indent 本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
+本文采用……，则每一个方向上的……由公式 
+@eqt:formula-1 @eqt:formula-2 求得：
 
 $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
@@ -290,17 +291,17 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 本章小结
 
-#indent ……
+……
 
 = 局部多孔质静压轴承的试验研究
 
 == 引言
 
-#indent 在前面几章中，分别对局部多孔质材料的渗透率……
+在前面几章中，分别对局部多孔质材料的渗透率……
 
 == 多孔质石墨渗透率测试试验
 
-#indent ……
+……
 
 1号试样的试验数据见 @tbl:1号试样的实验数据。
 
@@ -376,7 +377,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 本章小结
 
-#indent ……
+……
 
 #pagebreak()
 
@@ -384,7 +385,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 图表
 
-#indent 使用`@fig:`来引用图片： @fig:square #lorem(4)
+使用`@fig:`来引用图片： @fig:square #lorem(4)
 
 #figure(
   square(size: 8em, stroke: 2pt),
@@ -392,7 +393,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   supplement: [图],
 ) <square>
 
-#indent 图表之后第一段默认不缩进，如需缩进，可以手动调用`#indent`实现缩进。
+#strike[图表之后第一段默认不缩进，如需缩进，可以手动调用`#indent`实现缩进。]
 
 #figure(
   table(
@@ -424,7 +425,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   supplement: [表],
 ) <time-results-three-line-table>
 
-#indent 使用`@tbl:`来引用表格： @tbl:time-results @tbl:time-results-three-line-table
+使用`@tbl:`来引用表格： @tbl:time-results @tbl:time-results-three-line-table
 
 == 伪代码
 
@@ -432,7 +433,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
   #import "@preview/algorithmic:0.1.0"
   #import algorithmic: algorithm
 
-  #indent 使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
+  使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
 
   #algorithm-figure(
     algorithm({
@@ -519,5 +520,5 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     label-name: "XXX代码",
   )
 
-  #indent 与 Markdown 类似，代码可以高亮显示，使用`@lst:`来引用代码块： @lst:XXX代码
+  与 Markdown 类似，代码可以高亮显示，使用`@lst:`来引用代码块： @lst:XXX代码
 ]

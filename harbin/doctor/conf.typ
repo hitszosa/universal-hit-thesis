@@ -205,7 +205,15 @@
   let par-spacing-multiplier = 1.25
   let leading = par-spacing-multiplier * par-spacing-base - 1em
   let spacing = par-spacing-multiplier * par-spacing-base - 1em
-  set par(first-line-indent: 2em, leading: leading, justify: true, spacing: spacing)
+  set par(
+    first-line-indent: (
+      amount: 2em,
+      all: true,
+    ), 
+    leading: leading, 
+    justify: true, 
+    spacing: spacing
+  )
 
   set text(font: 字体.宋体, size: 字号.小四)
 
