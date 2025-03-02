@@ -12,6 +12,11 @@ jobs:
     env:
       PYTHONUTF8: ${{ matrix.os == 'windows-latest' && '1' || '' }}
     steps:
+      - uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: "Asia/Shanghai"
+          timezoneMacos: "Asia/Shanghai"
+          timezoneWindows: "China Standard Time"
       - uses: actions/checkout@v4
       - name: Checkout Haixing-Hu/latex-chinese-fonts
         uses: actions/checkout@v4
