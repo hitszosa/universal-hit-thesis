@@ -24,3 +24,9 @@ jobs:
         with:
           name: templates-build-${{ github.run_id }}-${{ matrix.os }}
           path: build/*.pdf
+      - name: Deploy PDF files to build branch
+        if: matrix.os == 'windows-latest'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 ci/deploy.py
