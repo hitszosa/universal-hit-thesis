@@ -1,6 +1,6 @@
-// #import "@preview/universal-hit-thesis:0.2.1": universal-bachelor // 用户使用
-// #import "@local/universal-hit-thesis:0.2.1": universal-bachelor // 本地部署
-#import "../lib.typ": universal-bachelor // 模板开发
+// #import "@preview/universal-hit-thesis:0.2.1": universal-bachelor // <#用户使用>
+// #import "@local/universal-hit-thesis:0.2.1": universal-bachelor // <#本地部署>
+#import "../lib.typ": universal-bachelor // <#模板开发>
 #import universal-bachelor: *
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
