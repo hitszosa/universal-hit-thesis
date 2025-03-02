@@ -66,7 +66,12 @@ typst watch ./templates/<template-name>.typ --root ./
 ```
 
 > [!TIP]
-> 本模板正处于积极开发阶段，更新较为频繁，虽然已经上传至 Typst Universe，但是您依然可以借助 Typst local packages 来实现待 Typst Universe 同步本模板的最新版本前，在本地体验本模板的最新版本，推荐使用 [Typship](https://github.com/sjfhsjfh/typship) 来实现这一点.
+> 本模板正处于积极开发阶段，更新较为频繁，虽然已经上传至 Typst Universe，但是您依然可以借助 Typst local packages 来实现待 Typst Universe 同步本模板的最新版本前，在本地体验本模板的最新版本，具体可按如下步骤操作：
+> - 确保配置了 Cargo 环境
+> - 使用 `cargo install typship` 安装 typship
+> - 项目根目录执行 `typship install local` 将项目部署至本地 `@local` 名称空间下
+> - 在模板开头使用 `#import "@local/universal-hit-thesis:0.2.1"` 进行导入
+> 更多内容可参考 [Typship](https://github.com/sjfhsjfh/typship) 的文档.
 
 ### 在线编辑
 
