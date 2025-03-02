@@ -4,7 +4,9 @@ import os
 import glob
 import sys
 
-line_to_comment = {"user": 1, "dev": 0}[sys.argv[1]]
+mode_to_comment = { "user": "<#用户使用>", "dev": "<#模板开发>", "local": "<#本地部署>" }
+
+line_to_comment = mode_to_comment[sys.argv[1]]
 
 filenames = []
 
@@ -17,10 +19,17 @@ for path in sys.argv[2:]:
 for filename in filenames:
     with open(filename) as f:
         lines = f.readlines()
-        if len(lines) < 2:
-            continue
-        lines[0] = lines[0].removeprefix("//").lstrip()
-        lines[1] = lines[1].removeprefix("//").lstrip()
-        lines[line_to_comment] = "// " + lines[line_to_comment]
+        for i, line in enumerate(lines):
+            found_comment = None
+            for comment in mode_to_comment.values():
+                if comment in line:
+                    found_comment = comment
+                    break
+            if found_comment is not None:
+                if found_comment == line_to_comment:
+                    lines[i] = lines[i].removeprefix("//").lstrip()
+                else:
+                    if not line.startswith("//"):
+                        lines[i] = "//" + lines[i]
     with open(filename, "w") as f:
         f.writelines(lines)
