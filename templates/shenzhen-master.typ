@@ -460,50 +460,56 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 == 伪代码
 
 #[
-  #import "@preview/algorithmic:0.1.0"
-  #import algorithmic: algorithm
+  #import "@preview/algo:0.3.4": algo, i, d, comment, code
 
-  使用`@algo:`来引用伪代码， 支持`algorithmic`和`lovelace`包，如#[@algo:XXX算法]和#[@algo:lovelace-algo]所示
+  使用`@algo:`来引用伪代码， 支持`algo`和`lovelace`包，如#[@algo:XXX算法]、#[@algo:XXXX算法]和#[@algo:lovelace-algo]所示
+
+  #set par(first-line-indent: 0em)
 
   #algorithm-figure(
-    algorithm({
-      import algorithmic: *
-      Function(
-        "Binary-Search",
-        args: ("A", "n", "v"),
-        {
-          Cmt[Initialize the search range]
-          Assign[$l$][$1$]
-          Assign[$r$][$n$]
-          State[]
-          While(
-            cond: $l <= r$,
-            {
-              Assign([mid], FnI[floor][$(l + r) / 2$])
-              If(
-                cond: $A ["mid"] < v$,
-                {
-                  Assign[$l$][$m + 1$]
-                },
-              )
-              ElsIf(
-                cond: [$A ["mid"] > v$],
-                {
-                  Assign[$r$][$m - 1$]
-                },
-              )
-              Else({
-                Return[$m$]
-              })
-            },
-          )
-          Return[*null*]
-        },
-      )
-    }),
-    caption: [二分查找],
+    algo(
+      title: "Fib",
+      parameters: ("n",),
+      stroke: none,
+      fill: none,
+      breakable: true,
+    )[
+      if $n < 0$:#i\
+        return null#d\
+      if $n = 0$ or $n = 1$:#i\
+        return $n$#d\
+      \
+      let $x <- 0$\
+      let $y <- 1$\
+      for $i <- 2$ to $n-1$:#i #comment[so dynamic!]\
+        let $z <- x+y$\
+        $x <- y$\
+        $y <- z$#d\
+        \
+      return $x+y$
+    ],
+    caption: [斐波那契数列1],
     supplement: [算法],
     label-name: "XXX算法",
+  )
+
+  #algorithm-figure(
+    algo(
+      title: "Fib",
+      parameters: ("n",),
+      stroke: none,
+      fill: none,
+      breakable: true
+    )[
+      if $n < 0$:#i\        // use #i to indent the following lines
+        return null#d\      // use #d to dedent the following lines
+      if $n = 0$ or $n = 1$:#i #comment[you can also]\
+        return $n$#d #comment[add comments!]\
+      return #smallcaps("Fib")$(n-1) +$ #smallcaps("Fib")$(n-2)$ \
+    ],
+    caption: [斐波那契数列2],
+    supplement: [算法],
+    label-name: "XXXX算法",
   )
 
   #import "@preview/lovelace:0.2.0": *

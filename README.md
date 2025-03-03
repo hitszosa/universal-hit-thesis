@@ -147,7 +147,7 @@ typst watch ./templates/<template-name>.typ --root ./
 
 ### 可选依赖
 
-若要书写和引用伪代码，您可以使用 `algorithm-figure`，为此，您需要导入 `algorithmic` 或 `lovelace` 包。
+若要书写和引用伪代码，您可以使用 `algorithm-figure`，为此，您需要导入 `algo` 或 `lovelace` 包。
 
 ```typ
 #import "@preview/algorithmic:0.1.0"
