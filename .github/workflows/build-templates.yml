@@ -7,9 +7,16 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
     env:
       PYTHONUTF8: ${{ matrix.os == 'windows-latest' && '1' || '' }}
     steps:
+      - uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: "Asia/Shanghai"
+          timezoneMacos: "Asia/Shanghai"
+          timezoneWindows: "China Standard Time"
       - uses: actions/checkout@v4
       - name: Checkout Haixing-Hu/latex-chinese-fonts
         uses: actions/checkout@v4
@@ -24,3 +31,17 @@ jobs:
         with:
           name: templates-build-${{ github.run_id }}-${{ matrix.os }}
           path: build/*.pdf
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Deploy PDF files to build branch
+        if: | 
+          matrix.os == 'windows-latest' && 
+          (github.event_name == 'workflow_dispatch' || 
+          github.event_name == 'push' && github.ref == 'refs/heads/main' || 
+          github.event_name == 'pull_request' && github.base_ref == 'main')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 ci/deploy.py
