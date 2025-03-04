@@ -1,5 +1,5 @@
-#import "@preview/universal-hit-thesis:0.2.1": shenzhen-master // <#用户使用>
-// #import "@local/universal-hit-thesis:0.2.1": shenzhen-master // <#本地部署>
+#import "@preview/universal-hit-thesis:0.3.0": shenzhen-master // <#用户使用>
+// #import "@local/universal-hit-thesis:0.3.0": shenzhen-master // <#本地部署>
 // #import "../lib.typ": shenzhen-master // <#模板开发>
 #import shenzhen-master: *
 

@@ -1,5 +1,5 @@
-#import "@preview/universal-hit-thesis:0.2.1": universal-doctor // <#用户使用>
-// #import "@local/universal-hit-thesis:0.2.1": universal-doctor // <#本地部署>
+#import "@preview/universal-hit-thesis:0.3.0": universal-doctor // <#用户使用>
+// #import "@local/universal-hit-thesis:0.3.0": universal-doctor // <#本地部署>
 // #import "../lib.typ": universal-doctor // <#模板开发>
 #import universal-doctor: *
 
