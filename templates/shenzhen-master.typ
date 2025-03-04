@@ -1,23 +1,43 @@
-#import "@preview/universal-hit-thesis:0.3.0": universal-bachelor // <#用户使用>
-// #import "@local/universal-hit-thesis:0.3.0": universal-bachelor // <#本地部署>
-// #import "../lib.typ": universal-bachelor // <#模板开发>
-#import universal-bachelor: *
+#import "@preview/universal-hit-thesis:0.3.0": shenzhen-master // <#用户使用>
+// #import "@local/universal-hit-thesis:0.3.0": shenzhen-master // <#本地部署>
+// #import "../lib.typ": shenzhen-master // <#模板开发>
+#import shenzhen-master: *
 
-// 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
-// 编译命令  typst compile ./templates/universal-bachelor.typ --root ./
-// 实时预览  typst watch ./templates/universal-bachelor.typ --root ./
+// 参考 哈尔滨工业大学（深圳）全日制硕士研究生学位论文书写范例-理工类-学术型（2023版）.doc 进行编写
+// 编译命令  typst compile ./templates/shenzhen-master.typ --root ./
+// 实时预览  typst watch ./templates/shenzhen-master.typ --root ./
 
 #show: doc.with(
+  // 学位类型. 
+  // e-master-type.academic: 学硕
+  // e-master-type.professional: 专硕
+  master-type: e-master-type.academic,
   thesis-info: (
     // 论文标题，可使用 \n 进行换行
     title-cn: "局部多孔质气体静压轴承关键技术的研究",
     title-en: "RESEARCH ON KEY TECHNOLOGIES OF PARTIAL POROUS EXTERNALLY PRESSURIZED GAS BEARING",
     author: "▢▢▢",
-    student-id: "▢▢▢▢▢▢▢▢▢▢",
+    author-en: "▢▢▢",
     supervisor: "▢▢▢ 教授",
-    profession: "机械制造及其自动化",
-    collage: "机电工程学院",
+    supervisor-en: "Prof. ▢▢▢",
+    // master-type = e-master-type.professional 时
+    // 如有联合培养的校外合作指导教师则填写此行；无则设置为 none 或注释掉
+    // co-supervisor: "▢▢▢",
+    // co-supervisor-en: "▢▢▢",
+    profession: "工学硕士",
+    profession-en: "Master of Engineering",
+    specialty: "机械制造及其自动化",
+    specialty-en: "Mechanical Manufacturing and Automation",
+    affiliation: "哈尔滨工业大学（深圳）",
+    affiliation-en: "Harbin Institute of Technology, Shenzhen",
     institute: "哈尔滨工业大学",
+    institute-en: "Harbin Institute of Technology",
+    // 国内图书分类号
+    chinese-library-classification: "××××",
+    // 国际图书分类号
+    universal-decimal-classification: "××××",
+    // 学校代码
+    school-identification-code: "×××",
     // year: 2024,
     // month: 5,
     // day: 1,
@@ -62,15 +82,15 @@
 
     本论文的主要创造性工作归纳如下：
 
-    \1. 建立了基于分形几何理论的多孔质石墨渗透率与分形维数之间关系的数学模型，该模型可预测多孔质石墨的渗透率，并可直观描述各种孔隙的大小对渗透率的影响。通过实验验证了该模型的正确性。
+    1. 建立了基于分形几何理论的多孔质石墨渗透率与分形维数之间关系的数学模型，该模型可预测多孔质石墨的渗透率，并可直观描述各种孔隙的大小对渗透率的影响。通过实验验证了该模型的正确性。
 
-    \2. 分别建立了基于气体连续性方程、Navier-Stokes 方程、Darcy 定律以及气体状态方程的局部多孔质气体静压轴承的承载能力、静态刚度和质量流量的数学模型，利用有限元法进行求解，给出了局部多孔质气体静压轴承的承载能力、静态刚度和质量流量特性曲线。
+    2. 分别建立了基于气体连续性方程、Navier-Stokes 方程、Darcy 定律以及气体状态方程的局部多孔质气体静压轴承的承载能力、静态刚度和质量流量的数学模型，利用有限元法进行求解，给出了局部多孔质气体静压轴承的承载能力、静态刚度和质量流量特性曲线。
 
     ……
 
     今后还应在以下几个方面继续深入研究：
 
-    \1. 本文仅是采用了局部多孔质圆柱塞这种节流方式，在以后的研究中，可以通过改变局部多孔质材料的形状来改变节流方式，从而通过性能对比，获得最优的节流效果。
+    1. 本文仅是采用了局部多孔质圆柱塞这种节流方式，在以后的研究中，可以通过改变局部多孔质材料的形状来改变节流方式，从而通过性能对比，获得最优的节流效果。
 
     ……
   ],
@@ -116,6 +136,20 @@
 
     ……
   ],
+  // 个人简历
+  personal-resume: [
+    ××××年××月××日出生于××××。
+
+    ××××年××月考入××大学××院（系）××专业，××××年××月本科毕业并获得××学学士学位。
+
+    ××××年××月——××××年××月，在××大学××院（系）××学科学习并获得××学硕士学位。
+
+    ××××年××月——××××年××月，在××大学××院（系）××学科攻读博士学位。
+
+    获奖情况：如获三好学生、优秀团干部、×奖学金等（不含科研学术获奖）。
+
+    工作经历：
+  ],
   digital-signature-option: (
     // 三种电子签名模式
     // e-digital-signature-mode.off 不启用电子签名功能
@@ -127,13 +161,13 @@
     // 作者电子签名图片及其偏移
     author-signature: [ #lorem(2) ],
     author-signature-offsets: (
-      (dx: 13em, dy: 19.15em),
-      (dx: 13em, dy: 46.8em),
+      (dx: 13em, dy: 18.9em),
+      (dx: 13em, dy: 46.5em),
     ),
     // 导师电子签名图片及其偏移
     supervisor-signature: [ #lorem(3) ],
     supervisor-signature-offsets: (
-      (dx: 13em, dy: 49.8em),
+      (dx: 13em, dy: 49.4em),
     ),
 
     // 日期及其偏移
@@ -144,19 +178,19 @@
     ),
     date-offsets: (
       (
-        (dx: 26em, dy: 19.15em),
-        (dx: 30.25em, dy: 19.15em),
-        (dx: 32.5em, dy: 19.15em),
+        (dx: 25em, dy: 18.9em),
+        (dx: 29.5em, dy: 18.9em),
+        (dx: 31.5em, dy: 18.9em),
       ),
       (
-        (dx: 26em, dy: 46.8em),
-        (dx: 29.6em, dy: 46.8em),
-        (dx: 32em, dy: 46.8em),
+        (dx: 26em, dy: 46.5em),
+        (dx: 30em, dy: 46.5em),
+        (dx: 32.5em, dy: 46.5em),
       ),
       (
-        (dx: 26em, dy: 49.8em),
-        (dx: 29.6em, dy: 49.8em),
-        (dx: 32em, dy: 49.8em),
+        (dx: 26em, dy: 49.4em),
+        (dx: 30em, dy: 49.4em),
+        (dx: 32.5em, dy: 49.4em),
       ),
     ),
     // 是否显示原创性声明页的页码
@@ -176,7 +210,6 @@
   )
 )
 
-
 = #[绪#h(1em)论]
 
 == 课题背景、研究目的和意义
@@ -189,7 +222,7 @@
 
 气体轴承是利用气膜支撑负荷或减少摩擦的机械构件。……
 
-……
+// ……
 
 === 气体润滑轴承的发展
 
@@ -273,26 +306,22 @@
 
 利用现成的商用软件来研究流场，可以免去对N-S方程求解程序的……
 
-=== 边界条件的设定
+== 问题的提出
 
-本文采用……，则每一个方向上的……由公式 
-@eqt:formula-1 @eqt:formula-2 求得：
+本文采用……，则每一个方向上的……由公式 @eqt:formula-1 @eqt:formula-2 求得：
 
 $ phi = D^2_p / 150 psi^3 / (1 - psi)^2 $ <formula-1>
 
 $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
-式中 $D_p$ —— 多孔质材料的平均粒子直径（m）；
+式中 $D_p$ —— 多孔质材料的平均粒子直径（$m$）；
 
 #h(1em) $psi$ —— 孔隙度（孔隙体积占总体积的百分比）；
 
-#h(1em) $phi$ —— 特征渗透性或固有渗透性（m2）。
-
+#h(1em) $phi$ —— 特征渗透性或固有渗透性（$m^2$）。
 ……
 
 == 本章小结
-
-……
 
 = 局部多孔质静压轴承的试验研究
 
@@ -386,7 +415,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 
 == 图表
 
-使用`@fig:`来引用图片： @fig:square #lorem(4)
+使用`@fig:`来引用图片： @fig:square
 
 #figure(
   square(size: 8em, stroke: 2pt),
@@ -402,7 +431,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     [t], [1], [2], [3],
     [y], [0.3s], [0.4s], [0.8s],
   ),
-  caption: text(lang: "en")[Timing results],
+  caption: [Timing results],
   supplement: [表],
 ) <time-results>
 

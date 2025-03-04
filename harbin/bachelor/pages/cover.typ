@@ -1,6 +1,6 @@
 #import "../../../common/theme/type.typ": 字体, 字号
-#import "../config/constants.typ": current-date
-#import "../utils/states.typ": thesis-info-state
+#import "../../../common/config/constants.typ": current-date
+#import "../../../common/utils/states.typ": thesis-info-state
 
 #let cover-primary(
   title-cn: "",
@@ -16,26 +16,23 @@
   month: current-date.month(),
   day: current-date.day(),
 ) = {
-  align(center)[
+    align(center)[
 
-    #let space-scale-ratio = 1.25
-
-    #v(字号.小四 * 6 * space-scale-ratio)
+    #v(50pt)
 
     #text(size: 字号.小一, font: 字体.宋体, weight: "bold")[*本科毕业论文（设计）*]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(32pt)
 
     #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(36pt)
 
     #par(justify: false)[
       #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[#title-en]
     ]
 
-    #v(字号.小四 * 1 * space-scale-ratio)
-    #v(字号.二号 * 2 * space-scale-ratio)
+    #v(62pt)
 
     #align(center)[
       #text(size: 字号.小二, font: 字体.宋体, weight: "bold")[
@@ -43,8 +40,7 @@
       ]
     ]
 
-    #v(字号.小二 * 2 * space-scale-ratio)
-    #v(字号.小四 * 6 * space-scale-ratio)
+    #v(128pt)
 
     #align(center)[
       #text(size: 字号.小二, font: 字体.楷体, weight: "bold")[#institute]
@@ -68,27 +64,23 @@
   month: current-date.month(),
   day: current-date.day(),
 ) = {
-  align(center)[
-
-    #let space-scale-ratio = 1.4
+    align(center)[
 
     #align(right)[
-      #text(size: 字号.四号, font: 字体.宋体)[密级：公开]
+      #block(inset: (top: 6pt, right: 40pt))[
+        #text(size: 字号.小四, font: 字体.宋体)[密级：公开]
+      ]
     ]
 
-    #v(字号.小四 * 3 * space-scale-ratio)
+    #v(42pt)
 
     #text(size: 字号.小二, font: 字体.宋体)[*本科毕业论文（设计）*]
 
-    #v(字号.小四 * 2 * space-scale-ratio)
+    #v(32pt)
 
     #text(size: 字号.二号, font: 字体.黑体)[#title-cn]
 
-    #v(字号.小四 * 1 * space-scale-ratio)
-
-    #v(字号.二号 * 4 * space-scale-ratio)
-
-    // #v(字号.小四 * space-scale-ratio)
+    #v(152pt)
 
     #let cover-info-key(content) = {
       align(right)[
@@ -108,32 +100,32 @@
       ]
     }
 
-    #let base-space = 0.8
-    #let key-width = 字号.四号 * (4 + base-space * 3)
+    #let key-width = 90pt
+    #let get-tracking-by-characters-count(count) = (key-width - count * 1em) / (count - 1)
 
     #grid(
-      columns: (auto, 1em, auto),
+      columns: (76fr, 1.5em, 100fr),
       rows: (字号.四号, 字号.四号),
-      row-gutter: 1.5em,
-      cover-info-key(text(spacing: (key-width - 3em) / 2)[本 科 生]),
+      row-gutter: 15.4pt,
+      cover-info-key(text(tracking: get-tracking-by-characters-count(3))[本科生]),
       cover-info-colon[：],
       cover-info-value(author),
-      cover-info-key(text(spacing: (key-width - 2em))[学 号]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[学号]),
       cover-info-colon[：],
       cover-info-value(student-id),
-      cover-info-key(text(spacing: base-space * 1em)[指 导 教 师]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[指导教师]),
       cover-info-colon[：],
       cover-info-value(supervisor),
-      cover-info-key(text(spacing: (key-width - 2em))[专 业]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[专业]),
       cover-info-colon[：],
       cover-info-value(profession),
-      cover-info-key(text(spacing: (key-width - 2em))[学 院]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[学院]),
       cover-info-colon[：],
       cover-info-value(collage),
-      cover-info-key(text(spacing: base-space * 1em)[答 辩 日 期]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(4))[答辩日期]),
       cover-info-colon[：],
       cover-info-value([#[#year]年#[#month]月]),
-      cover-info-key(text(spacing: (key-width - 2em))[学 校]),
+      cover-info-key(text(tracking: get-tracking-by-characters-count(2))[学校]),
       cover-info-colon[：],
       cover-info-value(institute),
     )

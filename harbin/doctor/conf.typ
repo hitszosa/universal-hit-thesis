@@ -2,10 +2,9 @@
 #import "../../common/components/typography.typ": use-heading-main, use-heading-preface, use-heading-end
 #import "../../common/components/header.typ": use-hit-header
 #import "../../common/components/footer.typ": use-footer-preface, use-footer-main
-#import "config/constants.typ": special-chapter-titles-additional, thesis-info-additional
+#import "config/constants.typ": thesis-info-additional, special-chapter-titles-additional
 #import "../../common/config/constants.typ": current-date, main-text-line-spacing-multiplier, single-line-spacing
-#import "../../common/utils/states.typ": special-chapter-titles-state
-#import "../../common/utils/states.typ": default-header-text-state, bibliography-state, thesis-info-state, digital-signature-option-state
+#import "../../common/utils/states.typ": thesis-info-state, bibliography-state, default-header-text-state, special-chapter-titles-state, digital-signature-option-state
 #import "@preview/cuti:0.2.1": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 #import "@preview/lovelace:0.2.0": setup-lovelace
@@ -17,24 +16,22 @@
 #import "../../common/pages/acknowledgement.typ": acknowledgement as acknowledgement-page
 #import "../../common/pages/achievement.typ": achievement as achievement-page
 #import "pages/declaration-of-originality.typ": declaration-of-originality
+#import "pages/personal-resume.typ": personal-resume-page
+#import "../../common/components/figure.typ": bilingual-figure-caption
 
 #let preface(content) = {
 
   [#metadata("") <preface-start>]
 
-  context {
-    let header-text = default-header-text-state.get()
-    show: use-hit-header.with(header-text: header-text)
-    show: use-footer-preface
+  show: use-hit-header
+  show: use-footer-preface
 
-    show: use-heading-preface
+  show: use-heading-preface
 
-    set page(numbering: "I")
-    counter(page).update(1)
+  set page(numbering: "I")
+  counter(page).update(1)
 
-    content
-  }
-
+  content
 }
 
 #let main(
@@ -62,6 +59,7 @@
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: "algorithm"): set figure.caption(position: top)
   show figure: set text(size: 字号.五号)
+  show figure.caption: bilingual-figure-caption
 
   show raw.where(block: false): box.with(
     fill: rgb("#fafafa"),
@@ -121,10 +119,10 @@
   content
 }
 
-#let ending-content(conclusion: none, achievement: none, acknowledgement: none) = {
+#let ending-content(conclusion: none, achievement: none, acknowledgement: none, personal-resume: none) = {
   if conclusion != none {
 
-    conclusion-page[
+    conclusion-page(use-same-header-text: true)[
       #conclusion
     ]
 
@@ -132,12 +130,12 @@
 
   }
 
-  bibliography-page()
+  bibliography-page(use-same-header-text: true)
 
   pagebreak()
 
   if achievement != none {
-    achievement-page[
+    achievement-page(use-same-header-text: true)[
       #achievement
     ]
     pagebreak()
@@ -148,8 +146,14 @@
   pagebreak()
 
   if acknowledgement != none {
-    acknowledgement-page[
+    acknowledgement-page(use-same-header-text: true)[
       #acknowledgement
+    ]
+  }
+
+  if personal-resume != none {
+    personal-resume-page()[
+      #personal-resume
     ]
   }
 }
@@ -166,6 +170,7 @@
   conclusion: none, 
   achievement: none, 
   acknowledgement: none,
+  personal-resume: none,
   digital-signature-option: (:),
 ) = {
   set document(
@@ -179,7 +184,7 @@
 
   bibliography-state.update(current => bibliography)
 
-  default-header-text-state.update(current => "哈尔滨工业大学本科毕业论文（设计）")
+  default-header-text-state.update(current => "哈尔滨工业大学博士学位论文")
 
   special-chapter-titles-state.update(current => current + special-chapter-titles-additional)
 
@@ -211,25 +216,28 @@
   )
 
   set text(font: 字体.宋体, size: 字号.小四)
-  
-  let zh-tracking = 1.067em
-  // show text.where(lang: "zh"): set text(tracking: zh-tracking - 1em)
 
   show: preface
 
   if abstract-cn != none {
-    abstract-cn-page(keywords: keywords-cn, par-leading: 0.94em, par-spacing: 0.94em, text-tracking: 0.72pt)[
+    abstract-cn-page(keywords: keywords-cn, use-same-header-text: true, par-leading: 0.96em, par-spacing: 0.9em, text-tracking: 0.72pt)[
       #abstract-cn
     ]
   }
 
   if abstract-en != none {
-    abstract-en-page(keywords: keywords-en, par-leading: 0.775em, par-spacing: 0.77em, text-tracking: 0.2pt, text-spacing: 4.76pt)[
+    abstract-en-page(keywords: keywords-en, use-same-header-text: true, par-leading: 0.84em, par-spacing: 0.8em, text-tracking: 0.2pt, text-spacing: 4.76pt)[
       #abstract-en
     ]
   }
 
-  outline-page(par-leading: 0.89em)
+  outline-page(
+    bilingual: true,
+    use-same-header-text: true,
+    par-leading: 0.82em,
+    par-leading-en: 0.74em,
+    par-spacing-en: 0.715em,
+  )
 
   figure-options = figure-options + (
     extra-kinds: (),
@@ -245,7 +253,8 @@
   ending-content(
     conclusion: conclusion,
     achievement: achievement,
-    acknowledgement: acknowledgement
+    acknowledgement: acknowledgement,
+    personal-resume: personal-resume,
   )
 
 }
