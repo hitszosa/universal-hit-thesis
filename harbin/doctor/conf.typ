@@ -5,7 +5,7 @@
 #import "config/constants.typ": thesis-info-additional, special-chapter-titles-additional
 #import "../../common/config/constants.typ": current-date, main-text-line-spacing-multiplier, single-line-spacing
 #import "../../common/utils/states.typ": thesis-info-state, bibliography-state, default-header-text-state, special-chapter-titles-state, digital-signature-option-state
-#import "@preview/cuti:0.2.1": show-cn-fakebold
+#import "@preview/cuti:0.3.0": show-cn-fakebold
 #import "@preview/i-figured:0.2.4": show-figure, reset-counters, show-equation
 #import "@preview/lovelace:0.2.0": setup-lovelace
 #import "pages/cover.typ": cover
