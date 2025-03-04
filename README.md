@@ -75,7 +75,7 @@ typst watch ./templates/<template-name>.typ --root ./
 
 ### 在线编辑
 
-本模板已上传 Typst Universe，您可以使用 Typst 的官方 Web App 进行编辑。
+本模板已上传 Typst Universe，您可以使用 Typst 的官方 Web App 进行编辑，这是一个[例子](https://typst.app/project/raeG0X4Y6kLjqceUSu3vd5)。
 
 具体来说，在 Typst Web App 登录后，点击 `Start from template`，在弹出的窗口中选择 `universal-hit-thesis`，即可从模板创建项目。
 
