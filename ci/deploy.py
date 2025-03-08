@@ -31,8 +31,7 @@ timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
 branch = "build"
 
 # 使用 GITHUB_TOKEN 进行认证
-github_token = os.getenv("GITHUB_TOKEN")
-repo_url = f"https://x-access-token:{github_token}@github.com/hitszosa/universal-hit-thesis.git"
+repo_url = os.getenv("REPO_URL")
 
 # 切换到部署目录
 os.chdir(DEPLOY_DIR)
