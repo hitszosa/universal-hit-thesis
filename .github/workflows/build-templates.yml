@@ -42,6 +42,6 @@ jobs:
           github.event_name == 'push' && github.ref == 'refs/heads/main' || 
           github.event_name == 'pull_request' && github.base_ref == 'main')
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         run: |
           python3 ci/deploy.py
