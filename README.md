@@ -1,4 +1,8 @@
-# 哈尔滨工业大学论文模板 · [![Build Templates](https://github.com/hitszosa/universal-hit-thesis/actions/workflows/build-templates.yml/badge.svg?branch=dev)](https://github.com/hitszosa/universal-hit-thesis/actions/workflows/build-templates.yml)
+# 哈尔滨工业大学论文模板
+
+[![Typst Package](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhitszosa%2Funiversal-hit-thesis%2Frefs%2Fheads%2Fmain%2Ftypst.toml&query=%24.package.version&prefix=v&logo=typst&label=package&color=239dae
+)](https://typst.app/universe/package/universal-hit-thesis)
+[![Build Templates](https://github.com/hitszosa/universal-hit-thesis/actions/workflows/build-templates.yml/badge.svg?branch=dev)](https://github.com/hitszosa/universal-hit-thesis/actions/workflows/build-templates.yml)
 
 适用于哈尔滨工业大学学位论文的 Typst 模板
 
