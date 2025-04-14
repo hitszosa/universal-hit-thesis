@@ -150,7 +150,7 @@ typst watch ./templates/<template-name>.typ --root ./
 若要书写和引用伪代码，您可以使用 `algorithm-figure`，为此，您需要导入 `algo` 或 `lovelace` 包。
 
 ```typ
-#import "@preview/algo:0.3.5": algo, i, d, comment, code
+#import "@preview/algo:0.3.6": algo, i, d, comment, code
 
 #import "@preview/lovelace:0.2.0": *
 ```
