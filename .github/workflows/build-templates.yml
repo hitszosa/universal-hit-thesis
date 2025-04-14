@@ -18,11 +18,17 @@ jobs:
           timezoneMacos: "Asia/Shanghai"
           timezoneWindows: "China Standard Time"
       - uses: actions/checkout@v4
+      - run: mkdir -p fonts
       - name: Checkout Haixing-Hu/latex-chinese-fonts
         uses: actions/checkout@v4
         with:
           repository: Haixing-Hu/latex-chinese-fonts
-          path: fonts
+          path: fonts/latex-chinese
+      - name: Checkout pensnarik/consolas-font
+        uses: actions/checkout@v4
+        with:
+          repository: pensnarik/consolas-font
+          path: fonts/consolas
       - uses: typst-community/setup-typst@v4
       - run: typst fonts --font-path fonts
       - run: python3 ci/mode_switch.py dev templates
