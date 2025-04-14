@@ -508,7 +508,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
 #enheading()[Pseudocode]
 
 #[
-  #import "@preview/algo:0.3.4": algo, i, d, comment, code
+  #import "@preview/algo:0.3.6": algo, i, d, comment, code
 
   使用`@algo:`来引用伪代码， 支持`algo`和`lovelace`包，如#[@algo:XXX算法]、#[@algo:XXXX算法]和#[@algo:lovelace-algo]所示
 
