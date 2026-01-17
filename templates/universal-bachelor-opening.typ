@@ -1,6 +1,6 @@
-//#import "@preview/universal-hit-thesis:0.3.0": universal-bachelor // <#用户使用>
+#import "@preview/universal-hit-thesis:0.3.0": universal-bachelor // <#用户使用>
 // #import "@local/universal-hit-thesis:0.3.0": universal-bachelor // <#本地部署>
-#import "../lib.typ": shenzhen-bachelor-opening // <#模板开发>
+// #import "../lib.typ": shenzhen-bachelor-opening // <#模板开发>
 #import shenzhen-bachelor-opening: *
 
 // 参考 本科毕业论文（设计）书写范例（理工类）.doc 进行编写
@@ -18,6 +18,7 @@
     profession: "机械制造及其自动化",
     collage: "机电工程学院",
     institute: "哈尔滨工业大学",
+    thesis-type: "毕业", // '毕业' or '综合'
     // year: 2024,
     // month: 5,
     // day: 1,

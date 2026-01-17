@@ -22,8 +22,10 @@
 **预览效果**
 
 - 本科通用：[universal-bachelor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-bachelor.pdf)
-- 深圳硕士：[shenzhen-master.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/shenzhen-master.pdf)
 - 博士通用：[universal-doctor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-bachelor.pdf)
+- 深圳：
+    - 深圳本科毕设开题报告：[shenzhen-bachelor-opening.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/shenzhen-bachelor-opening.pdf)
+    - 深圳硕士：[shenzhen-master.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/shenzhen-master.pdf)
 
 ## 使用
 
@@ -99,6 +101,7 @@ typst watch ./templates/<template-name>.typ --root ./
 > - `Kaiti.ttf`
 > - `Consolas.ttf`
 > - `Courier New.ttf`
+> - _`STXINWEI.TTF`_ （华文新魏，非本科开题不需要）
 > 
 > 并将这些文件手动上传至 Web App 项目根目录中，或为了目录整洁，可以创建一个 `fonts` 文件夹并将字体置于其中，Typst Web App 将自动加载这些字体，并正确渲染到预览窗口中.
 > 
@@ -136,6 +139,8 @@ typst watch ./templates/<template-name>.typ --root ./
   - [ ] 威海校区硕士毕业论文
   - [x] 威海校区博士毕业论文
   - [x] 深圳校区本科毕业设计
+    - [x] 深圳校区本科毕业设计开题报告
+    - [ ] 深圳校区本科毕业设计中期报告
   - [x] 深圳校区硕士毕业论文
   - [x] 深圳校区博士毕业论文
 - 排版
