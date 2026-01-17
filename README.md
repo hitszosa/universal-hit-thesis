@@ -22,7 +22,7 @@
 **预览效果**
 
 - 本科通用：[universal-bachelor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-bachelor.pdf)
-- 博士通用：[universal-doctor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-bachelor.pdf)
+- 博士通用：[universal-doctor.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/universal-doctor.pdf)
 - 深圳：
     - 深圳本科毕设开题报告：[shenzhen-bachelor-opening.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/shenzhen-bachelor-opening.pdf)
     - 深圳硕士：[shenzhen-master.pdf](https://github.com/hitszosa/universal-hit-thesis/blob/build/shenzhen-master.pdf)

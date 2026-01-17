@@ -30,10 +30,6 @@
       #thesis-type-state.get()论文开题报告*]
 
     #v(32pt)
-    #let distr(width: 5em, body) = block(
-      width: width,
-      body + linebreak(justify: true),
-    )
     #show linebreak: [asdf]
 
     #show table.cell: it => {
