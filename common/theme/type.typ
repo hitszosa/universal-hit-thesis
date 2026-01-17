@@ -21,8 +21,18 @@
 )
 
 #let 字体 = (
-  宋体: ("Times New Roman", "SimSun"),
-  楷体: ("Times New Roman", "KaiTi"),
-  黑体: ("Times New Roman", "Adobe Heiti Std", "SimHei"),
+  宋体: (
+    (name: "Times New Roman", covers: "latin-in-cjk"),
+    "SimSun",
+  ),
+  楷体: (
+    (name: "Times New Roman", covers: "latin-in-cjk"),
+    "KaiTi",
+  ),
+  黑体: (
+    (name: "Times New Roman", covers: "latin-in-cjk"),
+    "Adobe Heiti Std",
+    "SimHei",
+  ),
   代码: ("Consolas", "Courier New", "SimSun"),
 )
