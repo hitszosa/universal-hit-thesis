@@ -174,9 +174,6 @@
 
   set text(font: 字体.宋体, size: 字号.小四)
   
-  let zh-tracking = 1.067em
-  // show text.where(lang: "zh"): set text(tracking: zh-tracking - 1em)
-
   show: preface
 
   outline-page(par-leading: 0.89em)

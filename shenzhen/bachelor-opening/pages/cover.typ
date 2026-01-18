@@ -30,8 +30,6 @@
       #thesis-type-state.get()论文开题报告*]
 
     #v(32pt)
-    #show linebreak: [asdf]
-
     #show table.cell: it => {
       set underline(offset: .15em, stroke: .06em, evade: false)
       set par(justify: true, leading: 1.25em)
@@ -49,7 +47,6 @@
         } else {
           set text(size: 字号.小三, font: 字体.宋体)
           underline(it)
-          //[ #underline_ #underline(it.body) #underline_]
         }
       }
     }
