@@ -4,6 +4,7 @@
 #import "harbin/bachelor/lib.typ" as universal-bachelor
 
 #import "shenzhen/master/lib.typ" as shenzhen-master
+#import "shenzhen/bachelor-opening/lib.typ" as shenzhen-bachelor-opening
 
 #import "harbin/doctor/lib.typ" as harbin-doctor
 #import "harbin/doctor/lib.typ" as universal-doctor

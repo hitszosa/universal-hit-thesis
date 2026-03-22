@@ -22,7 +22,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Haixing-Hu/latex-chinese-fonts
-          path: fonts
+          path: fonts/latex-chinese-fonts
+      - name: Checkout chengda/popular-fonts
+        uses: actions/checkout@v4
+        with:
+          repository: chengda/popular-fonts
+          path: fonts/popular-fonts
+      - name: Checkout saminyasar004/coding-fonts
+        uses: actions/checkout@v4
+        with:
+          repository: saminyasar004/coding-fonts
+          path: fonts/coding-fonts
       - uses: typst-community/setup-typst@v4
       - run: typst fonts --font-path fonts
       - run: python3 ci/mode_switch.py dev templates

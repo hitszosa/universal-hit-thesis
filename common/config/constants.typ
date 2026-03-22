@@ -21,7 +21,7 @@
   author: "▢▢▢",
   supervisor: "▢▢▢ 教授",
   profession: "▢▢▢ 专业",
-  collage: "▢▢▢ 学院",
+  college: "▢▢▢ 学院",
   institute: "哈尔滨工业大学",
   year: current-date.year(),
   month: current-date.month(),

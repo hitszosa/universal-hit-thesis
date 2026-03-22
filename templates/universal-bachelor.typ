@@ -16,7 +16,7 @@
     student-id: "▢▢▢▢▢▢▢▢▢▢",
     supervisor: "▢▢▢ 教授",
     profession: "机械制造及其自动化",
-    collage: "机电工程学院",
+    college: "机电工程学院",
     institute: "哈尔滨工业大学",
     // year: 2024,
     // month: 5,

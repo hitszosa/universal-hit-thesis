@@ -25,4 +25,5 @@
   楷体: ("Times New Roman", "KaiTi"),
   黑体: ("Times New Roman", "Adobe Heiti Std", "SimHei"),
   代码: ("Consolas", "Courier New", "SimSun"),
+  华文新魏: ("STXinwei"), // 开题报告标题
 )

@@ -94,3 +94,27 @@
 
   content
 }
+
+#let u_ = context {
+ box(width: 1fr, stroke: (bottom: underline.stroke), baseline: underline.offset -.25em, outset: (y:0.25em))
+}
+
+// 占满全宽度的居中下划线：[___a̲b̲c̲___]
+#let u(body) = context {
+  layout(size => {
+    let single_line_height = measure(text("A")).height
+    let (height,) = measure(
+      width: size.width,
+      body,
+    )
+    // 多行则只有最后一行有下划线
+    if height < single_line_height * 1.5 {
+      u_
+      body
+      u_
+    } else {
+      body
+      u_
+    }
+  })
+}
