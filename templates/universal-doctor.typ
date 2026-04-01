@@ -560,7 +560,7 @@ $ C_2 = 3.5 / D_p ((1 - psi)) / psi^3 $ <formula-2>
     label-name: "XXXX算法",
   )
 
-  #import "@preview/lovelace:0.2.0": *
+  #import "@preview/lovelace:0.3.1": *
 
   #algorithm-figure(
     pseudocode(
