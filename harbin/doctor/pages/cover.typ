@@ -235,7 +235,7 @@
 
       cover-info-key(text()[Date of Defense：]),
       cover-info-value([
-        #import "@preview/datify:0.1.4": custom-date-format
+        #import "@preview/datify:1.0.1": custom-date-format
         #let year-month = datetime(
           year: year,
           month: month,
