@@ -17,19 +17,19 @@ jobs:
           timezoneLinux: "Asia/Shanghai"
           timezoneMacos: "Asia/Shanghai"
           timezoneWindows: "China Standard Time"
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Checkout Haixing-Hu/latex-chinese-fonts
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: Haixing-Hu/latex-chinese-fonts
           path: fonts/latex-chinese-fonts
       - name: Checkout chengda/popular-fonts
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: chengda/popular-fonts
           path: fonts/popular-fonts
       - name: Checkout saminyasar004/coding-fonts
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: saminyasar004/coding-fonts
           path: fonts/coding-fonts
