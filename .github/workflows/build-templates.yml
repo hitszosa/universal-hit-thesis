@@ -37,7 +37,7 @@ jobs:
       - run: typst fonts --font-path fonts
       - run: python3 ci/mode_switch.py dev templates
       - run: python3 ci/build.py
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: templates-build-${{ github.run_id }}-${{ matrix.os }}
           path: build/*.pdf
