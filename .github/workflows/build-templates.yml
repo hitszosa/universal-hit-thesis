@@ -33,7 +33,7 @@ jobs:
         with:
           repository: saminyasar004/coding-fonts
           path: fonts/coding-fonts
-      - uses: typst-community/setup-typst@v4
+      - uses: typst-community/setup-typst@v5
       - run: typst fonts --font-path fonts
       - run: python3 ci/mode_switch.py dev templates
       - run: python3 ci/build.py
