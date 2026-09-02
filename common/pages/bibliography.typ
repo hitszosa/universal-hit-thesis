@@ -5,12 +5,19 @@
 #import "../components/enheading.typ": addif_enheading
 
 #let bibliography-page(
+    use-header: none,
     use-same-header-text: false,
 ) = context [
 
   #let special-chapter-titles = special-chapter-titles-state.get()
 
-  #show: use-hit-header.with(
+  #let header = if use-header == none {
+    use-hit-header
+  } else {
+    use-header
+  }
+
+  #show: header.with(
     header-text: if use-same-header-text {
       special-chapter-titles.参考文献
     }
