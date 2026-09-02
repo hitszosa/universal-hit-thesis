@@ -3,6 +3,7 @@
 #import "../utils/states.typ": default-header-text-state, special-chapter-titles-state
 
 #let outline-page(
+  use-header: none,
   use-same-header-text: false,
   bilingual: false,
   par-leading: 0.65em,
@@ -12,7 +13,13 @@
   
   #let special-chapter-titles = special-chapter-titles-state.get()
 
-  #show: use-hit-header.with(
+  #let real-use-header = if use-header == none {
+    use-hit-header
+  } else {
+    use-header
+  }
+
+  #show: real-use-header.with(
     header-text: if use-same-header-text {
       special-chapter-titles.目录
     }
@@ -32,7 +39,7 @@
   #if bilingual {
       pagebreak()
       set par(first-line-indent: 0em, leading: par-leading-en, spacing: par-spacing-en)
-      show: use-hit-header.with(
+      show: real-use-header.with(
         header-text: if use-same-header-text {
           special-chapter-titles.目录-en
         }

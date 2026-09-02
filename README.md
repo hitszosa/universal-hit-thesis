@@ -102,6 +102,8 @@ typst watch ./templates/<template-name>.typ --root ./
 > - `Consolas.ttf`
 > - `Courier New.ttf`
 > - _`STXINWEI.TTF`_ （华文新魏，非本科开题不需要）
+> - _`WINGDNG2.TTF`_ （Wingdings 2，非本科开题不需要）
+> - _`XITSMath-Regular.otf`_ （XITS Math，非本科开题不需要）
 > 
 > 并将这些文件手动上传至 Web App 项目根目录中，或为了目录整洁，可以创建一个 `fonts` 文件夹并将字体置于其中，Typst Web App 将自动加载这些字体，并正确渲染到预览窗口中.
 > 

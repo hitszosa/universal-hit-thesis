@@ -1,0 +1,45 @@
+#import "../../../common/theme/type.typ": 字体, 字号
+#import "../../../common/config/constants.typ": page-margins, distance-to-the-edges
+
+#let use-footer-preface(content) = {
+  context {
+    let footer-body = context [
+        #align(center)[
+          #set text(size: 字号.小五, font: 字体.宋体)
+          #counter(page).display("1")
+        ]
+    ]
+
+    let footer-body-size = measure(footer-body)
+    // Not sure why there is a vertical drift to the Word template. Add a small offset.
+    let footer-ascent = page-margins.bottom - distance-to-the-edges.footer - footer-body-size.height - 2pt
+
+    set page(
+      footer: footer-body,
+      footer-descent: footer-ascent,
+    )
+
+    content
+  }
+}
+
+#let use-footer-main(content) = {
+  context {
+    let footer-body = context [
+      #align(center)[
+        #set text(size: 字号.小五, font: 字体.宋体)
+        #counter(page).display("-  1  -")
+      ]
+    ]
+
+    let footer-body-size = measure(footer-body)
+    let footer-ascent = page-margins.bottom - distance-to-the-edges.footer - footer-body-size.height - 2pt
+
+    set page(
+      footer: footer-body,
+      footer-descent: footer-ascent,
+    )
+
+    content
+  }
+}
